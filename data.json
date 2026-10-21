@@ -1,0 +1,3046 @@
+{
+ "generated_at": "2026-10-21T13:04:31+00:00",
+ "user": {
+  "login": "Avinashistoocool",
+  "name": "Avinash Chandra Gupta",
+  "bio": "A cool dude starting out ;D",
+  "avatar": "https://avatars.githubusercontent.com/u/230444961?v=4",
+  "since": "2025",
+  "followers": 3,
+  "public_repos": 9,
+  "location": null,
+  "email": "ph1251520@iitd.ac.in",
+  "blog": null,
+  "socials": [
+   {
+    "provider": "linkedin",
+    "url": "https://www.linkedin.com/in/avinashistoocool"
+   }
+  ],
+  "html_url": "https://github.com/Avinashistoocool",
+  "support_url": "https://buymeacoffee.com/avinashistoocool"
+ },
+ "projects": [
+  {
+   "name": "Agnostos-v2",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2",
+   "text": "Agnostos: AI research internship outreach CLI. Finds professors matching your resume, drafts honest cold emails, sends them paced, tracks and drafts replies.",
+   "stars": 33,
+   "forks": 1,
+   "language": "Python",
+   "pushed_at": "2026-10-16T18:50:10Z",
+   "created_at": "2026-10-13T07:50:44Z",
+   "topics": [
+    "academic-outreach",
+    "agnostos",
+    "cli",
+    "cold-email",
+    "email-automation",
+    "groq",
+    "internship",
+    "llm",
+    "openai",
+    "openalex",
+    "professors",
+    "python",
+    "research-internship",
+    "students"
+   ],
+   "size_kb": 502,
+   "commits": 19,
+   "libs": [
+    "openpyxl",
+    "pyyaml",
+    "dns",
+    "ddgs",
+    "openai",
+    "playwright"
+   ]
+  },
+  {
+   "name": "Gated-Dual-Stream-Particle-Transformer",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer",
+   "text": "A custom PyTorch architecture for jet classification that rethinks how pairwise particle physics enters a transformer.",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-10-21T11:43:29Z",
+   "created_at": "2026-07-02T07:36:49Z",
+   "topics": [
+    "jetclass",
+    "particle-physics",
+    "transformer"
+   ],
+   "size_kb": 61059,
+   "commits": 15,
+   "libs": [
+    "numpy",
+    "torch",
+    "scikit-learn",
+    "uproot",
+    "awkward",
+    "matplotlib"
+   ]
+  },
+  {
+   "name": "asclepius",
+   "url": "https://github.com/Avinashistoocool/asclepius",
+   "text": "RescueSwarm - Phase 1 Simulation. Core logic for: 1. FleetManager - polygon -> parallel search lanes, balanced across N search drones 2. TargetManager - survivor detections -> delivery-drone dispatch (continuous / two-wave) Scope note (read before extending): This module is a GENERAL lane-generation planner driven by swathwidth. It is deliberately separate from the \"5 fixed parallel strips flown once as a single formation pass\" design used elsewhere in the RescueSwarm engineering docs - that design assumes the 5-drone combined swath already spans the polygon width in one pass. This planner instead computes however many lanes swathwidth actually requires and balances them across the fleet, which is the right tool if that single-pass assumption doesn't hold (narrower footprint, different polygon, different fleet size). Keep the two mental models separate.",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-10-04T19:20:01Z",
+   "created_at": "2026-08-29T17:13:51Z",
+   "topics": [],
+   "size_kb": 22,
+   "commits": 2,
+   "libs": [
+    "shapely",
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "ultralytics",
+    "opencv"
+   ]
+  },
+  {
+   "name": "eraksha-hackathon",
+   "url": "https://github.com/Avinashistoocool/eraksha-hackathon",
+   "text": "IoT Flow Generator - IMPROVED VERSION. Simulates IoT device traffic with clear output",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-07-06T12:12:53Z",
+   "created_at": "2026-07-06T12:10:19Z",
+   "topics": [],
+   "size_kb": 11079,
+   "commits": 1,
+   "libs": [
+    "google-adk",
+    "scapy",
+    "numpy",
+    "scikit-learn",
+    "flask"
+   ]
+  },
+  {
+   "name": "Jet-Class-Particle-Visualizer",
+   "url": "https://github.com/Avinashistoocool/Jet-Class-Particle-Visualizer",
+   "text": "Build a clean, modular, self-contained PyTorch implementation of a novel alternative to ParT that fuses single-particle and pairwise interaction information differently from the original additive attention-bias formulation.",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-07-02T07:06:20Z",
+   "created_at": "2026-05-25T15:32:01Z",
+   "topics": [],
+   "size_kb": 33,
+   "commits": 1,
+   "libs": [
+    "numpy",
+    "matplotlib",
+    "plotly",
+    "uproot",
+    "the"
+   ]
+  },
+  {
+   "name": "ISRO-BAH-26",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26",
+   "text": "This project maps subsurface lunar ice using Chandrayaan-2 DFSAR radar polarimetry. It identifies safe landing zones near doubly shadowed craters and computes an optimal, power-constrained rover traverse to access these ancient volatile deposits.",
+   "stars": 0,
+   "forks": 2,
+   "language": "Python",
+   "pushed_at": "2026-07-02T06:51:10Z",
+   "created_at": "2026-06-26T07:23:22Z",
+   "topics": [],
+   "size_kb": 58052,
+   "commits": 18,
+   "libs": [
+    "numpy",
+    "rasterio",
+    "matplotlib",
+    "pyproj",
+    "scipy",
+    "tqdm"
+   ]
+  },
+  {
+   "name": "Object-tracking-with-color",
+   "url": "https://github.com/Avinashistoocool/Object-tracking-with-color",
+   "text": "This project consists of two different approaches to computer vision- both using opencv-python.",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-02-04T16:56:42Z",
+   "created_at": "2026-02-04T16:56:36Z",
+   "topics": [],
+   "size_kb": 17977,
+   "commits": 2,
+   "libs": [
+    "numpy",
+    "matplotlib",
+    "opencv"
+   ]
+  }
+ ],
+ "commits": [
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "a1f2d65",
+   "date": "2026-10-21T11:43:13Z",
+   "message": "Add 10M/10-epoch results (test acc 0.8484, AUC 0.9853) and resumable 20-epoch checkpoint (epoch 3)",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/a1f2d65124db7f476ed0d0eb1f2dfb2d179b9610"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "45947f0",
+   "date": "2026-10-19T08:49:55Z",
+   "message": "Add ablation results, official-ParT pipeline validation, accuracy-ceiling analysis",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/45947f051f0f63023c020d60535d22750e25eaa5"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "1a43457",
+   "date": "2026-10-19T06:43:33Z",
+   "message": "Add GUIDE.md, SLURM script, requirements, ablation runner, gate_mode=none, --cache_only",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/1a434574addbf27a468058c55621d5dca4966052"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "e11a161",
+   "date": "2026-10-16T18:50:07Z",
+   "message": "SEO: brand-first README heading and intro",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/e11a161f073877a26ef3033578c002c50908bff2"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "b01d04f",
+   "date": "2026-10-16T11:14:56Z",
+   "message": "Cap GPU memory fraction to avoid WDDM shared-memory spill (4x speedup on 6 GB GPU)",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/b01d04f32b629da51c26790be91480bd573077ee"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "c6f4ae5",
+   "date": "2026-10-16T10:55:58Z",
+   "message": "GDS-ParT v2: identity per-layer gates, hybrid pair bias, CLS pooling, EMA; PBS job scripts",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/c6f4ae5bee2e447e478ad0e63741cb6b852f47c7"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "d4bd26f",
+   "date": "2026-10-16T05:17:40Z",
+   "message": "Add 10M-jet GDS-ParT results: test acc 0.8272, AUC 0.9824 (1M test jets)",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/d4bd26fa04853e051818ac8a12d3e5cb205594c8"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "926ecab",
+   "date": "2026-10-15T23:25:20Z",
+   "message": "Add persistent run logging and official-ParT pipeline validation",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/926ecab2cadf1ec990f13709ea44f5c7d541d9f3"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "0fd4129",
+   "date": "2026-10-15T22:49:42Z",
+   "message": "Clean repo: fix corrupted README trailer, ignore checkpoints and logs",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/0fd4129ee0e6083c60d3594a8a24817d8af3ca71"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "feb62de",
+   "date": "2026-10-15T22:41:04Z",
+   "message": "Fix CI: make httpx optional and declare it as a dependency",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/feb62deaa41b6d1b08220d76da365de83ce6da82"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "882e837",
+   "date": "2026-10-15T22:19:36Z",
+   "message": "Add FAQ and diagnostics guides",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/882e8375d698eee85ac4795971b4d7957701597e"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "0141e1b",
+   "date": "2026-10-15T22:17:20Z",
+   "message": "Add Windows, macOS and Linux usage documentation",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/0141e1bbbfc1809133995ede5a3f988f62928e24"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "71e74e3",
+   "date": "2026-10-15T20:09:32Z",
+   "message": "Fix macOS certificate errors with OS trust store; survive laptop sleep",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/71e74e3cd186b6332e2a9cad0d4b67f6c1bf3cc4"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "874e5b9",
+   "date": "2026-10-15T18:49:48Z",
+   "message": "adding replier",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/874e5b90487896700e37c9530441239f1c77dcd8"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "1b4ee9a",
+   "date": "2026-10-15T13:37:19Z",
+   "message": "Add live training monitor dashboard",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/1b4ee9a16ef39b19453adb2159c90cfad2d8de2a"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "5dc7908",
+   "date": "2026-10-15T13:35:54Z",
+   "message": "Scalable JetClass training pipeline, ParT-paper metrics, and report generator",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/5dc79081057cbb39955feec9334a00fb2f93b5ab"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "61a1b32",
+   "date": "2026-10-15T12:25:53Z",
+   "message": "Add stats command, send log, SMTP reconnect, reasoning-model token budget",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/61a1b32d885704158fa0ba86ecc83c83bc4b376d"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "3c979d8",
+   "date": "2026-10-15T00:36:11Z",
+   "message": "Add send scheduling (--at, recipient-local windows) and IMAP reply tracking",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/3c979d84e234d521f24d57d96032880b5142413d"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "6a1e994",
+   "date": "2026-10-14T20:48:32Z",
+   "message": "Decode obfuscated and TYPO3-encrypted email addresses in verify",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/6a1e994e828e8d3b0340674aacfa719cfe42b8a9"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "2fc0574",
+   "date": "2026-10-14T20:48:32Z",
+   "message": "Show live timer between emails while sending",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/2fc05742652046cb247e06a9c3ba9474abda0f18"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "99345ca",
+   "date": "2026-10-14T13:52:53Z",
+   "message": "Add run --skip option and clearer filter diagnostics",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/99345caccc1222040b673f87efc52bc126ba3851"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "f14e81a",
+   "date": "2026-10-14T13:03:36Z",
+   "message": "Update README: workflow diagram, scaling guide, sent-row safety, test coverage",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/f14e81a53e3116a38b457ee4869c75c10981a089"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "4f82c25",
+   "date": "2026-10-14T12:59:38Z",
+   "message": "Fix review_1 findings",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/4f82c25ddb625941e1cf41b9f466dc4e9e34bf6e"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "6588fc7",
+   "date": "2026-10-14T12:10:50Z",
+   "message": "Add batched N-professor discovery, email verification and recheck",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/6588fc7c4668b6375332f85b357a4650c8866bfb"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "d216b2a",
+   "date": "2026-10-13T12:05:36Z",
+   "message": "Revise README for improved project overview",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/d216b2a72389c26ce0885478dbb950f77c00ffba"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "ca149e2",
+   "date": "2026-10-13T12:04:34Z",
+   "message": "Never lose send statuses when the workbook is locked",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/ca149e2743881947c68f52c2ca6df8275ce6c578"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "4adcf11",
+   "date": "2026-10-13T08:15:00Z",
+   "message": "Make SMTP sending resilient to dropped connections",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/4adcf11af773f79a79228bb453cec37607e05bf4"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "8d3ad66",
+   "date": "2026-10-13T08:03:58Z",
+   "message": "Agnostos v2: production-ready release with free Groq support",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/8d3ad66ba27645e52aac25e939f336a869940f51"
+  },
+  {
+   "repo": "Agnostos-v2",
+   "sha": "2e0528e",
+   "date": "2026-10-13T07:50:45Z",
+   "message": "Initial commit",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/2e0528e16553e9398a9fee3a4a7ac8f744b71be9"
+  },
+  {
+   "repo": "asclepius",
+   "sha": "0e2e8f6",
+   "date": "2026-10-04T19:20:00Z",
+   "message": "Add update note to README",
+   "url": "https://github.com/Avinashistoocool/asclepius/commit/0e2e8f67138a16533f0f0d8da5502cb262edfa56"
+  },
+  {
+   "repo": "asclepius",
+   "sha": "38aa16c",
+   "date": "2026-09-22T20:57:31Z",
+   "message": "Fresh initial commit with Git LFS",
+   "url": "https://github.com/Avinashistoocool/asclepius/commit/38aa16cd37840f9f4439874f115fa8f09c1bd598"
+  },
+  {
+   "repo": "eraksha-hackathon",
+   "sha": "eefffb4",
+   "date": "2026-07-06T12:11:15Z",
+   "message": "initial commit july 26",
+   "url": "https://github.com/Avinashistoocool/eraksha-hackathon/commit/eefffb4c30b7b875561f190d23b4c7ef05a205a2"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "25952bf",
+   "date": "2026-07-05T11:34:29Z",
+   "message": "Update README with project details and structure",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/25952bfb509d82fa237909e16c96caed148a5091"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "5a36ca3",
+   "date": "2026-07-05T11:33:57Z",
+   "message": "Context_update",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/5a36ca36acab4ca9af0957b590552a62e3288952"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "c7ca91a",
+   "date": "2026-07-02T07:41:27Z",
+   "message": "Update README",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/c7ca91acf14844e70f3ce3a56361a60c6c3101dc"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "aec962b",
+   "date": "2026-07-02T07:40:47Z",
+   "message": "files edit",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/aec962b18c699e35ed11860c9e2b010aed6d5638"
+  },
+  {
+   "repo": "Gated-Dual-Stream-Particle-Transformer",
+   "sha": "34c945e",
+   "date": "2026-07-02T07:39:59Z",
+   "message": "first commit",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/34c945e3565373245876694e20a64eac381ddfa4"
+  },
+  {
+   "repo": "Jet-Class-Particle-Visualizer",
+   "sha": "4337bc9",
+   "date": "2026-07-02T06:53:15Z",
+   "message": "First commit",
+   "url": "https://github.com/Avinashistoocool/Jet-Class-Particle-Visualizer/commit/4337bc9067473fce03c8d558242bb1b9b15e16df"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "f42140c",
+   "date": "2026-07-02T06:51:09Z",
+   "message": "Spaces in latex dont work sweetheart",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/f42140c54b5308451ca44ddc61daf13eb57f0882"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "904684a",
+   "date": "2026-07-02T06:50:06Z",
+   "message": "added arhcitecture diagram and process flow diagram in this",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/904684ad8cf42536fcaa64e944b920f38b1c382d"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "f004ec6",
+   "date": "2026-07-02T06:46:30Z",
+   "message": "Merge branch 'main' of https://github.com/Avinashistoocool/ISRO-BAH-26-",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/f004ec62f367083841a835c2ae68020534cfd678"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "bf0b83f",
+   "date": "2026-07-02T06:45:50Z",
+   "message": "added_presentation_slides",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/bf0b83f1dd93181defdac544dd8728af8c640d23"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "fa4b525",
+   "date": "2026-07-02T06:26:01Z",
+   "message": "Updated_README_with_parameters_to_fill",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/fa4b525853e26b2791be4e7d89ecf59f096fef61"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "0cd490f",
+   "date": "2026-07-02T06:23:54Z",
+   "message": "Final_cost_estimation_with_A_star",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/0cd490fffa2565be5f558c3e5b0023dd61450bd0"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "a3c3157",
+   "date": "2026-06-30T21:56:27Z",
+   "message": "Revert \"Merge pull request #1 from eshajain-123/main\"",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/a3c3157626a57ab0ff012fc7a94f3468be2fff01"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "d0b79d0",
+   "date": "2026-06-30T21:48:13Z",
+   "message": "Merge branch 'main' of https://github.com/Avinashistoocool/ISRO-BAH-26-",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/d0b79d04b62e54ea45b62aa4874e0bbbc5552b3f"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "6c4d621",
+   "date": "2026-06-30T21:10:21Z",
+   "message": "cost",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/6c4d62181fc202098c91dc43c4a474f41802a064"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "243689f",
+   "date": "2026-06-30T18:49:11Z",
+   "message": "Merge pull request #1 from eshajain-123/main",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/243689f6c19f1f356bebb05b4d2f22a56e001f10"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "101aca1",
+   "date": "2026-06-28T07:40:02Z",
+   "message": "Update cost_map.py",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/101aca11e3ccd0e099601b908b9fb8dddcf04113"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "9c94f96",
+   "date": "2026-06-28T06:49:30Z",
+   "message": "Merge branch 'main' of https://github.com/Avinashistoocool/ISRO-BAH-26-",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/9c94f969e26289b5c6ed61251f9babd8ad68fd9c"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "07d62bf",
+   "date": "2026-06-28T06:48:40Z",
+   "message": "cost",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/07d62bfe5753c061862c6a42e038e349ab80e4d6"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "b2d6283",
+   "date": "2026-06-27T14:06:39Z",
+   "message": "Update README.md- How to use_v!",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/b2d6283a8bb76bd464373d14e7a4912fc758ad37"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "1aacac4",
+   "date": "2026-06-27T10:46:54Z",
+   "message": "elevation and slope maps for cost mapping",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/1aacac49409d485034eb7eb25d6c9ef1c5c8a8ae"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "a93bb81",
+   "date": "2026-06-26T07:26:07Z",
+   "message": "Update README.md again",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/a93bb81824c8a6359ceab34440f74b7ea1e2eb00"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "22e3cb7",
+   "date": "2026-06-26T07:25:21Z",
+   "message": "Update README.md",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/22e3cb7924b78ff37ca6b4cf8cb286b930e73570"
+  },
+  {
+   "repo": "ISRO-BAH-26",
+   "sha": "d868863",
+   "date": "2026-06-26T07:23:22Z",
+   "message": "Initial commit",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/d86886300f6f609ca5059c8a46f3b94ad18e86ea"
+  },
+  {
+   "repo": "Object-tracking-with-color",
+   "sha": "da1cfc9",
+   "date": "2026-02-04T16:56:27Z",
+   "message": "First draft",
+   "url": "https://github.com/Avinashistoocool/Object-tracking-with-color/commit/da1cfc9be2b356c766bdebbb9ffbdd133c4c1992"
+  },
+  {
+   "repo": "Object-tracking-with-color",
+   "sha": "c27677a",
+   "date": "2026-02-04T16:54:42Z",
+   "message": "Initial commit",
+   "url": "https://github.com/Avinashistoocool/Object-tracking-with-color/commit/c27677a60d15ea0feebd98c9910d67be8be72f92"
+  }
+ ],
+ "languages": [
+  {
+   "name": "Python",
+   "bytes": 630040
+  },
+  {
+   "name": "Shell",
+   "bytes": 3892
+  },
+  {
+   "name": "HTML",
+   "bytes": 3734
+  }
+ ],
+ "libraries": [
+  {
+   "name": "numpy",
+   "repos": 6,
+   "files": 28,
+   "group": "Science"
+  },
+  {
+   "name": "matplotlib",
+   "repos": 5,
+   "files": 14,
+   "group": "Science"
+  },
+  {
+   "name": "scikit-learn",
+   "repos": 2,
+   "files": 3,
+   "group": "ML"
+  },
+  {
+   "name": "uproot",
+   "repos": 2,
+   "files": 3,
+   "group": "Science"
+  },
+  {
+   "name": "opencv",
+   "repos": 2,
+   "files": 2,
+   "group": "Geo / CV"
+  },
+  {
+   "name": "scipy",
+   "repos": 2,
+   "files": 2,
+   "group": "Science"
+  },
+  {
+   "name": "rasterio",
+   "repos": 1,
+   "files": 6,
+   "group": "Geo / CV"
+  },
+  {
+   "name": "torch",
+   "repos": 1,
+   "files": 6,
+   "group": "ML"
+  },
+  {
+   "name": "openpyxl",
+   "repos": 1,
+   "files": 5,
+   "group": "Tooling"
+  },
+  {
+   "name": "pyproj",
+   "repos": 1,
+   "files": 4,
+   "group": "Geo / CV"
+  },
+  {
+   "name": "google-adk",
+   "repos": 1,
+   "files": 2,
+   "group": "LLM / web"
+  },
+  {
+   "name": "plotly",
+   "repos": 1,
+   "files": 2,
+   "group": "Science"
+  },
+  {
+   "name": "awkward",
+   "repos": 1,
+   "files": 1,
+   "group": "Science"
+  },
+  {
+   "name": "certifi",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "ddgs",
+   "repos": 1,
+   "files": 1,
+   "group": "LLM / web"
+  },
+  {
+   "name": "dns",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "docx",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "flask",
+   "repos": 1,
+   "files": 1,
+   "group": "LLM / web"
+  },
+  {
+   "name": "httpx",
+   "repos": 1,
+   "files": 1,
+   "group": "LLM / web"
+  },
+  {
+   "name": "openai",
+   "repos": 1,
+   "files": 1,
+   "group": "LLM / web"
+  },
+  {
+   "name": "pdfplumber",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "playwright",
+   "repos": 1,
+   "files": 1,
+   "group": "LLM / web"
+  },
+  {
+   "name": "python-dotenv",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "pyyaml",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "reportlab",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "scapy",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "shapely",
+   "repos": 1,
+   "files": 1,
+   "group": "Geo / CV"
+  },
+  {
+   "name": "the",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "tqdm",
+   "repos": 1,
+   "files": 1,
+   "group": "Science"
+  },
+  {
+   "name": "truststore",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "tzdata",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "ultralytics",
+   "repos": 1,
+   "files": 1,
+   "group": "ML"
+  },
+  {
+   "name": "weaver",
+   "repos": 1,
+   "files": 1,
+   "group": "ML"
+  }
+ ],
+ "diff": {
+  "repo": "Gated-Dual-Stream-Particle-Transformer",
+  "sha": "a1f2d65",
+  "message": "Add 10M/10-epoch results (test acc 0.8484, AUC 0.9853) and resumable 20-epoch checkpoint (epoch 3)",
+  "file": "results/v2_shared_10M_10ep/RESULTS.md",
+  "additions": 89,
+  "deletions": 0,
+  "lines": [
+   "+# GDS-ParT results \u2014 train_10M",
+   "+",
+   "+## Setup",
+   "+",
+   "+- Training set: `D:\\JetClass\\train_10M` (train_10M)",
+   "+- Validation set: `D:\\JetClass\\val` \u2014 1,000,000 jets",
+   "+- Test set: `D:\\JetClass\\test` \u2014 **1,000,000 jets** (balanced, 10 classes)",
+   "+- Model: 2,074,420 parameters; embed_dim=128, layers=8, heads=8, pairwise_embed_dim=64, max_particles=128",
+   "+- Optimizer: AdamW lr=0.001, wd=0.01, batch=512, 10 epochs, warmup 5% + cosine, AMP",
+   "+- Checkpoint used for test: best validation accuracy (epoch 10)",
+   "+",
+   "+## Headline test metrics",
+   "+",
+   "+| Metric | Value |"
+  ],
+  "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/a1f2d65124db7f476ed0d0eb1f2dfb2d179b9610"
+ },
+ "contributions": {
+  "total": 86,
+  "days": [
+   {
+    "date": "2025-10-19",
+    "row": 0,
+    "col": 0,
+    "level": 0
+   },
+   {
+    "date": "2025-10-26",
+    "row": 0,
+    "col": 1,
+    "level": 0
+   },
+   {
+    "date": "2025-11-02",
+    "row": 0,
+    "col": 2,
+    "level": 0
+   },
+   {
+    "date": "2025-11-09",
+    "row": 0,
+    "col": 3,
+    "level": 0
+   },
+   {
+    "date": "2025-11-16",
+    "row": 0,
+    "col": 4,
+    "level": 0
+   },
+   {
+    "date": "2025-11-23",
+    "row": 0,
+    "col": 5,
+    "level": 0
+   },
+   {
+    "date": "2025-11-30",
+    "row": 0,
+    "col": 6,
+    "level": 0
+   },
+   {
+    "date": "2025-12-07",
+    "row": 0,
+    "col": 7,
+    "level": 0
+   },
+   {
+    "date": "2025-12-14",
+    "row": 0,
+    "col": 8,
+    "level": 0
+   },
+   {
+    "date": "2025-12-21",
+    "row": 0,
+    "col": 9,
+    "level": 0
+   },
+   {
+    "date": "2025-12-28",
+    "row": 0,
+    "col": 10,
+    "level": 0
+   },
+   {
+    "date": "2026-01-04",
+    "row": 0,
+    "col": 11,
+    "level": 0
+   },
+   {
+    "date": "2026-01-11",
+    "row": 0,
+    "col": 12,
+    "level": 0
+   },
+   {
+    "date": "2026-01-18",
+    "row": 0,
+    "col": 13,
+    "level": 0
+   },
+   {
+    "date": "2026-01-25",
+    "row": 0,
+    "col": 14,
+    "level": 0
+   },
+   {
+    "date": "2026-02-01",
+    "row": 0,
+    "col": 15,
+    "level": 0
+   },
+   {
+    "date": "2026-02-08",
+    "row": 0,
+    "col": 16,
+    "level": 0
+   },
+   {
+    "date": "2026-02-15",
+    "row": 0,
+    "col": 17,
+    "level": 0
+   },
+   {
+    "date": "2026-02-22",
+    "row": 0,
+    "col": 18,
+    "level": 0
+   },
+   {
+    "date": "2026-03-01",
+    "row": 0,
+    "col": 19,
+    "level": 0
+   },
+   {
+    "date": "2026-03-08",
+    "row": 0,
+    "col": 20,
+    "level": 0
+   },
+   {
+    "date": "2026-03-15",
+    "row": 0,
+    "col": 21,
+    "level": 0
+   },
+   {
+    "date": "2026-03-22",
+    "row": 0,
+    "col": 22,
+    "level": 0
+   },
+   {
+    "date": "2026-03-29",
+    "row": 0,
+    "col": 23,
+    "level": 0
+   },
+   {
+    "date": "2026-04-05",
+    "row": 0,
+    "col": 24,
+    "level": 0
+   },
+   {
+    "date": "2026-04-12",
+    "row": 0,
+    "col": 25,
+    "level": 0
+   },
+   {
+    "date": "2026-04-19",
+    "row": 0,
+    "col": 26,
+    "level": 0
+   },
+   {
+    "date": "2026-04-26",
+    "row": 0,
+    "col": 27,
+    "level": 0
+   },
+   {
+    "date": "2026-05-03",
+    "row": 0,
+    "col": 28,
+    "level": 0
+   },
+   {
+    "date": "2026-05-10",
+    "row": 0,
+    "col": 29,
+    "level": 0
+   },
+   {
+    "date": "2026-05-17",
+    "row": 0,
+    "col": 30,
+    "level": 0
+   },
+   {
+    "date": "2026-05-24",
+    "row": 0,
+    "col": 31,
+    "level": 0
+   },
+   {
+    "date": "2026-05-31",
+    "row": 0,
+    "col": 32,
+    "level": 0
+   },
+   {
+    "date": "2026-06-07",
+    "row": 0,
+    "col": 33,
+    "level": 0
+   },
+   {
+    "date": "2026-06-14",
+    "row": 0,
+    "col": 34,
+    "level": 0
+   },
+   {
+    "date": "2026-06-21",
+    "row": 0,
+    "col": 35,
+    "level": 0
+   },
+   {
+    "date": "2026-06-28",
+    "row": 0,
+    "col": 36,
+    "level": 1
+   },
+   {
+    "date": "2026-07-05",
+    "row": 0,
+    "col": 37,
+    "level": 1
+   },
+   {
+    "date": "2026-07-12",
+    "row": 0,
+    "col": 38,
+    "level": 0
+   },
+   {
+    "date": "2026-07-19",
+    "row": 0,
+    "col": 39,
+    "level": 0
+   },
+   {
+    "date": "2026-07-26",
+    "row": 0,
+    "col": 40,
+    "level": 0
+   },
+   {
+    "date": "2026-08-02",
+    "row": 0,
+    "col": 41,
+    "level": 0
+   },
+   {
+    "date": "2026-08-09",
+    "row": 0,
+    "col": 42,
+    "level": 0
+   },
+   {
+    "date": "2026-08-16",
+    "row": 0,
+    "col": 43,
+    "level": 0
+   },
+   {
+    "date": "2026-08-23",
+    "row": 0,
+    "col": 44,
+    "level": 0
+   },
+   {
+    "date": "2026-08-30",
+    "row": 0,
+    "col": 45,
+    "level": 0
+   },
+   {
+    "date": "2026-09-06",
+    "row": 0,
+    "col": 46,
+    "level": 0
+   },
+   {
+    "date": "2026-09-13",
+    "row": 0,
+    "col": 47,
+    "level": 0
+   },
+   {
+    "date": "2026-09-20",
+    "row": 0,
+    "col": 48,
+    "level": 0
+   },
+   {
+    "date": "2026-09-27",
+    "row": 0,
+    "col": 49,
+    "level": 0
+   },
+   {
+    "date": "2026-10-04",
+    "row": 0,
+    "col": 50,
+    "level": 0
+   },
+   {
+    "date": "2026-10-11",
+    "row": 0,
+    "col": 51,
+    "level": 0
+   },
+   {
+    "date": "2026-10-18",
+    "row": 0,
+    "col": 52,
+    "level": 0
+   },
+   {
+    "date": "2025-10-20",
+    "row": 1,
+    "col": 0,
+    "level": 0
+   },
+   {
+    "date": "2025-10-27",
+    "row": 1,
+    "col": 1,
+    "level": 0
+   },
+   {
+    "date": "2025-11-03",
+    "row": 1,
+    "col": 2,
+    "level": 0
+   },
+   {
+    "date": "2025-11-10",
+    "row": 1,
+    "col": 3,
+    "level": 0
+   },
+   {
+    "date": "2025-11-17",
+    "row": 1,
+    "col": 4,
+    "level": 0
+   },
+   {
+    "date": "2025-11-24",
+    "row": 1,
+    "col": 5,
+    "level": 0
+   },
+   {
+    "date": "2025-12-01",
+    "row": 1,
+    "col": 6,
+    "level": 0
+   },
+   {
+    "date": "2025-12-08",
+    "row": 1,
+    "col": 7,
+    "level": 0
+   },
+   {
+    "date": "2025-12-15",
+    "row": 1,
+    "col": 8,
+    "level": 0
+   },
+   {
+    "date": "2025-12-22",
+    "row": 1,
+    "col": 9,
+    "level": 0
+   },
+   {
+    "date": "2025-12-29",
+    "row": 1,
+    "col": 10,
+    "level": 0
+   },
+   {
+    "date": "2026-01-05",
+    "row": 1,
+    "col": 11,
+    "level": 0
+   },
+   {
+    "date": "2026-01-12",
+    "row": 1,
+    "col": 12,
+    "level": 0
+   },
+   {
+    "date": "2026-01-19",
+    "row": 1,
+    "col": 13,
+    "level": 0
+   },
+   {
+    "date": "2026-01-26",
+    "row": 1,
+    "col": 14,
+    "level": 0
+   },
+   {
+    "date": "2026-02-02",
+    "row": 1,
+    "col": 15,
+    "level": 0
+   },
+   {
+    "date": "2026-02-09",
+    "row": 1,
+    "col": 16,
+    "level": 0
+   },
+   {
+    "date": "2026-02-16",
+    "row": 1,
+    "col": 17,
+    "level": 0
+   },
+   {
+    "date": "2026-02-23",
+    "row": 1,
+    "col": 18,
+    "level": 0
+   },
+   {
+    "date": "2026-03-02",
+    "row": 1,
+    "col": 19,
+    "level": 0
+   },
+   {
+    "date": "2026-03-09",
+    "row": 1,
+    "col": 20,
+    "level": 0
+   },
+   {
+    "date": "2026-03-16",
+    "row": 1,
+    "col": 21,
+    "level": 0
+   },
+   {
+    "date": "2026-03-23",
+    "row": 1,
+    "col": 22,
+    "level": 0
+   },
+   {
+    "date": "2026-03-30",
+    "row": 1,
+    "col": 23,
+    "level": 0
+   },
+   {
+    "date": "2026-04-06",
+    "row": 1,
+    "col": 24,
+    "level": 0
+   },
+   {
+    "date": "2026-04-13",
+    "row": 1,
+    "col": 25,
+    "level": 0
+   },
+   {
+    "date": "2026-04-20",
+    "row": 1,
+    "col": 26,
+    "level": 0
+   },
+   {
+    "date": "2026-04-27",
+    "row": 1,
+    "col": 27,
+    "level": 0
+   },
+   {
+    "date": "2026-05-04",
+    "row": 1,
+    "col": 28,
+    "level": 0
+   },
+   {
+    "date": "2026-05-11",
+    "row": 1,
+    "col": 29,
+    "level": 0
+   },
+   {
+    "date": "2026-05-18",
+    "row": 1,
+    "col": 30,
+    "level": 0
+   },
+   {
+    "date": "2026-05-25",
+    "row": 1,
+    "col": 31,
+    "level": 1
+   },
+   {
+    "date": "2026-06-01",
+    "row": 1,
+    "col": 32,
+    "level": 0
+   },
+   {
+    "date": "2026-06-08",
+    "row": 1,
+    "col": 33,
+    "level": 0
+   },
+   {
+    "date": "2026-06-15",
+    "row": 1,
+    "col": 34,
+    "level": 0
+   },
+   {
+    "date": "2026-06-22",
+    "row": 1,
+    "col": 35,
+    "level": 0
+   },
+   {
+    "date": "2026-06-29",
+    "row": 1,
+    "col": 36,
+    "level": 0
+   },
+   {
+    "date": "2026-07-06",
+    "row": 1,
+    "col": 37,
+    "level": 2
+   },
+   {
+    "date": "2026-07-13",
+    "row": 1,
+    "col": 38,
+    "level": 0
+   },
+   {
+    "date": "2026-07-20",
+    "row": 1,
+    "col": 39,
+    "level": 0
+   },
+   {
+    "date": "2026-07-27",
+    "row": 1,
+    "col": 40,
+    "level": 0
+   },
+   {
+    "date": "2026-08-03",
+    "row": 1,
+    "col": 41,
+    "level": 0
+   },
+   {
+    "date": "2026-08-10",
+    "row": 1,
+    "col": 42,
+    "level": 0
+   },
+   {
+    "date": "2026-08-17",
+    "row": 1,
+    "col": 43,
+    "level": 0
+   },
+   {
+    "date": "2026-08-24",
+    "row": 1,
+    "col": 44,
+    "level": 0
+   },
+   {
+    "date": "2026-08-31",
+    "row": 1,
+    "col": 45,
+    "level": 0
+   },
+   {
+    "date": "2026-09-07",
+    "row": 1,
+    "col": 46,
+    "level": 0
+   },
+   {
+    "date": "2026-09-14",
+    "row": 1,
+    "col": 47,
+    "level": 0
+   },
+   {
+    "date": "2026-09-21",
+    "row": 1,
+    "col": 48,
+    "level": 0
+   },
+   {
+    "date": "2026-09-28",
+    "row": 1,
+    "col": 49,
+    "level": 0
+   },
+   {
+    "date": "2026-10-05",
+    "row": 1,
+    "col": 50,
+    "level": 2
+   },
+   {
+    "date": "2026-10-12",
+    "row": 1,
+    "col": 51,
+    "level": 0
+   },
+   {
+    "date": "2026-10-19",
+    "row": 1,
+    "col": 52,
+    "level": 1
+   },
+   {
+    "date": "2025-10-21",
+    "row": 2,
+    "col": 0,
+    "level": 0
+   },
+   {
+    "date": "2025-10-28",
+    "row": 2,
+    "col": 1,
+    "level": 0
+   },
+   {
+    "date": "2025-11-04",
+    "row": 2,
+    "col": 2,
+    "level": 0
+   },
+   {
+    "date": "2025-11-11",
+    "row": 2,
+    "col": 3,
+    "level": 0
+   },
+   {
+    "date": "2025-11-18",
+    "row": 2,
+    "col": 4,
+    "level": 0
+   },
+   {
+    "date": "2025-11-25",
+    "row": 2,
+    "col": 5,
+    "level": 0
+   },
+   {
+    "date": "2025-12-02",
+    "row": 2,
+    "col": 6,
+    "level": 0
+   },
+   {
+    "date": "2025-12-09",
+    "row": 2,
+    "col": 7,
+    "level": 0
+   },
+   {
+    "date": "2025-12-16",
+    "row": 2,
+    "col": 8,
+    "level": 0
+   },
+   {
+    "date": "2025-12-23",
+    "row": 2,
+    "col": 9,
+    "level": 0
+   },
+   {
+    "date": "2025-12-30",
+    "row": 2,
+    "col": 10,
+    "level": 0
+   },
+   {
+    "date": "2026-01-06",
+    "row": 2,
+    "col": 11,
+    "level": 0
+   },
+   {
+    "date": "2026-01-13",
+    "row": 2,
+    "col": 12,
+    "level": 0
+   },
+   {
+    "date": "2026-01-20",
+    "row": 2,
+    "col": 13,
+    "level": 0
+   },
+   {
+    "date": "2026-01-27",
+    "row": 2,
+    "col": 14,
+    "level": 0
+   },
+   {
+    "date": "2026-02-03",
+    "row": 2,
+    "col": 15,
+    "level": 0
+   },
+   {
+    "date": "2026-02-10",
+    "row": 2,
+    "col": 16,
+    "level": 0
+   },
+   {
+    "date": "2026-02-17",
+    "row": 2,
+    "col": 17,
+    "level": 0
+   },
+   {
+    "date": "2026-02-24",
+    "row": 2,
+    "col": 18,
+    "level": 0
+   },
+   {
+    "date": "2026-03-03",
+    "row": 2,
+    "col": 19,
+    "level": 0
+   },
+   {
+    "date": "2026-03-10",
+    "row": 2,
+    "col": 20,
+    "level": 0
+   },
+   {
+    "date": "2026-03-17",
+    "row": 2,
+    "col": 21,
+    "level": 0
+   },
+   {
+    "date": "2026-03-24",
+    "row": 2,
+    "col": 22,
+    "level": 0
+   },
+   {
+    "date": "2026-03-31",
+    "row": 2,
+    "col": 23,
+    "level": 0
+   },
+   {
+    "date": "2026-04-07",
+    "row": 2,
+    "col": 24,
+    "level": 0
+   },
+   {
+    "date": "2026-04-14",
+    "row": 2,
+    "col": 25,
+    "level": 0
+   },
+   {
+    "date": "2026-04-21",
+    "row": 2,
+    "col": 26,
+    "level": 0
+   },
+   {
+    "date": "2026-04-28",
+    "row": 2,
+    "col": 27,
+    "level": 0
+   },
+   {
+    "date": "2026-05-05",
+    "row": 2,
+    "col": 28,
+    "level": 0
+   },
+   {
+    "date": "2026-05-12",
+    "row": 2,
+    "col": 29,
+    "level": 0
+   },
+   {
+    "date": "2026-05-19",
+    "row": 2,
+    "col": 30,
+    "level": 0
+   },
+   {
+    "date": "2026-05-26",
+    "row": 2,
+    "col": 31,
+    "level": 0
+   },
+   {
+    "date": "2026-06-02",
+    "row": 2,
+    "col": 32,
+    "level": 0
+   },
+   {
+    "date": "2026-06-09",
+    "row": 2,
+    "col": 33,
+    "level": 0
+   },
+   {
+    "date": "2026-06-16",
+    "row": 2,
+    "col": 34,
+    "level": 0
+   },
+   {
+    "date": "2026-06-23",
+    "row": 2,
+    "col": 35,
+    "level": 0
+   },
+   {
+    "date": "2026-06-30",
+    "row": 2,
+    "col": 36,
+    "level": 0
+   },
+   {
+    "date": "2026-07-07",
+    "row": 2,
+    "col": 37,
+    "level": 0
+   },
+   {
+    "date": "2026-07-14",
+    "row": 2,
+    "col": 38,
+    "level": 0
+   },
+   {
+    "date": "2026-07-21",
+    "row": 2,
+    "col": 39,
+    "level": 0
+   },
+   {
+    "date": "2026-07-28",
+    "row": 2,
+    "col": 40,
+    "level": 0
+   },
+   {
+    "date": "2026-08-04",
+    "row": 2,
+    "col": 41,
+    "level": 0
+   },
+   {
+    "date": "2026-08-11",
+    "row": 2,
+    "col": 42,
+    "level": 0
+   },
+   {
+    "date": "2026-08-18",
+    "row": 2,
+    "col": 43,
+    "level": 0
+   },
+   {
+    "date": "2026-08-25",
+    "row": 2,
+    "col": 44,
+    "level": 0
+   },
+   {
+    "date": "2026-09-01",
+    "row": 2,
+    "col": 45,
+    "level": 0
+   },
+   {
+    "date": "2026-09-08",
+    "row": 2,
+    "col": 46,
+    "level": 0
+   },
+   {
+    "date": "2026-09-15",
+    "row": 2,
+    "col": 47,
+    "level": 0
+   },
+   {
+    "date": "2026-09-22",
+    "row": 2,
+    "col": 48,
+    "level": 0
+   },
+   {
+    "date": "2026-09-29",
+    "row": 2,
+    "col": 49,
+    "level": 0
+   },
+   {
+    "date": "2026-10-06",
+    "row": 2,
+    "col": 50,
+    "level": 0
+   },
+   {
+    "date": "2026-10-13",
+    "row": 2,
+    "col": 51,
+    "level": 3
+   },
+   {
+    "date": "2026-10-20",
+    "row": 2,
+    "col": 52,
+    "level": 0
+   },
+   {
+    "date": "2025-10-22",
+    "row": 3,
+    "col": 0,
+    "level": 0
+   },
+   {
+    "date": "2025-10-29",
+    "row": 3,
+    "col": 1,
+    "level": 0
+   },
+   {
+    "date": "2025-11-05",
+    "row": 3,
+    "col": 2,
+    "level": 0
+   },
+   {
+    "date": "2025-11-12",
+    "row": 3,
+    "col": 3,
+    "level": 0
+   },
+   {
+    "date": "2025-11-19",
+    "row": 3,
+    "col": 4,
+    "level": 0
+   },
+   {
+    "date": "2025-11-26",
+    "row": 3,
+    "col": 5,
+    "level": 0
+   },
+   {
+    "date": "2025-12-03",
+    "row": 3,
+    "col": 6,
+    "level": 0
+   },
+   {
+    "date": "2025-12-10",
+    "row": 3,
+    "col": 7,
+    "level": 0
+   },
+   {
+    "date": "2025-12-17",
+    "row": 3,
+    "col": 8,
+    "level": 0
+   },
+   {
+    "date": "2025-12-24",
+    "row": 3,
+    "col": 9,
+    "level": 0
+   },
+   {
+    "date": "2025-12-31",
+    "row": 3,
+    "col": 10,
+    "level": 0
+   },
+   {
+    "date": "2026-01-07",
+    "row": 3,
+    "col": 11,
+    "level": 0
+   },
+   {
+    "date": "2026-01-14",
+    "row": 3,
+    "col": 12,
+    "level": 0
+   },
+   {
+    "date": "2026-01-21",
+    "row": 3,
+    "col": 13,
+    "level": 0
+   },
+   {
+    "date": "2026-01-28",
+    "row": 3,
+    "col": 14,
+    "level": 0
+   },
+   {
+    "date": "2026-02-04",
+    "row": 3,
+    "col": 15,
+    "level": 2
+   },
+   {
+    "date": "2026-02-11",
+    "row": 3,
+    "col": 16,
+    "level": 0
+   },
+   {
+    "date": "2026-02-18",
+    "row": 3,
+    "col": 17,
+    "level": 0
+   },
+   {
+    "date": "2026-02-25",
+    "row": 3,
+    "col": 18,
+    "level": 0
+   },
+   {
+    "date": "2026-03-04",
+    "row": 3,
+    "col": 19,
+    "level": 0
+   },
+   {
+    "date": "2026-03-11",
+    "row": 3,
+    "col": 20,
+    "level": 0
+   },
+   {
+    "date": "2026-03-18",
+    "row": 3,
+    "col": 21,
+    "level": 0
+   },
+   {
+    "date": "2026-03-25",
+    "row": 3,
+    "col": 22,
+    "level": 0
+   },
+   {
+    "date": "2026-04-01",
+    "row": 3,
+    "col": 23,
+    "level": 0
+   },
+   {
+    "date": "2026-04-08",
+    "row": 3,
+    "col": 24,
+    "level": 0
+   },
+   {
+    "date": "2026-04-15",
+    "row": 3,
+    "col": 25,
+    "level": 0
+   },
+   {
+    "date": "2026-04-22",
+    "row": 3,
+    "col": 26,
+    "level": 0
+   },
+   {
+    "date": "2026-04-29",
+    "row": 3,
+    "col": 27,
+    "level": 0
+   },
+   {
+    "date": "2026-05-06",
+    "row": 3,
+    "col": 28,
+    "level": 0
+   },
+   {
+    "date": "2026-05-13",
+    "row": 3,
+    "col": 29,
+    "level": 0
+   },
+   {
+    "date": "2026-05-20",
+    "row": 3,
+    "col": 30,
+    "level": 0
+   },
+   {
+    "date": "2026-05-27",
+    "row": 3,
+    "col": 31,
+    "level": 0
+   },
+   {
+    "date": "2026-06-03",
+    "row": 3,
+    "col": 32,
+    "level": 0
+   },
+   {
+    "date": "2026-06-10",
+    "row": 3,
+    "col": 33,
+    "level": 0
+   },
+   {
+    "date": "2026-06-17",
+    "row": 3,
+    "col": 34,
+    "level": 0
+   },
+   {
+    "date": "2026-06-24",
+    "row": 3,
+    "col": 35,
+    "level": 0
+   },
+   {
+    "date": "2026-07-01",
+    "row": 3,
+    "col": 36,
+    "level": 2
+   },
+   {
+    "date": "2026-07-08",
+    "row": 3,
+    "col": 37,
+    "level": 0
+   },
+   {
+    "date": "2026-07-15",
+    "row": 3,
+    "col": 38,
+    "level": 0
+   },
+   {
+    "date": "2026-07-22",
+    "row": 3,
+    "col": 39,
+    "level": 0
+   },
+   {
+    "date": "2026-07-29",
+    "row": 3,
+    "col": 40,
+    "level": 0
+   },
+   {
+    "date": "2026-08-05",
+    "row": 3,
+    "col": 41,
+    "level": 0
+   },
+   {
+    "date": "2026-08-12",
+    "row": 3,
+    "col": 42,
+    "level": 0
+   },
+   {
+    "date": "2026-08-19",
+    "row": 3,
+    "col": 43,
+    "level": 0
+   },
+   {
+    "date": "2026-08-26",
+    "row": 3,
+    "col": 44,
+    "level": 0
+   },
+   {
+    "date": "2026-09-02",
+    "row": 3,
+    "col": 45,
+    "level": 0
+   },
+   {
+    "date": "2026-09-09",
+    "row": 3,
+    "col": 46,
+    "level": 0
+   },
+   {
+    "date": "2026-09-16",
+    "row": 3,
+    "col": 47,
+    "level": 0
+   },
+   {
+    "date": "2026-09-23",
+    "row": 3,
+    "col": 48,
+    "level": 1
+   },
+   {
+    "date": "2026-09-30",
+    "row": 3,
+    "col": 49,
+    "level": 0
+   },
+   {
+    "date": "2026-10-07",
+    "row": 3,
+    "col": 50,
+    "level": 0
+   },
+   {
+    "date": "2026-10-14",
+    "row": 3,
+    "col": 51,
+    "level": 2
+   },
+   {
+    "date": "2026-10-21",
+    "row": 3,
+    "col": 52,
+    "level": 4
+   },
+   {
+    "date": "2025-10-23",
+    "row": 4,
+    "col": 0,
+    "level": 0
+   },
+   {
+    "date": "2025-10-30",
+    "row": 4,
+    "col": 1,
+    "level": 0
+   },
+   {
+    "date": "2025-11-06",
+    "row": 4,
+    "col": 2,
+    "level": 0
+   },
+   {
+    "date": "2025-11-13",
+    "row": 4,
+    "col": 3,
+    "level": 0
+   },
+   {
+    "date": "2025-11-20",
+    "row": 4,
+    "col": 4,
+    "level": 0
+   },
+   {
+    "date": "2025-11-27",
+    "row": 4,
+    "col": 5,
+    "level": 0
+   },
+   {
+    "date": "2025-12-04",
+    "row": 4,
+    "col": 6,
+    "level": 0
+   },
+   {
+    "date": "2025-12-11",
+    "row": 4,
+    "col": 7,
+    "level": 0
+   },
+   {
+    "date": "2025-12-18",
+    "row": 4,
+    "col": 8,
+    "level": 0
+   },
+   {
+    "date": "2025-12-25",
+    "row": 4,
+    "col": 9,
+    "level": 0
+   },
+   {
+    "date": "2026-01-01",
+    "row": 4,
+    "col": 10,
+    "level": 0
+   },
+   {
+    "date": "2026-01-08",
+    "row": 4,
+    "col": 11,
+    "level": 0
+   },
+   {
+    "date": "2026-01-15",
+    "row": 4,
+    "col": 12,
+    "level": 0
+   },
+   {
+    "date": "2026-01-22",
+    "row": 4,
+    "col": 13,
+    "level": 0
+   },
+   {
+    "date": "2026-01-29",
+    "row": 4,
+    "col": 14,
+    "level": 0
+   },
+   {
+    "date": "2026-02-05",
+    "row": 4,
+    "col": 15,
+    "level": 0
+   },
+   {
+    "date": "2026-02-12",
+    "row": 4,
+    "col": 16,
+    "level": 0
+   },
+   {
+    "date": "2026-02-19",
+    "row": 4,
+    "col": 17,
+    "level": 0
+   },
+   {
+    "date": "2026-02-26",
+    "row": 4,
+    "col": 18,
+    "level": 0
+   },
+   {
+    "date": "2026-03-05",
+    "row": 4,
+    "col": 19,
+    "level": 0
+   },
+   {
+    "date": "2026-03-12",
+    "row": 4,
+    "col": 20,
+    "level": 0
+   },
+   {
+    "date": "2026-03-19",
+    "row": 4,
+    "col": 21,
+    "level": 0
+   },
+   {
+    "date": "2026-03-26",
+    "row": 4,
+    "col": 22,
+    "level": 0
+   },
+   {
+    "date": "2026-04-02",
+    "row": 4,
+    "col": 23,
+    "level": 0
+   },
+   {
+    "date": "2026-04-09",
+    "row": 4,
+    "col": 24,
+    "level": 0
+   },
+   {
+    "date": "2026-04-16",
+    "row": 4,
+    "col": 25,
+    "level": 0
+   },
+   {
+    "date": "2026-04-23",
+    "row": 4,
+    "col": 26,
+    "level": 0
+   },
+   {
+    "date": "2026-04-30",
+    "row": 4,
+    "col": 27,
+    "level": 0
+   },
+   {
+    "date": "2026-05-07",
+    "row": 4,
+    "col": 28,
+    "level": 0
+   },
+   {
+    "date": "2026-05-14",
+    "row": 4,
+    "col": 29,
+    "level": 0
+   },
+   {
+    "date": "2026-05-21",
+    "row": 4,
+    "col": 30,
+    "level": 0
+   },
+   {
+    "date": "2026-05-28",
+    "row": 4,
+    "col": 31,
+    "level": 0
+   },
+   {
+    "date": "2026-06-04",
+    "row": 4,
+    "col": 32,
+    "level": 0
+   },
+   {
+    "date": "2026-06-11",
+    "row": 4,
+    "col": 33,
+    "level": 0
+   },
+   {
+    "date": "2026-06-18",
+    "row": 4,
+    "col": 34,
+    "level": 0
+   },
+   {
+    "date": "2026-06-25",
+    "row": 4,
+    "col": 35,
+    "level": 0
+   },
+   {
+    "date": "2026-07-02",
+    "row": 4,
+    "col": 36,
+    "level": 4
+   },
+   {
+    "date": "2026-07-09",
+    "row": 4,
+    "col": 37,
+    "level": 0
+   },
+   {
+    "date": "2026-07-16",
+    "row": 4,
+    "col": 38,
+    "level": 0
+   },
+   {
+    "date": "2026-07-23",
+    "row": 4,
+    "col": 39,
+    "level": 0
+   },
+   {
+    "date": "2026-07-30",
+    "row": 4,
+    "col": 40,
+    "level": 0
+   },
+   {
+    "date": "2026-08-06",
+    "row": 4,
+    "col": 41,
+    "level": 0
+   },
+   {
+    "date": "2026-08-13",
+    "row": 4,
+    "col": 42,
+    "level": 0
+   },
+   {
+    "date": "2026-08-20",
+    "row": 4,
+    "col": 43,
+    "level": 0
+   },
+   {
+    "date": "2026-08-27",
+    "row": 4,
+    "col": 44,
+    "level": 0
+   },
+   {
+    "date": "2026-09-03",
+    "row": 4,
+    "col": 45,
+    "level": 0
+   },
+   {
+    "date": "2026-09-10",
+    "row": 4,
+    "col": 46,
+    "level": 0
+   },
+   {
+    "date": "2026-09-17",
+    "row": 4,
+    "col": 47,
+    "level": 0
+   },
+   {
+    "date": "2026-09-24",
+    "row": 4,
+    "col": 48,
+    "level": 0
+   },
+   {
+    "date": "2026-10-01",
+    "row": 4,
+    "col": 49,
+    "level": 0
+   },
+   {
+    "date": "2026-10-08",
+    "row": 4,
+    "col": 50,
+    "level": 0
+   },
+   {
+    "date": "2026-10-15",
+    "row": 4,
+    "col": 51,
+    "level": 3
+   },
+   {
+    "date": "2025-10-24",
+    "row": 5,
+    "col": 0,
+    "level": 0
+   },
+   {
+    "date": "2025-10-31",
+    "row": 5,
+    "col": 1,
+    "level": 0
+   },
+   {
+    "date": "2025-11-07",
+    "row": 5,
+    "col": 2,
+    "level": 0
+   },
+   {
+    "date": "2025-11-14",
+    "row": 5,
+    "col": 3,
+    "level": 0
+   },
+   {
+    "date": "2025-11-21",
+    "row": 5,
+    "col": 4,
+    "level": 0
+   },
+   {
+    "date": "2025-11-28",
+    "row": 5,
+    "col": 5,
+    "level": 0
+   },
+   {
+    "date": "2025-12-05",
+    "row": 5,
+    "col": 6,
+    "level": 0
+   },
+   {
+    "date": "2025-12-12",
+    "row": 5,
+    "col": 7,
+    "level": 0
+   },
+   {
+    "date": "2025-12-19",
+    "row": 5,
+    "col": 8,
+    "level": 0
+   },
+   {
+    "date": "2025-12-26",
+    "row": 5,
+    "col": 9,
+    "level": 0
+   },
+   {
+    "date": "2026-01-02",
+    "row": 5,
+    "col": 10,
+    "level": 0
+   },
+   {
+    "date": "2026-01-09",
+    "row": 5,
+    "col": 11,
+    "level": 0
+   },
+   {
+    "date": "2026-01-16",
+    "row": 5,
+    "col": 12,
+    "level": 0
+   },
+   {
+    "date": "2026-01-23",
+    "row": 5,
+    "col": 13,
+    "level": 0
+   },
+   {
+    "date": "2026-01-30",
+    "row": 5,
+    "col": 14,
+    "level": 0
+   },
+   {
+    "date": "2026-02-06",
+    "row": 5,
+    "col": 15,
+    "level": 0
+   },
+   {
+    "date": "2026-02-13",
+    "row": 5,
+    "col": 16,
+    "level": 0
+   },
+   {
+    "date": "2026-02-20",
+    "row": 5,
+    "col": 17,
+    "level": 0
+   },
+   {
+    "date": "2026-02-27",
+    "row": 5,
+    "col": 18,
+    "level": 0
+   },
+   {
+    "date": "2026-03-06",
+    "row": 5,
+    "col": 19,
+    "level": 0
+   },
+   {
+    "date": "2026-03-13",
+    "row": 5,
+    "col": 20,
+    "level": 0
+   },
+   {
+    "date": "2026-03-20",
+    "row": 5,
+    "col": 21,
+    "level": 0
+   },
+   {
+    "date": "2026-03-27",
+    "row": 5,
+    "col": 22,
+    "level": 0
+   },
+   {
+    "date": "2026-04-03",
+    "row": 5,
+    "col": 23,
+    "level": 0
+   },
+   {
+    "date": "2026-04-10",
+    "row": 5,
+    "col": 24,
+    "level": 0
+   },
+   {
+    "date": "2026-04-17",
+    "row": 5,
+    "col": 25,
+    "level": 0
+   },
+   {
+    "date": "2026-04-24",
+    "row": 5,
+    "col": 26,
+    "level": 0
+   },
+   {
+    "date": "2026-05-01",
+    "row": 5,
+    "col": 27,
+    "level": 0
+   },
+   {
+    "date": "2026-05-08",
+    "row": 5,
+    "col": 28,
+    "level": 0
+   },
+   {
+    "date": "2026-05-15",
+    "row": 5,
+    "col": 29,
+    "level": 0
+   },
+   {
+    "date": "2026-05-22",
+    "row": 5,
+    "col": 30,
+    "level": 0
+   },
+   {
+    "date": "2026-05-29",
+    "row": 5,
+    "col": 31,
+    "level": 0
+   },
+   {
+    "date": "2026-06-05",
+    "row": 5,
+    "col": 32,
+    "level": 0
+   },
+   {
+    "date": "2026-06-12",
+    "row": 5,
+    "col": 33,
+    "level": 0
+   },
+   {
+    "date": "2026-06-19",
+    "row": 5,
+    "col": 34,
+    "level": 0
+   },
+   {
+    "date": "2026-06-26",
+    "row": 5,
+    "col": 35,
+    "level": 2
+   },
+   {
+    "date": "2026-07-03",
+    "row": 5,
+    "col": 36,
+    "level": 0
+   },
+   {
+    "date": "2026-07-10",
+    "row": 5,
+    "col": 37,
+    "level": 0
+   },
+   {
+    "date": "2026-07-17",
+    "row": 5,
+    "col": 38,
+    "level": 0
+   },
+   {
+    "date": "2026-07-24",
+    "row": 5,
+    "col": 39,
+    "level": 0
+   },
+   {
+    "date": "2026-07-31",
+    "row": 5,
+    "col": 40,
+    "level": 0
+   },
+   {
+    "date": "2026-08-07",
+    "row": 5,
+    "col": 41,
+    "level": 0
+   },
+   {
+    "date": "2026-08-14",
+    "row": 5,
+    "col": 42,
+    "level": 0
+   },
+   {
+    "date": "2026-08-21",
+    "row": 5,
+    "col": 43,
+    "level": 0
+   },
+   {
+    "date": "2026-08-28",
+    "row": 5,
+    "col": 44,
+    "level": 0
+   },
+   {
+    "date": "2026-09-04",
+    "row": 5,
+    "col": 45,
+    "level": 0
+   },
+   {
+    "date": "2026-09-11",
+    "row": 5,
+    "col": 46,
+    "level": 0
+   },
+   {
+    "date": "2026-09-18",
+    "row": 5,
+    "col": 47,
+    "level": 0
+   },
+   {
+    "date": "2026-09-25",
+    "row": 5,
+    "col": 48,
+    "level": 0
+   },
+   {
+    "date": "2026-10-02",
+    "row": 5,
+    "col": 49,
+    "level": 0
+   },
+   {
+    "date": "2026-10-09",
+    "row": 5,
+    "col": 50,
+    "level": 0
+   },
+   {
+    "date": "2026-10-16",
+    "row": 5,
+    "col": 51,
+    "level": 4
+   },
+   {
+    "date": "2025-10-25",
+    "row": 6,
+    "col": 0,
+    "level": 0
+   },
+   {
+    "date": "2025-11-01",
+    "row": 6,
+    "col": 1,
+    "level": 0
+   },
+   {
+    "date": "2025-11-08",
+    "row": 6,
+    "col": 2,
+    "level": 0
+   },
+   {
+    "date": "2025-11-15",
+    "row": 6,
+    "col": 3,
+    "level": 0
+   },
+   {
+    "date": "2025-11-22",
+    "row": 6,
+    "col": 4,
+    "level": 0
+   },
+   {
+    "date": "2025-11-29",
+    "row": 6,
+    "col": 5,
+    "level": 0
+   },
+   {
+    "date": "2025-12-06",
+    "row": 6,
+    "col": 6,
+    "level": 0
+   },
+   {
+    "date": "2025-12-13",
+    "row": 6,
+    "col": 7,
+    "level": 0
+   },
+   {
+    "date": "2025-12-20",
+    "row": 6,
+    "col": 8,
+    "level": 0
+   },
+   {
+    "date": "2025-12-27",
+    "row": 6,
+    "col": 9,
+    "level": 0
+   },
+   {
+    "date": "2026-01-03",
+    "row": 6,
+    "col": 10,
+    "level": 0
+   },
+   {
+    "date": "2026-01-10",
+    "row": 6,
+    "col": 11,
+    "level": 0
+   },
+   {
+    "date": "2026-01-17",
+    "row": 6,
+    "col": 12,
+    "level": 0
+   },
+   {
+    "date": "2026-01-24",
+    "row": 6,
+    "col": 13,
+    "level": 0
+   },
+   {
+    "date": "2026-01-31",
+    "row": 6,
+    "col": 14,
+    "level": 0
+   },
+   {
+    "date": "2026-02-07",
+    "row": 6,
+    "col": 15,
+    "level": 0
+   },
+   {
+    "date": "2026-02-14",
+    "row": 6,
+    "col": 16,
+    "level": 0
+   },
+   {
+    "date": "2026-02-21",
+    "row": 6,
+    "col": 17,
+    "level": 0
+   },
+   {
+    "date": "2026-02-28",
+    "row": 6,
+    "col": 18,
+    "level": 0
+   },
+   {
+    "date": "2026-03-07",
+    "row": 6,
+    "col": 19,
+    "level": 0
+   },
+   {
+    "date": "2026-03-14",
+    "row": 6,
+    "col": 20,
+    "level": 0
+   },
+   {
+    "date": "2026-03-21",
+    "row": 6,
+    "col": 21,
+    "level": 0
+   },
+   {
+    "date": "2026-03-28",
+    "row": 6,
+    "col": 22,
+    "level": 0
+   },
+   {
+    "date": "2026-04-04",
+    "row": 6,
+    "col": 23,
+    "level": 0
+   },
+   {
+    "date": "2026-04-11",
+    "row": 6,
+    "col": 24,
+    "level": 0
+   },
+   {
+    "date": "2026-04-18",
+    "row": 6,
+    "col": 25,
+    "level": 0
+   },
+   {
+    "date": "2026-04-25",
+    "row": 6,
+    "col": 26,
+    "level": 0
+   },
+   {
+    "date": "2026-05-02",
+    "row": 6,
+    "col": 27,
+    "level": 0
+   },
+   {
+    "date": "2026-05-09",
+    "row": 6,
+    "col": 28,
+    "level": 0
+   },
+   {
+    "date": "2026-05-16",
+    "row": 6,
+    "col": 29,
+    "level": 0
+   },
+   {
+    "date": "2026-05-23",
+    "row": 6,
+    "col": 30,
+    "level": 0
+   },
+   {
+    "date": "2026-05-30",
+    "row": 6,
+    "col": 31,
+    "level": 0
+   },
+   {
+    "date": "2026-06-06",
+    "row": 6,
+    "col": 32,
+    "level": 0
+   },
+   {
+    "date": "2026-06-13",
+    "row": 6,
+    "col": 33,
+    "level": 0
+   },
+   {
+    "date": "2026-06-20",
+    "row": 6,
+    "col": 34,
+    "level": 0
+   },
+   {
+    "date": "2026-06-27",
+    "row": 6,
+    "col": 35,
+    "level": 1
+   },
+   {
+    "date": "2026-07-04",
+    "row": 6,
+    "col": 36,
+    "level": 0
+   },
+   {
+    "date": "2026-07-11",
+    "row": 6,
+    "col": 37,
+    "level": 0
+   },
+   {
+    "date": "2026-07-18",
+    "row": 6,
+    "col": 38,
+    "level": 0
+   },
+   {
+    "date": "2026-07-25",
+    "row": 6,
+    "col": 39,
+    "level": 0
+   },
+   {
+    "date": "2026-08-01",
+    "row": 6,
+    "col": 40,
+    "level": 0
+   },
+   {
+    "date": "2026-08-08",
+    "row": 6,
+    "col": 41,
+    "level": 3
+   },
+   {
+    "date": "2026-08-15",
+    "row": 6,
+    "col": 42,
+    "level": 0
+   },
+   {
+    "date": "2026-08-22",
+    "row": 6,
+    "col": 43,
+    "level": 0
+   },
+   {
+    "date": "2026-08-29",
+    "row": 6,
+    "col": 44,
+    "level": 1
+   },
+   {
+    "date": "2026-09-05",
+    "row": 6,
+    "col": 45,
+    "level": 0
+   },
+   {
+    "date": "2026-09-12",
+    "row": 6,
+    "col": 46,
+    "level": 0
+   },
+   {
+    "date": "2026-09-19",
+    "row": 6,
+    "col": 47,
+    "level": 0
+   },
+   {
+    "date": "2026-09-26",
+    "row": 6,
+    "col": 48,
+    "level": 0
+   },
+   {
+    "date": "2026-10-03",
+    "row": 6,
+    "col": 49,
+    "level": 0
+   },
+   {
+    "date": "2026-10-10",
+    "row": 6,
+    "col": 50,
+    "level": 0
+   },
+   {
+    "date": "2026-10-17",
+    "row": 6,
+    "col": 51,
+    "level": 1
+   }
+  ]
+ }
+}

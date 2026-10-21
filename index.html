@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avinash Chandra Gupta — physics × machine learning</title>
+<meta name="description" content="Physics student at IIT Delhi building machine learning for particle physics, lunar remote sensing, robotics and research tooling.">
+<link rel="icon" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <a class="brand" href="#top" aria-label="Home">
+    <img src="assets/logo.svg" alt="" class="brand-logo">
+    <span>avinash</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <a href="#stream">Activity</a>
+    <a href="#work">Work</a>
+    <a href="#projects">Projects</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="header-right">
+    <a class="btn-square" id="cta-top" href="https://buymeacoffee.com/avinashistoocool" target="_blank" rel="noopener">
+      Buy me a coffee <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <nav aria-label="Mobile">
+    <a href="#stream">Activity</a>
+    <a href="#work">Work</a>
+    <a href="#projects">Projects</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="btn-square btn-lg" href="https://buymeacoffee.com/avinashistoocool" target="_blank" rel="noopener">
+    Buy me a coffee <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+  </a>
+</div>
+
+<main>
+  <section class="hero">
+    <canvas id="jet" aria-hidden="true"></canvas>
+    <div class="scrim"></div>
+    <div class="hero-inner">
+      <div class="chips">
+        <span class="v-chip"><i class="dot pass"></i>IIT DELHI · PHYSICS</span>
+        <span class="v-chip"><i class="dot active"></i><span id="hero-last">LAST PUSH —</span></span>
+      </div>
+      <h1 class="headline-fluid">I build machine learning for physics, and the tools around it.</h1>
+      <p class="hero-sub" id="hero-sub">Transformers that read particle jets, ice maps of the Moon's south pole, rescue drone swarms, and small tools that help students reach researchers. Everything here is open source and pulled live from GitHub.</p>
+      <div class="hero-ctas">
+        <a class="btn-square btn-lg" href="#projects">See the work <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <a class="btn-ghost" href="https://github.com/Avinashistoocool" target="_blank" rel="noopener">github.com/Avinashistoocool</a>
+      </div>
+    </div>
+    <div class="hero-caption mono">simulated jet · particles in (η, φ) · colour = energy</div>
+  </section>
+
+  <section class="section" id="stream">
+    <div class="section-head">
+      <p class="eyebrow mono">01 / activity</p>
+      <h2 class="headline">Event stream</h2>
+      <p class="lede">Every commit across my repositories, laid out like a trace. Pick a repository on the left; bars show when each commit landed inside that repo's history.</p>
+    </div>
+    <div class="card stream">
+      <div class="stream-head">
+        <span class="mono trace" id="trace-id">trace —</span>
+        <div class="chips">
+          <span class="v-chip" id="chip-span"><i class="dot active"></i>— COMMITS</span>
+          <span class="v-chip" id="chip-dur"><i class="dot warn"></i>— DAYS</span>
+        </div>
+      </div>
+      <div class="stream-body">
+        <aside class="stream-list" id="stream-list" aria-label="Repositories"></aside>
+        <div class="stream-table-wrap">
+          <table class="stream-table">
+            <thead><tr><th>SPAN</th><th>START</th><th class="r">WHEN</th></tr></thead>
+            <tbody id="stream-rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="section-head">
+      <p class="eyebrow mono">02 / how I work</p>
+      <h2 class="headline">Measured, compared, shipped.</h2>
+    </div>
+    <div class="bento">
+      <article class="card glow">
+        <p class="card-kicker mono">Repo health</p>
+        <h3>Every project, checked</h3>
+        <p class="card-sub">Commits in the last 30 days and how recently each repository moved.</p>
+        <ul class="reg-list mono" id="health"></ul>
+      </article>
+      <article class="card glow">
+        <p class="card-kicker mono">Libraries</p>
+        <h3>What my code imports</h3>
+        <p class="card-sub">Third-party imports found in every .py and .ipynb, stacked by domain.</p>
+        <div class="stacks" id="lib-stacks"></div>
+        <div class="legend mono" id="lib-legend"></div>
+      </article>
+      <article class="card glow">
+        <p class="card-kicker mono">Latest diff</p>
+        <h3 id="diff-title">From the last commit</h3>
+        <p class="card-sub mono" id="diff-sub">—</p>
+        <pre class="diff mono" id="diff"></pre>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="metrics" id="metrics">
+      <div class="metric"><div class="num"><span data-k="projects">—</span><span class="unit mono">repos</span></div><p class="mono">public projects with code</p></div>
+      <div class="metric"><div class="num"><span data-k="contrib">—</span><span class="unit mono">/yr</span></div><p class="mono">contributions in the last year</p></div>
+      <div class="metric"><div class="num"><span data-k="kb">—</span><span class="unit mono">KB</span></div><p class="mono">of source across all repos</p></div>
+      <div class="metric"><div class="num"><span data-k="stars">—</span><span class="unit mono">★</span></div><p class="mono">stars from people who use it</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="section-head">
+      <p class="eyebrow mono">03 / projects</p>
+      <h2 class="headline">What I've built</h2>
+      <p class="lede">Read from each repository: its description, README or module docstrings, plus the libraries it actually imports.</p>
+    </div>
+    <div class="projects" id="project-grid"></div>
+  </section>
+
+  <section class="section" id="stack">
+    <div class="section-head">
+      <p class="eyebrow mono">04 / stack</p>
+      <h2 class="headline">What I build with</h2>
+    </div>
+    <div class="card table-card">
+      <table class="data-table mono">
+        <thead><tr><th>LIBRARY</th><th>DOMAIN</th><th>USAGE</th><th class="r">REPOS</th></tr></thead>
+        <tbody id="lib-rows"></tbody>
+      </table>
+    </div>
+    <div class="contrib card" id="contrib">
+      <div class="contrib-head"><span class="mono">contributions · last 12 months</span><span class="v-chip" id="contrib-chip"><i class="dot pass"></i>—</span></div>
+      <div class="contrib-grid" id="contrib-grid"></div>
+    </div>
+  </section>
+
+  <section class="section support" id="contact">
+    <div class="card glow support-card">
+      <div>
+        <p class="eyebrow mono">05 / support</p>
+        <h2 class="headline">Fuel the next experiment.</h2>
+        <p class="lede">I build to understand: jets, lunar ice, drone swarms, outreach tools. It all runs on a student laptop and stays open source. Support pays for GPU hours, datasets, robotics parts, and keeps my tools free for other students.</p>
+        <div class="hero-ctas">
+          <a class="btn-square btn-lg" id="cta-support" href="https://buymeacoffee.com/avinashistoocool" target="_blank" rel="noopener">Buy me a coffee <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        </div>
+      </div>
+      <ul class="contact-list mono" id="contact-list"></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer mono">
+  <span>© <span id="year"></span> Avinash Chandra Gupta</span>
+  <span id="generated">data from the GitHub API</span>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
