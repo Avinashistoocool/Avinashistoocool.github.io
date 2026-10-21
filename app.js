@@ -45,7 +45,7 @@
     const PRONGS = [2, 2, 2, 4, 2, 3, 2, 2, 2, 1];
     const LEPTON = [0, 0, 0, 0, 1, 0, 1, 0, 0, 0];
     const TOWERS = 72;
-    const T_FLASH = 0.35, T_TRACKS = 1.8, T_HOLD = 5.2, T_FADE = 6.2;
+    const T_FLASH = 0.35, T_TRACKS = 1.8, T_HOLD = 9, T_FADE = 10;
     let W, H, dpr, C, R, ev = null, t0 = 0, evNo = 41270 + Math.floor(Math.random() * 900);
     const rnd = (a, b) => a + Math.random() * (b - a);
     const gauss = () => { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
@@ -56,9 +56,24 @@
       W = cv.clientWidth; H = cv.clientHeight;
       cv.width = W * dpr; cv.height = H * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const wide = W > 820;
-      C = wide ? { x: W * 0.69, y: H * 0.46 } : { x: W * 0.5, y: H * 0.3 };
-      R = wide ? Math.min(W * 0.36, H * 0.46) : Math.min(W * 0.62, H * 0.27);
+      const landscapePhone = W > H && H < 520;
+      if (W > 1024) {
+        // laptop / desktop: detector on the right, text on the left
+        C = { x: W * 0.7, y: H * 0.46 };
+        R = Math.min(W * 0.26, H * 0.36);
+      } else if (landscapePhone) {
+        C = { x: W * 0.78, y: H * 0.55 };
+        R = Math.min(W * 0.17, H * 0.34);
+      } else if (W > 600) {
+        // tablet portrait
+        C = { x: W * 0.5, y: H * 0.3 };
+        R = Math.min(W * 0.3, H * 0.2);
+      } else {
+        // phone portrait: detector above the headline
+        C = { x: W * 0.5, y: Math.max(160, H * 0.28) };
+        R = Math.min(W * 0.38, H * 0.19);
+      }
+      if (ev) ev = null; // rebuild trajectories for the new radius
     }
 
     function track(phi, pt, q, stopR) {
@@ -101,10 +116,11 @@
           if (kind < 0.62) {
             const q = Math.random() < 0.5 ? -1 : 1;
             const tr = track(phi, Math.max(0.12, pt) * R, q, L.trkOut * R);
-            parts.push({ type: "ch", ...tr, pt, delay: rnd(0, 0.35) });
-            if (tr.exit !== null) deposit(ecal, hcal, tr.exit, pt, Math.random() < 0.3 ? "e" : "h");
+            const calo = Math.random() < 0.3 ? "e" : "h";
+            parts.push({ type: "ch", ...tr, pt, q, calo, delay: rnd(0, 0.35), jet: j });
+            if (tr.exit !== null) deposit(ecal, hcal, tr.exit, pt, calo);
           } else if (kind < 0.85) {
-            parts.push({ type: "ph", phi, pt, r1: L.ecal[0] * R, delay: rnd(0, 0.35) });
+            parts.push({ type: "ph", phi, pt, r1: L.ecal[0] * R, delay: rnd(0, 0.35), jet: j });
             deposit(ecal, hcal, phi, pt, "e");
           } else {
             parts.push({ type: "nh", phi, pt, r1: L.hcal[0] * R, delay: rnd(0, 0.35) });
@@ -112,10 +128,11 @@
           }
         }
       }
-      if (LEPTON[cls] || Math.random() < 0.12) {
+      if (LEPTON[cls] || Math.random() < 0.35) {
         const phi = rnd(0, Math.PI * 2);
-        const tr = track(phi, rnd(1.6, 3) * R, Math.random() < 0.5 ? -1 : 1, L.mu[1] * R);
-        muons.push({ ...tr, delay: 0.1 });
+        const q = Math.random() < 0.5 ? -1 : 1;
+        const tr = track(phi, rnd(1.6, 3) * R, q, L.mu[1] * R);
+        muons.push({ ...tr, q, pt: rnd(25, 80), delay: 0.1 });
       }
       for (let k = 0; k < 18; k++) {
         const tr = track(rnd(0, Math.PI * 2), rnd(0.05, 0.22) * R, Math.random() < 0.5 ? -1 : 1, L.trkOut * R);
@@ -126,7 +143,27 @@
       const ex = logits.map(Math.exp), z = ex.reduce((a, b) => a + b, 0);
       const probs = ex.map((v, i) => ({ i, p: v / z })).sort((a, b) => b.p - a.p).slice(0, 3);
       const nTracks = parts.filter((p) => p.type !== "ph" && p.type !== "nh").length + muons.length;
-      ev = { cls, jets, parts, muons, ecal, hcal, probs, nTracks, ht: jets.reduce((s, j) => s + j.pt, 0) * 210 };
+      // the hardest charged tracks get labelled callouts
+      const labelled = parts.filter((p) => p.type === "ch" && p.exit !== null).sort((a, b) => b.pt - a.pt).slice(0, 3);
+      labelled.forEach((p, k) => {
+        p.label = `${p.q > 0 ? "h⁺" : "h⁻"}  pT ${(p.pt * 95 + 8).toFixed(0)} GeV`;
+        p.k = k;
+      });
+      // straight extrapolation from the tracker edge into the calorimeter for every exiting track
+      for (const p of parts) {
+        if (p.type !== "ch" || p.exit === null) continue;
+        const n = p.pts.length;
+        const [x1, y1] = p.pts[n - 1], [x0, y0] = p.pts[Math.max(0, n - 4)];
+        const a = Math.atan2(y1 - y0, x1 - x0);
+        const stop = (p.calo === "e" ? L.ecal[1] : L.hcal[1] * 0.9) * R;
+        p.ext = [];
+        for (let s = 0; s < 80; s++) {
+          const x = x1 + Math.cos(a) * s * 4, y = y1 + Math.sin(a) * s * 4;
+          p.ext.push([x, y]);
+          if (Math.hypot(x, y) >= stop) break;
+        }
+      }
+      ev = { cls, jets, parts, muons, ecal, hcal, probs, nTracks, labelled, ht: jets.reduce((s, j) => s + j.pt, 0) * 210 };
       evNo += 1 + Math.floor(Math.random() * 40);
     }
 
@@ -201,7 +238,16 @@
           ctx.strokeStyle = p.type === "soft" ? `rgba(153,153,153,${0.45 * alpha})` : hi ? `rgba(237,237,237,${0.95 * alpha})` : `rgba(82,168,255,${0.9 * alpha})`;
           ctx.lineWidth = p.type === "soft" ? 1 : hi ? 2 : 1.5;
           const head = polyline(p.pts, f);
-          if (f < 1) { ctx.fillStyle = ctx.strokeStyle; ctx.beginPath(); ctx.arc(C.x + head[0], C.y + head[1], 2.2, 0, 7); ctx.fill(); }
+          if (f < 1) { ctx.fillStyle = ctx.strokeStyle; ctx.beginPath(); ctx.arc(C.x + head[0], C.y + head[1], 2.6, 0, 7); ctx.fill(); }
+          // dotted continuation into the calorimeter, drawn once the track reaches the tracker edge
+          if (f >= 1 && p.ext) {
+            const ef = Math.max(0, Math.min(1, (t - T_TRACKS) / 0.5));
+            ctx.save();
+            ctx.setLineDash([2, 3]); ctx.lineWidth = 1;
+            ctx.strokeStyle = p.calo === "e" ? `rgba(237,237,237,${0.45 * alpha})` : `rgba(82,168,255,${0.55 * alpha})`;
+            polyline(p.ext, ef);
+            ctx.restore();
+          }
         } else {
           const r = p.r1 * f;
           ctx.strokeStyle = p.type === "ph" ? `rgba(237,237,237,${0.5 * alpha})` : `rgba(153,153,153,${0.55 * alpha})`;
@@ -250,10 +296,64 @@
         g.addColorStop(1, "rgba(255,255,255,0)");
         ctx.fillStyle = g; ctx.beginPath(); ctx.arc(C.x, C.y, R * 0.25, 0, 7); ctx.fill();
       }
+      drawLabels(t, alpha);
+    }
+
+    // leader lines + text tags pointing at the actual trajectories
+    function drawLabels(t, alpha) {
+      const la = Math.max(0, Math.min(1, (t - T_TRACKS - 0.3) / 0.6)) * alpha;
+      if (la <= 0) return;
+      const fs = W < 560 ? 10.5 : 12;
+      ctx.font = `${fs}px 'Geist Mono', ui-monospace, monospace`;
+      ctx.textBaseline = "middle";
+      const placed = [];
+      const tag = (ax, ay, ang, text, color, dist) => {
+        // anchor (ax, ay) on the trajectory, tag pushed outward along ang
+        let ex = C.x + Math.cos(ang) * dist, ey = C.y + Math.sin(ang) * dist;
+        for (const q of placed) if (Math.abs(q - ey) < fs + 6) ey += (ey > C.y ? 1 : -1) * (fs + 8);
+        placed.push(ey);
+        const right = Math.cos(ang) >= 0;
+        const tw = ctx.measureText(text).width;
+        let hx = right ? ex + 18 : ex - 18;
+        if (right && hx + tw + 10 > W) hx = W - tw - 10;
+        if (!right && hx - tw - 10 < 0) hx = tw + 10;
+        ctx.strokeStyle = color.replace("A", String(0.6 * la)); ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(ex, ey); ctx.lineTo(hx, ey); ctx.stroke();
+        ctx.fillStyle = color.replace("A", String(la));
+        ctx.beginPath(); ctx.arc(ax, ay, 2.5, 0, 7); ctx.fill();
+        ctx.fillStyle = `rgba(0,0,0,${0.55 * la})`;
+        ctx.fillRect(right ? hx + 2 : hx - tw - 8, ey - fs / 2 - 3, tw + 6, fs + 6);
+        ctx.fillStyle = color.replace("A", String(la));
+        ctx.textAlign = right ? "left" : "right";
+        ctx.fillText(text, right ? hx + 5 : hx - 5, ey);
+      };
+      const outer = L.mu[1] * R + (W < 560 ? 10 : 28);
+      const compact = W < 700 || H < 520;
+      // hardest charged tracks (full labels only where there is room)
+      for (const p of compact ? ev.labelled.slice(0, 1) : ev.labelled) {
+        const [x, y] = p.pts[Math.floor(p.pts.length * 0.7)];
+        tag(C.x + x, C.y + y, Math.atan2(y, x), compact ? p.label.split("  ")[0] + " track" : p.label, "rgba(237,237,237,A)", outer);
+      }
+      // jets: labelled at their axis outside the detector
+      (compact ? ev.jets.slice(0, 1) : ev.jets).forEach((j, k) => {
+        const r = L.hcal[1] * R;
+        const name = k === 0 ? (compact ? "lead jet" : `lead jet · ${PRONGS[ev.cls]}-prong`) : `jet ${k + 1}`;
+        tag(C.x + Math.cos(j.axis) * r, C.y + Math.sin(j.axis) * r, j.axis + 0.12, compact ? name : `${name} · ${(j.pt * 210).toFixed(0)} GeV`, "rgba(82,168,255,A)", outer + 14);
+      });
+      // muons reach the outer chambers
+      for (const m of ev.muons) {
+        if (m.exit === null) continue;
+        const r = L.mu[1] * R;
+        tag(C.x + Math.cos(m.exit) * r, C.y + Math.sin(m.exit) * r, m.exit - 0.1, compact ? (m.q > 0 ? "μ⁺" : "μ⁻") : `${m.q > 0 ? "μ⁺" : "μ⁻"} · ${m.pt.toFixed(0)} GeV`, "rgba(98,192,115,A)", outer + 4);
+      }
+      // primary vertex
+      if (!compact) tag(C.x, C.y, -Math.PI * 0.62, "primary vertex", "rgba(153,153,153,A)", R * 0.2);
+      ctx.textAlign = "left";
+      ctx.textBaseline = "alphabetic";
     }
 
     function drawHud(t, alpha) {
-      if (W <= 820) return;
+      if (W <= 1024) return;
       const x = Math.max(20, Math.min(56, W * 0.04)), y = 150;
       ctx.font = "12px 'Geist Mono', ui-monospace, monospace";
       ctx.textBaseline = "alphabetic";
@@ -289,12 +389,18 @@
     }
 
     layout();
-    addEventListener("resize", () => { layout(); if (reduce) requestAnimationFrame(frame); });
-    hero.addEventListener("click", (e) => {
-      if (e.target.closest("a, button")) return;
-      ev = null;
+    let lastW = W;
+    addEventListener("resize", () => {
+      // mobile browsers fire resize when the URL bar hides; only rebuild on real size changes
+      if (Math.abs(cv.clientWidth - lastW) < 2 && Math.abs(cv.clientHeight - H) < 120) return;
+      lastW = cv.clientWidth;
+      layout();
       if (reduce) requestAnimationFrame(frame);
     });
+    const fire = () => { ev = null; if (reduce) requestAnimationFrame(frame); };
+    cv.addEventListener("pointerdown", (e) => { if (e.isPrimary) fire(); });
+    const btn = $("#new-event");
+    if (btn) btn.addEventListener("click", fire);
     requestAnimationFrame(frame);
   }
   eventDisplay();
