@@ -23,7 +23,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install pillow
       - run: python scripts/build_data.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -34,3 +33,4 @@ jobs:
           path: .
       - id: deployment
         uses: actions/deploy-pages@v4
+

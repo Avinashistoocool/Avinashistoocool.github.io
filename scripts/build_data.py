@@ -9,7 +9,6 @@ contribution calendar are all read from the repos and the profile.
 """
 import base64
 import datetime as dt
-import io
 import json
 import os
 import re
@@ -161,25 +160,6 @@ def latest_diff(repo, sha):
             "lines": lines, "url": c["html_url"]}
 
 
-def pixel_logo(url, n=16):
-    """Avatar quantised to an n x n pixel grid, used as the site logo."""
-    try:
-        from PIL import Image
-    except ImportError:
-        return
-    sep = "&" if "?" in url else "?"
-    im = Image.open(io.BytesIO(fetch(f"{url}{sep}s=256", raw=True))).convert("RGB")
-    small = im.resize((n, n), Image.BOX).quantize(colors=8, method=Image.MEDIANCUT).convert("RGB")
-    rects = []
-    for y in range(n):
-        for x in range(n):
-            r, g, b = small.getpixel((x, y))
-            rects.append(f'<rect x="{x}" y="{y}" width="1.02" height="1.02" fill="#{r:02x}{g:02x}{b:02x}"/>')
-    (ROOT / "assets" / "logo.svg").write_text(
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {n} {n}" shape-rendering="crispEdges">{"".join(rects)}</svg>',
-        encoding="utf-8")
-
-
 def main():
     user = api(f"users/{USER}")
     socials = api(f"users/{USER}/social_accounts") or []
@@ -242,7 +222,6 @@ def main():
         "contributions": contributions(),
     }
     (ROOT / "assets").mkdir(exist_ok=True)
-    pixel_logo(user["avatar_url"])
     (ROOT / "data.json").write_text(json.dumps(data, indent=1), encoding="utf-8")
     print(f"data.json: {len(projects)} projects, {len(data['commits'])} commits, "
           f"{len(lib_list)} libraries, {data['contributions']['total']} contributions")

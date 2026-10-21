@@ -44,7 +44,7 @@ a { color: inherit; text-decoration: none; }
   padding: 0 var(--pad);
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--sans); font-weight: 500; font-size: 20px; letter-spacing: -0.4px; }
-.brand-logo { width: 28px; height: 28px; image-rendering: pixelated; box-shadow: 0 0 0 1px var(--ring); }
+.brand-logo { width: 30px; height: auto; image-rendering: pixelated; }
 .nav { display: flex; gap: 32px; font-size: 16px; }
 .nav a { color: #fff; opacity: .86; transition: opacity .15s; }
 .nav a:hover { opacity: 1; }
@@ -117,7 +117,28 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-sub { color: var(--sub); font-size: 16px; max-width: 600px; margin: 0 0 28px; }
 .hero-ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
-.hero-caption { position: absolute; right: var(--pad); bottom: 28px; z-index: 2; font-size: 12px; color: var(--muted); }
+.hero-caption { position: absolute; right: var(--pad); bottom: 28px; z-index: 2; font-size: 12px; color: var(--muted); max-width: 46%; text-align: right; }
+.hero { cursor: crosshair; }
+.hero a, .hero button { cursor: pointer; }
+
+/* friendly hello line above the headline */
+.hello { display: flex; flex-wrap: wrap; gap: 10px; }
+.hello-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #ededed;
+  background: rgba(31, 31, 31, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 100px;
+  padding: 6px 14px;
+  letter-spacing: 0;
+}
+.hello-tag.soft { color: var(--muted); }
+.hello-tag .dot { width: 7px; height: 7px; }
 
 /* ---------- chips ---------- */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
