@@ -408,14 +408,65 @@
   /* ---------------- data-driven sections ---------------- */
   fetch("data.json", { cache: "no-cache" })
     .then((r) => r.json())
+    .then(live)
     .then(render)
     .catch((err) => console.error("data.json", err));
+
+  /* data.json is rebuilt hourly; patch in anything pushed since then straight from the GitHub API */
+  async function live(d) {
+    const TTL = 5 * 60e3;
+    const gh = async (path) => {
+      const key = "gh:" + path;
+      try {
+        const hit = JSON.parse(sessionStorage.getItem(key) || "null");
+        if (hit && Date.now() - hit.t < TTL) return hit.v;
+      } catch (_) { /* storage unavailable */ }
+      const r = await fetch("https://api.github.com/" + path, { headers: { Accept: "application/vnd.github+json" } });
+      if (!r.ok) throw new Error(`GitHub API ${r.status}`);
+      const v = await r.json();
+      try { sessionStorage.setItem(key, JSON.stringify({ t: Date.now(), v })); } catch (_) { /* quota */ }
+      return v;
+    };
+    try {
+      const login = d.user.login;
+      const repos = (await gh(`users/${login}/repos?per_page=100&type=owner&sort=pushed`))
+        .filter((r) => !r.fork && !r.archived && r.name.toLowerCase() !== login.toLowerCase() && r.size > 0);
+      const known = new Map(d.projects.map((p) => [p.name, p]));
+      const changed = [];
+      for (const r of repos) {
+        let p = known.get(r.name);
+        if (!p) {
+          p = { name: r.name, url: r.html_url, text: r.description || "", language: r.language, created_at: r.created_at,
+                topics: r.topics || [], commits: 0, libs: [], pushed_at: "" };
+          d.projects.push(p);
+        }
+        if (r.pushed_at > p.pushed_at) changed.push(p);
+        Object.assign(p, { stars: r.stargazers_count, forks: r.forks_count, pushed_at: r.pushed_at, size_kb: r.size });
+      }
+      const seen = new Set(d.commits.map((c) => c.sha));
+      const since = new Date(d.generated_at).toISOString();
+      await Promise.all(changed.slice(0, 5).map(async (p) => {
+        const rc = await gh(`repos/${login}/${p.name}/commits?per_page=30&since=${since}`);
+        const fresh = rc.filter((c) => !seen.has(c.sha.slice(0, 7)));
+        p.commits = Math.min(30, p.commits + fresh.length);
+        for (const c of fresh) d.commits.push({ repo: p.name, sha: c.sha.slice(0, 7), date: c.commit.author.date,
+          message: c.commit.message.split("\n")[0].slice(0, 120), url: c.html_url });
+      }));
+      d.commits.sort((a, b) => new Date(b.date) - new Date(a.date));
+      d.commits = d.commits.slice(0, 60);
+      d.projects.sort((a, b) => (b.stars - a.stars) || (a.pushed_at < b.pushed_at ? 1 : -1));
+      d.live = true;
+    } catch (err) {
+      console.warn("live GitHub refresh skipped:", err);
+    }
+    return d;
+  }
 
   function render(d) {
     const { user, projects, commits, libraries, languages, diff, contributions } = d;
 
     $("#year").textContent = new Date().getFullYear();
-    $("#generated").textContent = `data from the GitHub API · updated ${ago(d.generated_at)}`;
+    $("#generated").textContent = `data from the GitHub API · ${d.live ? "live" : `updated ${ago(d.generated_at)}`}`;
     if (commits.length) $("#hero-last").textContent = `last pushed code ${ago(commits[0].date)}`;
     for (const a of document.querySelectorAll('a[href*="buymeacoffee"]')) a.href = user.support_url;
 
