@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avinashistoocool.github.io/sitemap.xml
