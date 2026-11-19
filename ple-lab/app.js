@@ -27,7 +27,7 @@
   const modes = {
     training: {
       title:"A slight loss gap. Not a win.",
-      description:"Same dense configuration and 24.6M training tokens, one seed each. The 0.009 difference at the end is within single-seed noise.",
+      description:"Same dense configuration and 24.6M sampled training-token positions, one seed each. The PLE model has more parameters and took longer to train. A 0.009 nats/token gap from one seed cannot establish an improvement.",
       source:"https://github.com/Avinashistoocool/PLE-Lab#results-rtx-4050-laptop-6-gb",
       legend:[["Baseline", "#43948a"], ["PLE, 64 dimensions", "#df603d"]],
       desc:"Validation loss from steps 250–3000 for baseline-small and ple-small, one training seed each."
