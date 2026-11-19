@@ -418,7 +418,7 @@
         }
       ],
       "sourceUrl": "https://github.com/Avinashistoocool/Sci-Synth",
-      "description": "Manifest V3 browser extension: open a PDF in its viewer, hold Alt over text, equations or figures and get explanations from the AI provider you configure. The built-in PDF viewer stays the default; no analytics. Optional local simulator backend (code execution removed)."
+      "description": "Browser extension (MV3) that explains scientific PDFs: hold Alt over text, equations or figures and ask your own AI provider. Opt-in viewer, no analytics."
     },
     {
       "repo": "eraksha-hackathon",
