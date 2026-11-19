@@ -35,21 +35,21 @@
     ablation: {
       title:"The first layer matters most.",
       description:"On 25,500 TinyStories validation predictions, remove each layer’s token input in turn—or remove all of them. The context path stays active.",
-      source:"https://github.com/Avinashistoocool/PLE-Lab/blob/main/results/explorer_findings.json",
+      source:"https://github.com/Avinashistoocool/PLE-Lab/blob/master/results/explorer_findings.json",
       legend:[["Single layer", "#43948a"], ["All layers", "#df603d"]],
       desc:"Delta loss in nats when a layer or all PLE token inputs are zeroed. All layers together: 0.621."
     },
     cache: {
       title:"Five percent of the table.",
       description:"Synthetic-big prefill: compare resident table/cache VRAM with the share of token lookups served from cache. Less memory does not imply less latency.",
-      source:"https://github.com/Avinashistoocool/PLE-Lab/blob/main/results/offload/synthetic-big-20261112-192517.json",
+      source:"https://github.com/Avinashistoocool/PLE-Lab/blob/master/results/offload/synthetic-big-20261112-192517.json",
       legend:[["Table VRAM (MB)", "#df603d"], ["Hit rate (%)", "#43948a"]],
       desc:"Synthetic-big prefill table VRAM in MB as bars, and token hit rate as green circles for cached strategies."
     },
     latency: {
       title:"Memory has a latency cost.",
       description:"Synthetic-big prefill, full-model B=1 × 256: compare measured p50 latency per forward. The small cache reduces VRAM; its forward pass can be slower.",
-      source:"https://github.com/Avinashistoocool/PLE-Lab/blob/main/results/offload/synthetic-big-20261112-192517.json",
+      source:"https://github.com/Avinashistoocool/PLE-Lab/blob/master/results/offload/synthetic-big-20261112-192517.json",
       legend:[["All-in-GPU", "#43948a"], ["Offloaded cache", "#df603d"]],
       desc:"Synthetic-big prefill median forward latency in milliseconds: GPU 46.56, LRU 1% 49.91, LRU 5% 51.17, LRU 20% 57.09, top-k 5% 58.14."
     }

@@ -589,7 +589,7 @@
   function renderProjects(projects) {
     const featured = `<a class="card project glow" href="ple-lab/">
       <div class="project-top"><h3>PLE Lab</h3><span class="v-chip">Interactive results</span></div>
-      <p>Per-layer embeddings, table offload benchmarks and an explorer of learned token vectors.</p>
+      <p>Per-layer embeddings and table offload benchmarks. Try the browser token explorer and its 3D vector map.</p>
       <div class="project-meta"><span>Static results; full model explorer runs locally</span><span class="open">explore ↗</span></div>
     </a><a class="card project glow" href="llm-nas/">
       <div class="project-top"><h3>LLM NAS</h3><span class="v-chip">Search results</span></div>

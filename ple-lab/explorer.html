@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#122a2a">
+  <meta name="description" content="Explore published per-layer token vectors from a small GPT trained on TinyStories. Static data, no server or model inference.">
+  <title>Token atlas · PLE-Lab</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23122a2a'/%3E%3Ctext x='8' y='44' font-family='Georgia' font-size='42' fill='%23df603d'%3EP%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="explorer.css">
+  <script src="explorer.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to explorer</a>
+  <header class="masthead">
+    <a class="wordmark" href="../" aria-label="Avinash Gupta, portfolio"><span class="mark" aria-hidden="true">A/</span> avinash<span class="wordmark-small"> / experiments</span></a>
+    <nav aria-label="Page navigation"><a href="./">← PLE-Lab</a><a href="#instrument">Instrument</a><a href="#about">About the data</a></nav>
+    <a class="nav-source" href="https://github.com/Avinashistoocool/PLE-Lab">Source ↗</a>
+  </header>
+  <main id="main">
+    <section class="intro">
+      <div class="overline"><span>PLE-LAB / FIELD INSTRUMENT 02</span><span>STATIC DATA · INTERACTIVE VIEW</span></div>
+      <div class="intro-grid"><div><p class="kicker">THE TOKEN ATLAS</p><h1>One token.<br><em>Six places.</em></h1></div><div class="intro-copy"><p>Move through the six learned embedding spaces. Search a token, rotate its neighborhood, and read the actual 384 published vector values.</p><p class="model-label">Trained small GPT on TinyStories; not Gemma 3n.</p></div></div>
+    </section>
+    <section class="workspace" id="instrument" aria-label="Interactive token atlas">
+      <div class="section-top"><span>01 / EXPLORE THE TABLE</span><span id="dataset-size">LOADING PUBLISHED DATA</span></div>
+      <div id="status" role="status" aria-live="polite">Loading projection and quantized vectors…</div>
+      <div class="layout" id="workspace" hidden>
+        <div class="map-column">
+          <div class="panel map-panel">
+            <div class="panel-heading"><div><span class="eyebrow">01 / THE MAP</span><h2>Vocabulary in space</h2></div><span id="variance" class="variance"></span></div>
+            <div class="map-toolbar"><label for="layer">LAYER <output id="layer-value" for="layer">0</output> / 5</label><input id="layer" type="range" min="0" max="5" step="1" value="0" aria-label="Embedding layer"><label for="color">COLOUR BY</label><select id="color"><option value="frequency">Log frequency</option><option value="norm">Vector norm</option></select></div>
+            <div class="canvas-wrap"><canvas id="cloud" tabindex="0" role="img" aria-label="Three-dimensional PCA token cloud. Drag to rotate, scroll to zoom, use arrow keys to rotate and plus or minus to zoom. Click a point to select it."></canvas><div id="tooltip" class="tooltip" hidden></div><div id="canvas-error" class="canvas-error" hidden>Canvas is unavailable. Search and select tokens below to inspect the published vectors.</div></div>
+            <div class="map-foot"><span>DRAG TO ROTATE · WHEEL TO ZOOM · ARROWS / + / − ON FOCUSED MAP</span><button type="button" id="reset-view">Reset view ↺</button></div>
+            <p class="caveat" id="pca-caveat">This 3D PCA projection explains only a small fraction of the embedding variance. Distances on this map do not replace cosine similarity in the full-dimensional vectors.</p>
+          </div>
+          <div class="panel search-panel">
+            <div class="panel-heading"><div><span class="eyebrow">02 / FIND A TOKEN</span><h2>Look up a row</h2></div></div>
+            <form id="search-form" role="search"><label for="search">Token string or exact token ID</label><div class="search-line"><input id="search" type="search" autocomplete="off" placeholder="Type a piece or ID…" aria-controls="matches"><button type="submit">Jump to token ↗</button></div></form>
+            <p class="hint">Search matches the published top tokens only. Press Enter to jump to the first match; use ↑ / ↓ to choose another.</p>
+            <div id="matches" class="matches" role="listbox" aria-label="Matching tokens"></div>
+          </div>
+        </div>
+        <div class="detail-column">
+          <div class="panel token-panel">
+            <div class="panel-heading"><div><span class="eyebrow">03 / SELECTED ROW</span><h2 id="token-heading">Select a token</h2></div><span id="token-id" class="token-id"></span></div>
+            <p id="token-meta" class="token-meta"></p>
+            <div class="heatmap-head"><h3>Six slices × 64 values</h3><span>QUANTIZED INT8 × ROW SCALE</span></div>
+            <div id="heatmap" class="heatmap" role="img" aria-label="Actual six by sixty-four token vector values"></div>
+            <div class="heatmap-key"><span>NEGATIVE</span><span class="gradient" aria-hidden="true"></span><span>POSITIVE</span></div>
+            <p id="cell-value" class="hint" aria-live="polite">Hover or focus a cell for its reconstructed value.</p>
+            <h3 class="subheading">Per-layer vector norms</h3>
+            <div id="norms" class="norms"></div>
+          </div>
+          <div class="panel neighbors-panel">
+            <div class="panel-heading"><div><span class="eyebrow">04 / COMPARE</span><h2>Nearest neighbors</h2></div></div>
+            <label for="neighbor-scope">COMPARE COSINE IN</label><select id="neighbor-scope"><option value="layer">Selected layer (64 values)</option><option value="full">Full row (384 values)</option></select>
+            <ol id="neighbors" class="neighbors"></ol>
+            <p class="caveat">Exact cosine on reconstructed vectors, restricted to the published top 2000 tokens (or fewer if the export contains fewer). Not nearest neighbors across the full model vocabulary.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <div class="section-top"><span>02 / WHAT YOU ARE SEEING</span><span>LOOKUP, NOT INFERENCE</span></div>
+      <div class="about-grid"><h2>A small table,<br><em>not a model in your browser.</em></h2><div><p>These are pre-exported rows from a trained small GPT on TinyStories, not Gemma 3n. Each token has six 64-dimensional learned PLE slices. The map stores three PCA coordinates per slice; the heatmap and cosine search reconstruct vector values from signed 8-bit integers multiplied by each row’s published float32 scale. Quantization means these approximate the original float vectors; similarity is exact for this published, quantized subset.</p><p>This page cannot generate text, run PyTorch, or perform live ablations. To try the full model-backed explorer locally, clone <a href="https://github.com/Avinashistoocool/PLE-Lab">PLE-Lab ↗</a>, install <code>pip install -r requirements.txt</code>, prepare a run (or <code>python -m explorer.make_demo_run</code> for a random demonstration), then launch <code>python -m explorer.server --runs runs --port 8765</code> and open <code>http://127.0.0.1:8765</code>. For trained results, follow the <a href="https://github.com/Avinashistoocool/PLE-Lab#reproduce">training instructions ↗</a>; the random demo is not the measured model.</p><a class="back-link" href="./">← Back to the PLE-Lab results</a></div></div>
+    </section>
+  </main>
+  <footer><span>PLE-LAB / STATIC TOKEN ATLAS</span><a href="https://github.com/Avinashistoocool/PLE-Lab">Source repository ↗</a></footer>
+</body>
+</html>
