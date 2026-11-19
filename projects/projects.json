@@ -392,23 +392,33 @@
     },
     {
       "repo": "Sci-Synth",
-      "title": "Sci-Synth (with PDF AI Explorer)",
+      "title": "Sci-Synth",
       "group": "tools",
-      "short": "Physics PDF to simulation, plus a PDF reading extension (merge in progress)",
+      "short": "Browser extension that explains scientific PDFs with your own AI provider; opt-in viewer",
       "topics": [
+        "chrome-extension",
         "pdf",
-        "simulation"
+        "ai",
+        "llm",
+        "ocr",
+        "tesseract",
+        "pdfjs",
+        "study-tool",
+        "physics-simulation",
+        "manifest-v3"
       ],
       "status": [
-        "merge in progress",
-        "source on review branch"
+        "browser extension",
+        "source"
       ],
-      "pages": [],
-      "aliases": [
-        "pdf-ai-explorer"
+      "pages": [
+        {
+          "label": "Privacy policy",
+          "url": "https://avinashistoocool.github.io/Sci-Synth/privacy.html"
+        }
       ],
-      "sourceUrl": "https://github.com/Avinashistoocool/Sci-Synth/tree/docs/ste100-sanitized-source",
-      "description": "Reads a physics PDF and generates and runs a Python simulation with Groq (Next.js + FastAPI); being merged with the PDF AI Explorer browser extension."
+      "sourceUrl": "https://github.com/Avinashistoocool/Sci-Synth",
+      "description": "Manifest V3 browser extension: open a PDF in its viewer, hold Alt over text, equations or figures and get explanations from the AI provider you configure. The built-in PDF viewer stays the default; no analytics. Optional local simulator backend (code execution removed)."
     },
     {
       "repo": "eraksha-hackathon",
