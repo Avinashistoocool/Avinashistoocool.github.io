@@ -45,7 +45,7 @@
       "additionalName": "Chandra",
       "familyName": "Gupta",
       "url": "https://avinashistoocool.github.io/",
-      "image": {"@type": "ImageObject", "url": "https://avinashistoocool.github.io/assets/me-square.jpg", "width": 800, "height": 800, "caption": "Avinash Chandra Gupta"},
+      "image": {"@id": "https://avinashistoocool.github.io/#portrait"},
       "mainEntityOfPage": "https://avinashistoocool.github.io/",
       "jobTitle": "Physics student",
       "affiliation": {"@type": "CollegeOrUniversity", "name": "Indian Institute of Technology Delhi", "alternateName": "IIT Delhi", "url": "https://home.iitd.ac.in/"},
@@ -59,6 +59,21 @@
       ]
     },
     {
+      "@type": "ImageObject",
+      "@id": "https://avinashistoocool.github.io/#portrait",
+      "contentUrl": "https://avinashistoocool.github.io/assets/avinash-chandra-gupta.jpg",
+      "url": "https://avinashistoocool.github.io/assets/avinash-chandra-gupta.jpg",
+      "width": 800,
+      "height": 800,
+      "name": "Avinash Chandra Gupta",
+      "caption": "Avinash Chandra Gupta, physics student at IIT Delhi",
+      "representativeOfPage": true,
+      "about": {"@id": "https://avinashistoocool.github.io/#person"},
+      "creator": {"@id": "https://avinashistoocool.github.io/#person"},
+      "creditText": "Avinash Chandra Gupta",
+      "copyrightNotice": "Avinash Chandra Gupta"
+    },
+    {
       "@type": "WebSite",
       "@id": "https://avinashistoocool.github.io/#website",
       "url": "https://avinashistoocool.github.io/",
@@ -70,7 +85,8 @@
       "@type": "ProfilePage",
       "url": "https://avinashistoocool.github.io/",
       "name": "Avinash Chandra Gupta (Avinash Gupta)",
-      "mainEntity": {"@id": "https://avinashistoocool.github.io/#person"}
+      "mainEntity": {"@id": "https://avinashistoocool.github.io/#person"},
+      "primaryImageOfPage": {"@id": "https://avinashistoocool.github.io/#portrait"}
     },
     {"@type": "SoftwareSourceCode", "name": "PLE Lab", "description": "Small-scale per-layer embeddings (PLE) experiment inspired by Gemma 3n: TinyStories GPT, PLE-table offload benchmarks (GPU/CPU/mmap) and a token explorer.", "url": "https://avinashistoocool.github.io/PLE-Lab/", "codeRepository": "https://github.com/Avinashistoocool/PLE-Lab", "author": {"@id": "https://avinashistoocool.github.io/#person"}, "keywords": "per-layer-embeddings, gemma-3n, tinystories, transformer, language-model, model-offloading, memory-mapping, llm-interpretability, token-embeddings, pytorch"},
     {"@type": "SoftwareSourceCode", "name": "LLM-NAS", "description": "Single-run comparison of LLM-guided (Ollama Qwen2.5-Coder 3B) and random neural architecture search on CIFAR-10 in PyTorch, with recorded results.", "url": "https://avinashistoocool.github.io/llm-nas/", "codeRepository": "https://github.com/Avinashistoocool/llm-nas", "author": {"@id": "https://avinashistoocool.github.io/#person"}, "keywords": "neural-architecture-search, llm-guided-search, random-search, cifar10, automl, ollama, qwen2-5-coder, pytorch, reproducible-research"},
@@ -160,7 +176,7 @@
   <section class="section" id="about">
     <div class="about">
       <figure class="about-photo card">
-        <img src="assets/me.jpg" alt="Portrait of Avinash Chandra Gupta" width="722" height="1600" loading="lazy" decoding="async">
+        <img src="assets/avinash-chandra-gupta-iit-delhi.jpg" alt="Avinash Chandra Gupta, physics student at IIT Delhi" title="Avinash Chandra Gupta" width="722" height="1008" decoding="async">
         <figcaption class="mono"><i class="dot pass"></i>Avinash Chandra Gupta · IIT Delhi</figcaption>
       </figure>
       <div class="about-text">
