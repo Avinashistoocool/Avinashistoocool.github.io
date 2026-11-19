@@ -26,28 +26,28 @@
   ];
   const modes = {
     training: {
-      title:"A slight loss gap. Not a win.",
+      title:"Validation loss, one seed per model",
       description:"Same dense configuration and 24.6M sampled training-token positions, one seed each. The PLE model has more parameters and took longer to train. A 0.009 nats/token gap from one seed cannot establish an improvement.",
       source:"https://github.com/Avinashistoocool/PLE-Lab#results-rtx-4050-laptop-6-gb",
       legend:[["Baseline", "#43948a"], ["PLE, 64 dimensions", "#df603d"]],
       desc:"Validation loss from steps 250–3000 for baseline-small and ple-small, one training seed each."
     },
     ablation: {
-      title:"The first layer matters most.",
+      title:"Ablation of PLE token input by layer",
       description:"On 25,500 TinyStories validation predictions, remove each layer’s token input in turn—or remove all of them. The context path stays active.",
       source:"https://github.com/Avinashistoocool/PLE-Lab/blob/master/results/explorer_findings.json",
       legend:[["Single layer", "#43948a"], ["All layers", "#df603d"]],
       desc:"Delta loss in nats when a layer or all PLE token inputs are zeroed. All layers together: 0.621."
     },
     cache: {
-      title:"Five percent of the table.",
+      title:"Static 5% row cache on synthetic-big",
       description:"Synthetic-big prefill: compare resident table/cache VRAM with the share of token lookups served from cache. Less memory does not imply less latency.",
       source:"https://github.com/Avinashistoocool/PLE-Lab/blob/master/results/offload/synthetic-big-20261112-192517.json",
       legend:[["Table VRAM (MB)", "#df603d"], ["Hit rate (%)", "#43948a"]],
       desc:"Synthetic-big prefill table VRAM in MB as bars, and token hit rate as green circles for cached strategies."
     },
     latency: {
-      title:"Memory has a latency cost.",
+      title:"Prefill latency by table source",
       description:"Synthetic-big prefill, full-model B=1 × 256: compare measured p50 latency per forward. The small cache reduces VRAM; its forward pass can be slower.",
       source:"https://github.com/Avinashistoocool/PLE-Lab/blob/master/results/offload/synthetic-big-20261112-192517.json",
       legend:[["All-in-GPU", "#43948a"], ["Offloaded cache", "#df603d"]],
