@@ -311,6 +311,20 @@ a { color: inherit; text-decoration: none; }
 .project .libs span { font-family: var(--mono); font-size: 11.5px; color: var(--muted); box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1); padding: 2px 8px; border-radius: 100px; }
 .project-meta { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 12px; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06); }
 .project-meta .open { color: #fff; }
+.project h3 a.stretch::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.project h3 a.stretch:focus-visible { outline: none; }
+.project:has(a.stretch:focus-visible) { outline: 2px solid var(--blue); outline-offset: 2px; }
+.project-meta .src { position: relative; z-index: 2; color: #fff; white-space: nowrap; }
+.project-meta .src:hover { color: var(--blue); }
+
+/* ---------- navigation guide ---------- */
+.guide-map { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: step; }
+.guide-map li { padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; }
+.guide-map .step { font-family: var(--mono); font-size: 12px; color: var(--blue); text-transform: uppercase; }
+.guide-map h3 { font-family: var(--display); font-weight: 500; font-size: 19px; letter-spacing: -0.5px; margin: 0; }
+.guide-map p { color: var(--muted); margin: 0; font-size: 14px; }
+.guide-map code { font-family: var(--mono); font-size: 12.5px; color: var(--text); }
+.guide-cta { margin-top: 24px; }
 
 /* ---------- stack table ---------- */
 .table-card { overflow: auto; max-height: 520px; }
@@ -362,6 +376,7 @@ a { color: inherit; text-decoration: none; }
   .stream-list button { width: auto; flex: none; padding: 12px 14px; }
   .stream-list button[aria-pressed="true"] { box-shadow: inset 0 -2px 0 var(--blue); }
   .bento, .projects { grid-template-columns: 1fr; }
+  .guide-map { grid-template-columns: 1fr 1fr; }
   .about { grid-template-columns: 1fr; }
   .about-photo { max-width: 420px; width: 100%; }
   .support-card { grid-template-columns: 1fr; }
@@ -381,6 +396,7 @@ a { color: inherit; text-decoration: none; }
   .metrics { grid-template-columns: 1fr; }
   .metric, .metric:nth-child(n) { box-shadow: 0 1px 0 var(--ring); }
   .metric .num { font-size: 48px; }
+  .guide-map { grid-template-columns: 1fr; }
   .stream-table th:nth-child(3), .stream-table td:nth-child(3) { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {

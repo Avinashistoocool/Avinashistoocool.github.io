@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project guide | Avinash Chandra Gupta</title>
+<meta name="description" content="Directory of every project by Avinash Chandra Gupta: machine learning research, drones and space, tools and earlier work. Each entry links to its project page, sub pages and GitHub source.">
+<link rel="canonical" href="https://avinashistoocool.github.io/projects/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Avinash Chandra Gupta">
+<meta property="og:title" content="Project guide | Avinash Chandra Gupta">
+<meta property="og:description" content="Every project in one directory, with links to project pages, demos, docs and source.">
+<meta property="og:url" content="https://avinashistoocool.github.io/projects/">
+<meta property="og:image" content="https://avinashistoocool.github.io/assets/me.jpg">
+<link rel="icon" href="/assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="guide.css">
+</head>
+<body class="guide-page">
+
+<header class="site-header guide-header">
+  <a class="brand" href="/" aria-label="Home">
+    <img src="/assets/logo.svg" alt="" class="brand-logo">
+    <span>avinash</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="/#about">About</a>
+    <a href="/#projects">Projects</a>
+    <a href="/projects/" aria-current="page">All projects</a>
+    <a href="/#contact">Contact</a>
+  </nav>
+  <div class="header-right">
+    <a class="btn-ghost" href="https://github.com/Avinashistoocool" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</header>
+
+<main>
+  <section class="section guide-intro">
+    <p class="eyebrow mono"><a href="/">avinash</a> / projects</p>
+    <h1 class="headline">Project guide</h1>
+    <p class="lede">Every project in one place. Each project has its own page at <span class="mono">/{Repo}/</span>, served from its own repository. From there you can open the interactive demos and documentation, or go to the GitHub source.</p>
+    <ol class="nav-map mono" aria-label="How the site is organised">
+      <li><b>1</b><span>This directory</span></li>
+      <li><b>2</b><span>Project page <i>/{Repo}/</i></span></li>
+      <li><b>3</b><span>Demos and docs</span></li>
+      <li><b>4</b><span>GitHub source</span></li>
+    </ol>
+  </section>
+
+  <section class="section guide-body" aria-labelledby="dir-title">
+    <h2 id="dir-title" class="visually-hidden">Directory</h2>
+    <div class="guide-controls card" role="search">
+      <label class="visually-hidden" for="q">Search projects</label>
+      <input id="q" type="search" class="mono" placeholder="Search name, description, topic…  ( / )" autocomplete="off">
+      <div class="group-filter" role="group" aria-label="Filter by group" id="group-filter"></div>
+      <p class="mono guide-count" id="count" aria-live="polite"></p>
+    </div>
+    <div id="directory"></div>
+    <p class="lede mono guide-empty" id="empty" hidden>No project matches that search.</p>
+    <noscript><p class="lede">This directory needs JavaScript. You can also browse the <a href="https://github.com/Avinashistoocool?tab=repositories">repositories on GitHub</a>.</p></noscript>
+  </section>
+</main>
+
+<footer class="footer mono">
+  <span><a href="/">← avinash</a> · <a href="/projects/">All projects</a> · <a href="https://github.com/Avinashistoocool" rel="me">GitHub ↗</a></span>
+  <span>Link status is checked in your browser. "Coming soon" means the page is not published yet.</span>
+</footer>
+
+<script src="guide.js" defer></script>
+</body>
+</html>

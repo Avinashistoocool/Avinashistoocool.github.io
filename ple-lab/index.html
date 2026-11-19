@@ -1,111 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#122a2a">
-  <meta name="description" content="PLE-Lab: a measured reproduction of per-layer embeddings, GPU offloading experiments, and an interactive local Explorer. Explore the results in a standalone static exhibit.">
-  <link rel="canonical" href="https://avinashistoocool.github.io/ple-lab/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="PLE-Lab — Give every layer its own vocabulary">
-  <meta property="og:description" content="A measured per-layer embedding experiment: architecture, validation, ablations and GPU memory tradeoffs.">
-  <meta property="og:url" content="https://avinashistoocool.github.io/ple-lab/">
-  <meta property="og:image" content="https://avinashistoocool.github.io/ple-lab/images/explorer-map.png">
-  <title>PLE-Lab · Per-Layer Embeddings, measured</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23122a2a'/%3E%3Ctext x='8' y='44' font-family='Georgia' font-size='42' fill='%23df603d'%3EP%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+<meta charset="utf-8">
+<title>Moved to PLE Lab</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://avinashistoocool.github.io/PLE-Lab/">
+<meta http-equiv="refresh" content="0; url=https://avinashistoocool.github.io/PLE-Lab/">
+<script>location.replace("https://avinashistoocool.github.io/PLE-Lab/" + location.search + location.hash);</script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="masthead">
-    <a class="wordmark" href="https://avinashistoocool.github.io/" aria-label="Avinash Gupta, back to portfolio"><span class="mark" aria-hidden="true">A/</span> avinash<span class="wordmark-small"> / experiments</span></a>
-    <nav aria-label="Page navigation">
-      <a href="#mechanism">Mechanism</a><a href="#measurements">Measurements</a><a href="#explorer">Explorer</a><a href="#reproduce">Run locally</a>
-    </nav>
-    <a class="nav-source" href="https://github.com/Avinashistoocool/PLE-Lab">Source ↗</a>
-  </header>
-  <main id="main">
-    <section class="hero" aria-labelledby="title">
-      <div class="hero-grain" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> RESEARCH NOTE / 001 <span class="divider">·</span> SMALL MODEL, REAL MEASUREMENTS</p>
-        <h1 id="title">The vocabulary<br>doesn’t have to live <em>on the GPU.</em></h1>
-        <p class="hero-lede">Per-Layer Embeddings give each transformer layer a different view of a token. PLE-Lab builds the model, moves its table off-device, and measures what the layers actually learned.</p>
-        <div class="hero-actions"><a class="button button-primary" href="explorer.html">Try the token explorer <span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#measurements">Explore the evidence <span aria-hidden="true">↗</span></a><a class="button button-quiet" href="https://github.com/Avinashistoocool/PLE-Lab">Browse the code <span aria-hidden="true">↗</span></a></div>
-        <p class="hero-footnote">Inspired by the per-layer embedding idea in Gemma 3n · independent small-scale reimplementation without Gemma 3n's AltUp streams; not a Gemma 3n benchmark.</p>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="diagram-caption">ONE TOKEN <span>→</span> SIX DESTINATIONS</div>
-        <div class="visual-row"><span class="token-glyph">t<sub>id</sub></span><span class="line"></span><span class="vector-stack"><span style="--i:0">L0 <b></b></span><span style="--i:1">L1 <b></b></span><span style="--i:2">L2 <b></b></span><span style="--i:3">L3 <b></b></span><span style="--i:4">L4 <b></b></span><span style="--i:5">L5 <b></b></span></span></div>
-        <p>One table row · 6 × 64 values<br>Each token in a forward pass needs its own row, including newly generated tokens.</p>
-      </div>
-      <div class="hero-bottom"><span>PLE-LAB / FIELD NOTES</span><a href="#mechanism">SCROLL TO FOLLOW THE TOKEN ↓</a><span>RTX 4050 LAPTOP · TINYSTORIES</span></div>
-    </section>
-
-    <section class="intro section-wrap" id="mechanism">
-      <div class="section-top"><span class="section-number">01 / THE MECHANISM</span><span>MODEL / OFFLOAD / INSPECTION</span></div>
-      <div class="intro-grid">
-        <div><p class="kicker">THE DESIGN QUESTION</p><h2>Large table.<br><i>Small transfer.</i></h2></div>
-        <div class="intro-text"><p>A normal embedding gives a token one vector. Here a token has <strong>six separately indexed, jointly trained 64-dimensional slices</strong>—one for each transformer block. The token IDs of a forward pass are known before that pass runs, so their rows can be fetched from CPU RAM or a memory-mapped file instead of keeping the entire table in GPU memory.</p><p>For <code>ple-small</code>, one fp16 row is <strong>768 bytes</strong>; the whole fp16 table is <strong>38.6 MB</strong>. Offloading is a memory strategy, not free acceleration: the latency measurements below show the cost.</p></div>
-      </div>
-      <div class="architecture">
-        <div class="architecture-header"><div><p class="kicker">THE PATH THROUGH ONE BLOCK</p><h3>Trace a slice</h3></div><p>Pick a layer to inspect its measured single-layer ablation.</p></div>
-        <div class="arch-flow" role="group" aria-label="Choose a transformer layer">
-          <div class="arch-node arch-token"><small>INPUT</small><strong>token ID</strong><span>known in advance</span></div>
-          <span class="flow-arrow" aria-hidden="true">→</span>
-          <div class="arch-node arch-table"><small>OFF-DEVICE STORE</small><strong>E[token]</strong><span>6 × 64 values</span></div>
-          <span class="flow-arrow" aria-hidden="true">→</span>
-          <div class="layer-picker" id="layer-picker">
-            <span class="picker-label">SELECT THE SLICE ↓</span>
-            <div class="layer-buttons">
-              <button type="button" class="selected" data-layer="0" aria-pressed="true">L0</button><button type="button" data-layer="1" aria-pressed="false">L1</button><button type="button" data-layer="2" aria-pressed="false">L2</button><button type="button" data-layer="3" aria-pressed="false">L3</button><button type="button" data-layer="4" aria-pressed="false">L4</button><button type="button" data-layer="5" aria-pressed="false">L5</button>
-            </div>
-            <span class="picker-label">64 values / layer</span>
-          </div>
-          <span class="flow-arrow" aria-hidden="true">→</span>
-          <div class="arch-node arch-residual"><small>AFTER ATTENTION + MLP</small><strong>gate × projection</strong><span>add to residual stream</span></div>
-        </div>
-        <div class="arch-readout" aria-live="polite"><span>SELECTED <strong id="layer-name">L0</strong></span><p id="layer-note">Removing only layer 0’s token input raises validation loss by +0.090 nats per prediction.</p><span class="mini-meter" aria-hidden="true"><span id="layer-meter" style="width:100%"></span></span></div>
-        <p class="fineprint">At each block, its token slice is combined with a projected initial-embedding context vector before the gated projection adds to the residual stream. The context term remains active in each single-layer ablation. Layers can compensate: their individual losses do not add up to the all-layer ablation. <a href="https://github.com/Avinashistoocool/PLE-Lab/blob/master/docs/CONTRACT.md">Model contract ↗</a> · <a href="https://github.com/Avinashistoocool/PLE-Lab/blob/master/docs/EXPLORER.md">Ablation definition ↗</a></p>
-      </div>
-    </section>
-
-    <section class="measurements" id="measurements">
-      <div class="section-wrap">
-        <div class="section-top"><span class="section-number">02 / MEASURED, NOT ASSUMED</span><span>SELECT A VIEW BELOW</span></div>
-        <div class="measure-header"><div><p class="kicker">INTERACTIVE DATA PLATE</p><h2>What changed<br><i>when we measured?</i></h2></div><p>Four views of the recorded runs. Change the view or select a mark to read its source and context; every number comes from the linked project results.</p></div>
-        <div class="chart-shell">
-          <div class="chart-controls" role="group" aria-label="Select measurement"><button type="button" class="active" data-chart="training" aria-pressed="true">01 / Training</button><button type="button" data-chart="ablation" aria-pressed="false">02 / Ablation</button><button type="button" data-chart="cache" aria-pressed="false">03 / Cache</button><button type="button" data-chart="latency" aria-pressed="false">04 / Latency</button></div>
-          <div class="chart-content"><div class="chart-text"><span class="chart-index" id="chart-index">FIGURE 01 / 04</span><h3 id="chart-title">A slight loss gap. Not a win.</h3><p id="chart-description">Same dense configuration and 24.6M sampled training-token positions, one seed each. The PLE model has more parameters and took longer to train. A 0.009 nats/token gap from one seed cannot establish an improvement.</p><div id="chart-key" class="chart-key"></div><p class="chart-selection" id="chart-selection" role="status">Select a plotted point to inspect it.</p><a id="chart-source" class="source-link" href="https://github.com/Avinashistoocool/PLE-Lab/blob/master/runs/summary.json">VIEW SOURCE DATA ↗</a></div><div class="chart-plot"><svg id="chart" viewBox="0 0 640 360" role="img" aria-labelledby="chart-svg-title chart-svg-desc"><title id="chart-svg-title">Training validation loss</title><desc id="chart-svg-desc">Interactive chart showing the measured baseline and PLE training validation loss.</desc></svg><p class="chart-hint">TAP, CLICK OR TAB TO A MARK FOR ITS EXACT VALUE</p></div></div>
-        </div>
-        <div class="stat-row"><div><span>+0.621 <small>± 0.008 SE</small></span><p>nats/token when the PLE token-table part is zeroed in all layers (context part active) · 25,500 predictions · token-level standard error, not run-to-run</p></div><div><span>0.872</span><p>Spearman correlation: PLE row norm vs. log frequency, for seen tokens</p></div><div><span>95.5%</span><p>prefill token hits with a 5% static-top-k cache on synthetic-big</p></div></div>
-        <p class="data-caveat">Measurements: TinyStories, RTX 4050 Laptop GPU (6 GB), Windows/WDDM; one training seed. Synthetic-big is a generated table benchmark, <strong>not</strong> a trained language model. GPU throughput is noisy on this shared laptop (about ±30% between runs); offload results use a warm OS page cache. <a href="https://github.com/Avinashistoocool/PLE-Lab/blob/master/docs/OFFLOAD.md">Benchmark methods ↗</a></p>
-      </div>
-    </section>
-
-    <section class="explorer section-wrap" id="explorer">
-      <div class="section-top"><span class="section-number">03 / OPEN THE INSTRUMENT</span><span>LOCAL APPLICATION / STATIC PREVIEW</span></div>
-      <div class="explorer-intro"><div><p class="kicker">THE PLE EXPLORER</p><h2>Numbers have<br><i>neighborhoods.</i></h2></div><div><p><a class="button button-primary" href="explorer.html">Try the public token map ↗</a></p><p>Search a published subset of trained tokens and explore their vectors in your browser. The screenshots below show the full local app, which also runs model-backed text analysis and ablations. GitHub Pages does not run PyTorch inference.</p></div></div>
-      <div class="gallery">
-        <figure class="gallery-feature"><img src="images/explorer-map.png" alt="PLE Explorer 3D PCA map showing token vectors grouped in colorful clusters" width="1440" height="1067" loading="lazy"><figcaption><span>PLATE I / THE MAP</span> A PCA snapshot of trained token vectors in the local Explorer. The image is not an interactive live map.</figcaption></figure>
-        <figure><img src="images/explorer-token.png" alt="PLE Explorer token view showing per-layer norms and nearest neighbors" width="1440" height="2282" loading="lazy"><figcaption><span>PLATE II / THE TOKEN</span> Inspect norms, slices and neighbors.</figcaption></figure>
-        <figure><img src="images/explorer-analyze.png" alt="PLE Explorer analysis view showing token-level loss and layer contribution visualizations" width="1440" height="1692" loading="lazy"><figcaption><span>PLATE III / THE ABLATION</span> Probe layer contributions on your own input locally.</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="reproduce" id="reproduce"><div class="section-wrap">
-      <div class="section-top"><span class="section-number">04 / REPRODUCE THE EXPERIMENT</span><span>NOT A HOSTED INFERENCE SERVICE</span></div>
-      <div class="reproduce-grid"><div><p class="kicker">TAKE IT OFF THE PAGE</p><h2>Run the full<br><i>Explorer locally.</i></h2><p>The public browser explorer shows a subset of token vectors without a backend. Full-vocabulary search, live text analysis and ablations require the FastAPI + PyTorch app on your own machine.</p><a class="button button-primary" href="https://github.com/Avinashistoocool/PLE-Lab">Clone PLE-Lab ↗</a></div><div class="terminal"><div class="terminal-top"><span>WINDOWS POWERSHELL</span><span>LOCAL ONLY <span class="terminal-dot" aria-hidden="true"></span></span></div><pre><code><span class="code-comment"># Clone the source:</span>
-git clone https://github.com/Avinashistoocool/PLE-Lab.git
-cd PLE-Lab
-pip install -r requirements.txt
-<span class="code-comment"># Train a run first, or create a random demo run:</span>
-python -m explorer.make_demo_run
-python -m explorer.server --runs runs --port 8765
-<span class="code-comment"># Open http://127.0.0.1:8765</span></code></pre><p>The public repository does <strong>not</strong> include trained checkpoints: model weights and table binaries under <code>runs/</code> are git-ignored. For the measured <code>ple-small</code> model instead of the random demo, prepare TinyStories and train both runs using <a href="https://github.com/Avinashistoocool/PLE-Lab#reproduce">README reproduction steps ↗</a>.</p></div></div>
-    </div></section>
-  </main>
-  <footer class="footer"><div><a class="wordmark" href="https://avinashistoocool.github.io/"><span class="mark">A/</span> avinash</a><p>PLE-Lab · a reproducible question about memory, not a claim of model improvement.</p></div><div class="footer-links"><a href="explorer.html">Try the public token map ↗</a><a href="https://avinashistoocool.github.io/">← Back to portfolio</a><a href="https://github.com/Avinashistoocool/PLE-Lab">Source repository ↗</a><a href="https://github.com/Avinashistoocool/PLE-Lab/blob/master/docs/EXPLORER.md">Explorer documentation ↗</a><a href="#main">Back to top ↑</a></div></footer>
+<p>This page moved to <a href="https://avinashistoocool.github.io/PLE-Lab/">https://avinashistoocool.github.io/PLE-Lab/</a>.</p>
 </body>
 </html>

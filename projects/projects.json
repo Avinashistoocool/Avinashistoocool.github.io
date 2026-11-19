@@ -1,0 +1,458 @@
+{
+  "groups": [
+    {
+      "id": "ml",
+      "title": "Machine learning research"
+    },
+    {
+      "id": "space",
+      "title": "Drones & space"
+    },
+    {
+      "id": "tools",
+      "title": "Tools"
+    },
+    {
+      "id": "earlier",
+      "title": "Earlier work"
+    }
+  ],
+  "projects": [
+    {
+      "repo": "Gated-Dual-Stream-Particle-Transformer",
+      "title": "GDS-ParT",
+      "group": "ml",
+      "short": "Jet-tagging transformer with pairwise-physics gating; 84.84% acc on JetClass",
+      "topics": [
+        "jet-tagging",
+        "particle-physics",
+        "high-energy-physics",
+        "jetclass",
+        "particle-transformer",
+        "transformer",
+        "attention",
+        "pytorch",
+        "deep-learning",
+        "lhc",
+        "avinash-chandra-gupta"
+      ],
+      "status": [
+        "interactive demo",
+        "docs"
+      ],
+      "pages": [
+        {
+          "label": "Guide",
+          "url": "https://avinashistoocool.github.io/Gated-Dual-Stream-Particle-Transformer/guide/"
+        },
+        {
+          "label": "GDS vs ParT explainer (interactive)",
+          "url": "https://avinashistoocool.github.io/Gated-Dual-Stream-Particle-Transformer/gds_vs_part.html"
+        }
+      ],
+      "description": "Gated dual-stream particle transformer for jet tagging: pairwise physics gates attention queries/keys. 84.84% accuracy, AUC 0.9853 on JetClass. PyTorch."
+    },
+    {
+      "repo": "GDS-parT-MoE",
+      "title": "GDS-ParT-MoE",
+      "group": "ml",
+      "short": "Mixture-of-Experts particle transformer; what physics each expert learns",
+      "topics": [
+        "jet-tagging",
+        "particle-physics",
+        "high-energy-physics",
+        "jetclass",
+        "mixture-of-experts",
+        "sparse-upcycling",
+        "interpretability",
+        "transformer",
+        "pytorch",
+        "avinash-chandra-gupta"
+      ],
+      "status": [
+        "results"
+      ],
+      "pages": [
+        {
+          "label": "Results",
+          "url": "https://avinashistoocool.github.io/GDS-parT-MoE/results/"
+        }
+      ],
+      "description": "Per-particle Mixture-of-Experts for GDS-ParT on JetClass: sparse upcycling and expert interpretability via mutual information and knockout. PyTorch."
+    },
+    {
+      "repo": "PLE-Lab",
+      "title": "PLE Lab",
+      "group": "ml",
+      "short": "Gemma-3n-inspired per-layer embeddings on a small TinyStories GPT",
+      "topics": [
+        "per-layer-embeddings",
+        "gemma-3n",
+        "tinystories",
+        "transformer",
+        "language-model",
+        "model-offloading",
+        "memory-mapping",
+        "llm-interpretability",
+        "token-embeddings",
+        "pytorch"
+      ],
+      "status": [
+        "interactive demo",
+        "results"
+      ],
+      "pages": [
+        {
+          "label": "Browser token explorer",
+          "url": "https://avinashistoocool.github.io/PLE-Lab/explorer.html"
+        }
+      ],
+      "description": "Small-scale per-layer embeddings (PLE) experiment inspired by Gemma 3n: TinyStories GPT, PLE-table offload benchmarks (GPU/CPU/mmap) and a token explorer."
+    },
+    {
+      "repo": "llm-nas",
+      "title": "LLM-NAS",
+      "group": "ml",
+      "short": "LLM-guided vs random architecture search on CIFAR-10 (one recorded run)",
+      "topics": [
+        "neural-architecture-search",
+        "llm-guided-search",
+        "random-search",
+        "cifar10",
+        "automl",
+        "ollama",
+        "qwen2-5-coder",
+        "pytorch",
+        "reproducible-research"
+      ],
+      "status": [
+        "results"
+      ],
+      "pages": [],
+      "description": "Single-run comparison of LLM-guided (Ollama Qwen2.5-Coder 3B) and random neural architecture search on CIFAR-10 in PyTorch, with recorded results."
+    },
+    {
+      "repo": "Jet-Class-Particle-Visualizer",
+      "title": "JetClass Particle Visualizer",
+      "group": "ml",
+      "short": "Particle-cloud plots, heatmaps and event displays for JetClass jets",
+      "topics": [
+        "jetclass",
+        "particle-physics",
+        "high-energy-physics",
+        "jet-tagging",
+        "data-visualization",
+        "plotly",
+        "matplotlib",
+        "uproot",
+        "python"
+      ],
+      "status": [
+        "docs"
+      ],
+      "pages": [],
+      "description": "Plotting pipeline for JetClass jets: 2D/3D particle clouds, class-averaged heatmaps, energy spectra, radial profiles and event displays. uproot, plotly."
+    },
+    {
+      "repo": "AnaTele",
+      "title": "AnaTele",
+      "group": "space",
+      "short": "ArduPilot flight-log crash investigation with 3D replay and diagnostics",
+      "topics": [
+        "ardupilot",
+        "drone",
+        "uav",
+        "flight-log-analysis",
+        "crash-investigation",
+        "mavlink",
+        "mission-planner",
+        "telemetry",
+        "pyside6",
+        "python",
+        "avinash-chandra-gupta"
+      ],
+      "status": [
+        "docs",
+        "download"
+      ],
+      "pages": [
+        {
+          "label": "Usage",
+          "url": "https://avinashistoocool.github.io/AnaTele/USAGE/"
+        },
+        {
+          "label": "Design",
+          "url": "https://avinashistoocool.github.io/AnaTele/DESIGN/"
+        },
+        {
+          "label": "Diagnostics",
+          "url": "https://avinashistoocool.github.io/AnaTele/DIAGNOSTICS/"
+        },
+        {
+          "label": "Preflight",
+          "url": "https://avinashistoocool.github.io/AnaTele/PREFLIGHT/"
+        },
+        {
+          "label": "Deployment",
+          "url": "https://avinashistoocool.github.io/AnaTele/DEPLOYMENT/"
+        },
+        {
+          "label": "Learn: 12 lessons and glossary",
+          "url": "https://avinashistoocool.github.io/AnaTele/learn/"
+        },
+        {
+          "label": "Latest release (download)",
+          "url": "https://github.com/Avinashistoocool/AnaTele/releases/latest"
+        }
+      ],
+      "description": "Drone crash investigation for ArduPilot flight logs (.tlog/.bin): 3D flight replay, compass/EKF, vibration and motor diagnostics, ranked crash hypotheses."
+    },
+    {
+      "repo": "asclepius",
+      "title": "Asclepius (NIDAR RescueSwarm)",
+      "group": "space",
+      "short": "Coverage planning and ArduPilot missions for a search-and-rescue drone swarm",
+      "topics": [
+        "drone-swarm",
+        "search-and-rescue",
+        "coverage-path-planning",
+        "ardupilot",
+        "mavlink",
+        "uav",
+        "multi-robot",
+        "computational-geometry",
+        "yolo-world",
+        "nidar",
+        "avinash-chandra-gupta"
+      ],
+      "status": [
+        "interactive demo",
+        "docs"
+      ],
+      "mainLabel": "browser planner",
+      "pages": [
+        {
+          "label": "Coverage theory (PDF)",
+          "url": "https://avinashistoocool.github.io/asclepius/papers/coverage_theory.pdf"
+        },
+        {
+          "label": "Technical report (PDF)",
+          "url": "https://avinashistoocool.github.io/asclepius/papers/Asclepius_Technical_Report.pdf"
+        }
+      ],
+      "description": "Search-and-rescue drone swarm tooling for NIDAR RescueSwarm: nadir-camera coverage path planning, ArduPilot mission export, fleet tools, YOLO-World detection."
+    },
+    {
+      "repo": "ISRO-BAH-26",
+      "title": "Lunar PSR Rover (ISRO BAH 2026)",
+      "group": "space",
+      "short": "Chandrayaan-2 DFSAR ice mapping, landing site and rover path (hackathon)",
+      "topics": [
+        "chandrayaan-2",
+        "dfsar",
+        "sar",
+        "radar-polarimetry",
+        "lunar-ice",
+        "lunar-south-pole",
+        "planetary-science",
+        "remote-sensing",
+        "path-planning",
+        "rover",
+        "isro",
+        "hackathon"
+      ],
+      "status": [
+        "results"
+      ],
+      "pages": [],
+      "description": "Lunar south pole subsurface ice mapping from Chandrayaan-2 DFSAR polarimetry: ice volume estimate, landing-site selection, A* rover path. ISRO hackathon 2026."
+    },
+    {
+      "repo": "Rotary-Detonation-Engine",
+      "title": "Rotating Detonation Engine atlas",
+      "group": "space",
+      "short": "Conceptual RDE project atlas, plan and 3D WebGL viewer (not a design)",
+      "topics": [
+        "rotating-detonation-engine",
+        "propulsion",
+        "aerospace",
+        "project-planning",
+        "visualization",
+        "webgl",
+        "playcanvas",
+        "html"
+      ],
+      "status": [
+        "interactive demo"
+      ],
+      "pages": [
+        {
+          "label": "Project atlas (interactive)",
+          "url": "https://avinashistoocool.github.io/Rotary-Detonation-Engine/rde-project.html"
+        },
+        {
+          "label": "3D observatory (WebGL)",
+          "url": "https://avinashistoocool.github.io/Rotary-Detonation-Engine/rde-3d.html"
+        }
+      ],
+      "description": "Conceptual planning and visualisation materials for a university rotating detonation engine demonstrator: project atlas, schedule, PlayCanvas 3D viewer."
+    },
+    {
+      "repo": "Agnostos-v2",
+      "title": "Agnostos (CLI)",
+      "group": "tools",
+      "short": "CLI that matches professors to your resume and sends paced cold emails",
+      "topics": [
+        "research-internship",
+        "academic-outreach",
+        "cold-email",
+        "email-automation",
+        "openalex",
+        "llm",
+        "groq",
+        "openai",
+        "cli",
+        "python",
+        "avinash-chandra-gupta"
+      ],
+      "status": [
+        "docs"
+      ],
+      "pages": [
+        {
+          "label": "Install on Windows",
+          "url": "https://avinashistoocool.github.io/Agnostos-v2/install-windows/"
+        },
+        {
+          "label": "Install on macOS",
+          "url": "https://avinashistoocool.github.io/Agnostos-v2/install-macos/"
+        },
+        {
+          "label": "Install on Linux",
+          "url": "https://avinashistoocool.github.io/Agnostos-v2/install-linux/"
+        },
+        {
+          "label": "FAQ",
+          "url": "https://avinashistoocool.github.io/Agnostos-v2/faq/"
+        },
+        {
+          "label": "Calendar",
+          "url": "https://avinashistoocool.github.io/Agnostos-v2/calendar/"
+        },
+        {
+          "label": "Diagnostics",
+          "url": "https://avinashistoocool.github.io/Agnostos-v2/diagnostics/"
+        }
+      ],
+      "description": "Research internship cold-email CLI: finds professors matching your resume, drafts personalised emails, sends them paced from your inbox, tracks replies."
+    },
+    {
+      "repo": "Agnostos-v3",
+      "title": "Agnostos (web app)",
+      "group": "tools",
+      "short": "Self-hosted web app version of Agnostos for research outreach",
+      "topics": [
+        "research-internship",
+        "academic-outreach",
+        "cold-email",
+        "email-automation",
+        "self-hosted",
+        "fastapi",
+        "openalex",
+        "llm",
+        "groq",
+        "python"
+      ],
+      "status": [
+        "docs"
+      ],
+      "pages": [],
+      "description": "Self-hosted web app for research internship outreach: find professors, draft emails, send paced from your inbox, handle replies. FastAPI. No public instance."
+    },
+    {
+      "repo": "ToggleCV",
+      "title": "ToggleCV",
+      "group": "tools",
+      "short": "GitHub repos to reviewed LaTeX CV project bullets via a YAML toggle file",
+      "topics": [
+        "resume",
+        "cv",
+        "latex",
+        "github-api",
+        "yaml",
+        "cli",
+        "python",
+        "jinja2"
+      ],
+      "status": [
+        "docs"
+      ],
+      "pages": [],
+      "description": "CLI that turns your GitHub repos into a YAML toggle file and writes the Projects section of your LaTeX CV, with reviewed Result/Action/Context bullets."
+    },
+    {
+      "repo": "Sci-Synth",
+      "title": "Sci-Synth (with PDF AI Explorer)",
+      "group": "tools",
+      "short": "Physics PDF to simulation, plus a PDF reading extension (merge in progress)",
+      "topics": [
+        "pdf",
+        "simulation"
+      ],
+      "status": [
+        "merge in progress",
+        "source on review branch"
+      ],
+      "pages": [],
+      "aliases": [
+        "pdf-ai-explorer"
+      ],
+      "sourceUrl": "https://github.com/Avinashistoocool/Sci-Synth/tree/docs/ste100-sanitized-source",
+      "description": "Reads a physics PDF and generates and runs a Python simulation with Groq (Next.js + FastAPI); being merged with the PDF AI Explorer browser extension."
+    },
+    {
+      "repo": "eraksha-hackathon",
+      "title": "e-Raksha hackathon prototype",
+      "group": "earlier",
+      "short": "Network flow capture and anomaly-detection prototype (hackathon)",
+      "topics": [
+        "network-security",
+        "anomaly-detection",
+        "isolation-forest",
+        "scapy",
+        "packet-sniffer",
+        "iot",
+        "flask",
+        "scikit-learn",
+        "hackathon",
+        "python"
+      ],
+      "status": [
+        "docs"
+      ],
+      "pages": [],
+      "description": "Hackathon prototype for network monitoring: Scapy flow capture, simulated IoT traffic, Isolation Forest anomaly detection, SQLite and a Flask dashboard."
+    },
+    {
+      "repo": "Object-tracking-with-color",
+      "title": "Colour-based object tracking",
+      "group": "earlier",
+      "short": "OpenCV colour-mask tracking with trajectory and velocity plots",
+      "topics": [
+        "computer-vision",
+        "opencv",
+        "object-tracking",
+        "color-detection",
+        "hsv",
+        "contours",
+        "matplotlib",
+        "python"
+      ],
+      "status": [
+        "docs"
+      ],
+      "pages": [],
+      "description": "OpenCV object tracking by colour: HSV masking, contours and convex hull centroid to plot a trajectory and velocity from a video. Early learning project."
+    }
+  ]
+}

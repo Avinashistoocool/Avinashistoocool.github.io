@@ -480,7 +480,7 @@
     renderHealth(projects, commits);
     renderLibStacks(libraries, projects.length);
     renderDiff(diff);
-    renderProjects(projects);
+    renderProjects(projects).catch((err) => console.error("projects", err));
     renderLibTable(libraries, projects.length);
     renderContrib(contributions);
     renderContact(user);
@@ -586,25 +586,54 @@
     }).join("");
   }
 
-  function renderProjects(projects) {
-    const featured = `<a class="card project glow" href="ple-lab/">
-      <div class="project-top"><h3>PLE Lab</h3><span class="v-chip">Interactive results</span></div>
-      <p>Per-layer embeddings and table offload benchmarks. Try the browser token explorer and its 3D vector map.</p>
-      <div class="project-meta"><span>Static results; full model explorer runs locally</span><span class="open">explore ↗</span></div>
-    </a><a class="card project glow" href="llm-nas/">
-      <div class="project-top"><h3>LLM NAS</h3><span class="v-chip">Search results</span></div>
-      <p>Language-model-guided neural architecture search with measured results and a reproducible workflow.</p>
-      <div class="project-meta"><span>Interactive result snapshots</span><span class="open">explore ↗</span></div>
-    </a>`;
-    $("#project-grid").innerHTML = featured + projects.filter((p) => !["ple-lab", "llm-nas"].includes(p.name.toLowerCase())).map((p) => {
+  /* project cards: guide entries (projects/projects.json) link to their /{Repo}/ page, plus a source link */
+  const PAGES = "https://avinashistoocool.github.io/";
+  const FEATURED = ["PLE-Lab", "llm-nas"];
+  const guideReady = fetch("projects/projects.json", { cache: "no-cache" })
+    .then((r) => (r.ok ? r.json() : null))
+    .catch(() => null);
+
+  async function renderProjects(projects) {
+    const guide = await guideReady;
+    if (!guide) return;
+    const key = (s) => s.toLowerCase();
+    const stats = new Map(projects.map((p) => [key(p.name), p]));
+    const covered = new Set();
+    for (const g of guide.projects) [g.repo, ...(g.aliases || [])].forEach((n) => covered.add(key(n)));
+    const order = [...FEATURED, ...guide.projects.map((g) => g.repo).filter((r) => !FEATURED.includes(r))];
+    const byRepo = new Map(guide.projects.map((g) => [g.repo, g]));
+
+    const card = ({ title, href, source, text, chip, libs, meta }) => `<article class="card project glow">
+        <div class="project-top"><h3><a class="stretch" href="${esc(href)}">${esc(title)}</a></h3>${chip}</div>
+        <p>${esc(text)}</p>
+        <div class="libs">${libs.map((l) => `<span>${esc(l)}</span>`).join("")}</div>
+        <div class="project-meta"><span>${meta}</span><a class="src" href="${esc(source)}" target="_blank" rel="noopener">source ↗</a></div>
+      </article>`;
+    const metaFor = (p) => p ? `${esc(p.language || "—")} · ${p.commits}${p.commits >= 30 ? "+" : ""} commits · pushed ${ago(p.pushed_at)}` : "open the project page";
+
+    const guided = order.map((repo) => {
+      const g = byRepo.get(repo);
+      const p = stats.get(key(repo));
+      const status = (g.status || [])[0];
+      return card({
+        title: g.title,
+        href: `${PAGES}${g.repo}/`,
+        source: g.sourceUrl || `https://github.com/Avinashistoocool/${g.repo}`,
+        text: g.short,
+        chip: status ? `<span class="v-chip"><i class="dot ${status === "merge in progress" ? "active" : "pass"}"></i>${esc(status)}</span>` : "",
+        libs: (g.topics || []).filter((t) => !/^avinash-/.test(t)).slice(0, 6),
+        meta: metaFor(p),
+      });
+    });
+    const others = projects.filter((p) => !covered.has(key(p.name))).map((p) => {
       const fresh = Date.now() - new Date(p.pushed_at) < 30 * DAY;
-      return `<a class="card project glow" href="${esc(p.url)}" target="_blank" rel="noopener">
-        <div class="project-top"><h3>${esc(p.name)}</h3><span class="v-chip"><i class="dot ${fresh ? "pass" : "warn"}"></i>★ ${p.stars}</span></div>
-        <p>${esc(p.text)}</p>
-        <div class="libs">${p.libs.map((l) => `<span>${esc(l)}</span>`).join("")}</div>
-        <div class="project-meta"><span>${esc(p.language || "—")} · ${p.commits}${p.commits >= 30 ? "+" : ""} commits · pushed ${ago(p.pushed_at)}</span><span class="open">open ↗</span></div>
-      </a>`;
-    }).join("");
+      return card({
+        title: p.name, href: p.url, source: p.url, text: p.text,
+        chip: `<span class="v-chip"><i class="dot ${fresh ? "pass" : "warn"}"></i>★ ${p.stars}</span>`,
+        libs: p.libs || [], meta: metaFor(p),
+      });
+    });
+    $("#project-grid").innerHTML = guided.join("") + others.join("");
   }
 
   function renderLibTable(libs, nRepos) {
