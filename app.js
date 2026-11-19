@@ -587,7 +587,16 @@
   }
 
   function renderProjects(projects) {
-    $("#project-grid").innerHTML = projects.map((p) => {
+    const featured = `<a class="card project glow" href="ple-lab/">
+      <div class="project-top"><h3>PLE Lab</h3><span class="v-chip">Interactive results</span></div>
+      <p>Per-layer embeddings, table offload benchmarks and an explorer of learned token vectors.</p>
+      <div class="project-meta"><span>Static results; full model explorer runs locally</span><span class="open">explore ↗</span></div>
+    </a><a class="card project glow" href="llm-nas/">
+      <div class="project-top"><h3>LLM NAS</h3><span class="v-chip">Search results</span></div>
+      <p>Language-model-guided neural architecture search with measured results and a reproducible workflow.</p>
+      <div class="project-meta"><span>Interactive result snapshots</span><span class="open">explore ↗</span></div>
+    </a>`;
+    $("#project-grid").innerHTML = featured + projects.filter((p) => !["ple-lab", "llm-nas"].includes(p.name.toLowerCase())).map((p) => {
       const fresh = Date.now() - new Date(p.pushed_at) < 30 * DAY;
       return `<a class="card project glow" href="${esc(p.url)}" target="_blank" rel="noopener">
         <div class="project-top"><h3>${esc(p.name)}</h3><span class="v-chip"><i class="dot ${fresh ? "pass" : "warn"}"></i>★ ${p.stars}</span></div>

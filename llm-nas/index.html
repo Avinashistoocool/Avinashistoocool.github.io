@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10130f">
+  <meta name="description" content="LLM-guided neural architecture search on CIFAR-10: inspect verified candidates, compare the local 3B model with random search, and reproduce the experiment.">
+  <link rel="canonical" href="https://avinashistoocool.github.io/llm-nas/">
+  <meta property="og:title" content="LLM NAS — when the searcher loses">
+  <meta property="og:description" content="A candid, interactive look at a local LLM evolving PyTorch CNNs against random search on CIFAR-10.">
+  <meta property="og:url" content="https://avinashistoocool.github.io/llm-nas/">
+  <title>LLM NAS — when the searcher loses</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="explorer.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar wrap">
+    <a class="wordmark" href="https://avinashistoocool.github.io/" aria-label="Avinash home">avinash<span class="mark"> / lab notes</span></a>
+    <nav aria-label="On this page"><a href="#experiment">Experiment</a><a href="#explorer">Explore</a><a href="#reproduce">Reproduce</a><a href="https://github.com/Avinashistoocool/llm-nas">Source ↗</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="headline">
+      <div class="hero-copy">
+        <p class="kicker"><span class="pulse" aria-hidden="true"></span> FIELD REPORT / CIFAR-10 / 12 NOV 2026</p>
+        <h1 id="headline">What if the <em>searcher</em> loses?</h1>
+        <p class="hero-lede">A local 3B language model wrote and evolved neural architectures. A plain random baseline found the stronger model. Here is what actually happened.</p>
+        <div class="hero-actions"><a class="button primary" href="#explorer">Inspect the evidence <span aria-hidden="true">↗</span></a><a class="button outline" href="https://github.com/Avinashistoocool/llm-nas">Read the code ↗</a></div>
+      </div>
+      <div class="hero-readout" aria-label="Best full-training test accuracy">
+        <p class="tiny">FINAL TEST ACCURACY / BEST MODEL PER STRATEGY</p>
+        <div class="readout"><span class="label">RANDOM</span><strong>92.72<span>%</span></strong><div class="meter"><span style="width:92.72%"></span></div></div>
+        <div class="readout llm"><span class="label">LLM / 3B</span><strong>89.34<span>%</span></strong><div class="meter"><span style="width:89.34%"></span></div></div>
+        <p class="readout-note">One reported run per strategy; not a multi-seed estimate. Test scores are from 20-epoch finalist training, not proxy search.</p>
+      </div>
+      <div class="hero-footer"><span>01 — ASK A MODEL TO DESIGN MODELS</span><span>SCROLL TO INVESTIGATE ↓</span></div>
+    </section>
+
+    <section class="section wrap" id="experiment">
+      <div class="section-title"><span class="num">01 / SETUP</span><h2>The experiment</h2></div>
+      <div class="experiment-grid">
+        <div class="statement"><p>The LLM is the <em>mutation operator</em>, not the trainer.</p><span>It proposes raw PyTorch CNN code. Validation checks syntax, safety rules, shapes and model budget; a fixed training recipe scores surviving candidates and feeds results into the next prompt.</span></div>
+        <div class="steps" aria-label="Search pipeline">
+          <div><b>01</b><span>Choose parents</span><small>Tournament from archive</small></div>
+          <div><b>02</b><span>Propose code</span><small>Qwen2.5-Coder 3B on CPU, or random sampling</small></div>
+          <div><b>03</b><span>Check &amp; train</span><small>≤1M parameters, ≤600 MFLOPs; 5 epochs on 10k images</small></div>
+          <div><b>04</b><span>Evaluate finalists</span><small>20 epochs on 45k images; test set only here</small></div>
+        </div>
+      </div>
+      <div class="stat-strip" aria-label="Reported proxy results">
+        <div><span>PROPOSED / TRAINED</span><strong>46 / 30</strong><small>LLM-generated (seeds excluded) / total trained</small></div>
+        <div><span>PROPOSED / TRAINED</span><strong>33 / 30</strong><small>random proposals / trained</small></div>
+        <div><span>MEDIAN PROXY VAL</span><strong>59.78<span>%</span></strong><small>LLM non-seed successful proposals</small></div>
+        <div><span>MEDIAN PROXY VAL</span><strong>56.92<span>%</span></strong><small>random successful proposals</small></div>
+      </div>
+      <p class="fineprint">The proposal counts and valid rates (LLM 59%, random 85%) exclude the LLM's hand-designed seeds; trained counts include them. Medians use successful non-seed proposals. Source: <a href="https://github.com/Avinashistoocool/llm-nas/blob/master/analysis/RESULTS.md">generated results report ↗</a> and <a href="https://github.com/Avinashistoocool/llm-nas/blob/master/analysis/report.py">report implementation ↗</a>.</p>
+    </section>
+
+    <section class="section explorer-section" id="explorer">
+      <div class="wrap">
+        <div class="section-title"><span class="num">02 / EVIDENCE</span><h2>Explore the candidates</h2></div>
+        <p class="intro">Ten documented top-five candidates, not a reconstruction of every trial. Switch strategies, select a dot or a row, and compare the four full-trained finalists. Accuracy below is <strong>proxy validation accuracy</strong> unless explicitly marked test.</p>
+        <div class="explorer-shell">
+          <div class="explorer-top"><span class="tiny">VERIFIED TOP-5 / EACH STRATEGY</span><div class="switches" role="group" aria-label="Filter candidates"><button type="button" class="selected" data-filter="all" aria-pressed="true">Both <span>10</span></button><button type="button" data-filter="llm" aria-pressed="false">LLM <span>5</span></button><button type="button" data-filter="random" aria-pressed="false">Random <span>5</span></button></div></div>
+          <div class="explorer-layout">
+            <div class="plot-column">
+              <div class="plot-head"><strong>Accuracy vs size</strong><span>● LLM &nbsp; ◆ Random &nbsp; ◯ Selected</span></div>
+              <div id="plot" class="plot" role="group" aria-label="Verified top-five candidates plotted by parameters and proxy validation accuracy"></div>
+              <div class="axis-x">PARAMETERS (THOUSANDS) →</div>
+              <p class="plot-note">Only report-listed top-five entries appear here. For the actual best-so-far trajectory across all trained candidates, see the original plot below.</p>
+              <div id="candidate-list" class="candidate-list" aria-label="Select a candidate"></div>
+            </div>
+            <aside class="detail" aria-live="polite" aria-atomic="true">
+              <span class="tiny">SELECTED ARCHITECTURE</span>
+              <h3 id="detail-name"></h3>
+              <p id="detail-idea"></p>
+              <dl><div><dt>Proxy validation</dt><dd id="detail-proxy"></dd></div><div><dt>Parameters</dt><dd id="detail-params"></dd></div><div><dt>Origin</dt><dd id="detail-origin"></dd></div><div><dt>Finalist test</dt><dd id="detail-test"></dd></div></dl>
+              <a id="detail-link" href="#">See entry in results ↗</a>
+            </aside>
+          </div>
+        </div>
+        <div class="progress-block">
+          <div><p class="num">FULL SEARCH / SOURCE PLOT</p><h3>The actual trajectory</h3><p>This is the project's generated figure: best proxy validation accuracy after each trained candidate, plus accuracy versus parameter count. It contains the full logged runs, unlike the ten-point explorer above.</p><a href="https://github.com/Avinashistoocool/llm-nas/blob/master/analysis/report.py">How this plot is generated ↗</a></div>
+          <figure><a href="search_progress.png" target="_blank" rel="noopener"><img src="search_progress.png" alt="Original generated two-panel plot comparing best-so-far proxy validation accuracy by trained candidate count and accuracy versus model parameters for the LLM and random runs." width="1560" height="585" loading="lazy"></a><figcaption>Original <code>analysis/search_progress.png</code> from the project; open for full size.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="takeaway">
+      <div class="section-title"><span class="num">03 / TAKEAWAY</span><h2>A better median. A worse winner.</h2></div>
+      <div class="takeaways">
+        <article><span>01 / LOCAL OPTIMISM</span><h3>Good neighbors, not enough novelty.</h3><p>The LLM's median non-seed proxy candidate reached 59.78% against random's 56.92%, but its best reached 66.68% against random's 69.08%. Its proposals repeatedly favored depthwise-separable convolutions close to the seeds.</p></article>
+        <article><span>02 / BUDGET HEADROOM</span><h3>Random explored larger models.</h3><p>The winning LLM finalist has 298,026 parameters; the highest-test random finalist has 801,326. Both fit under the 1M-parameter limit. The reported failure modes include 9 duplicate and 8 error entries for the LLM run.</p></article>
+        <article><span>03 / HONEST LIMITS</span><h3>One run is not a verdict on LLM NAS.</h3><p>These are first-run results with a CPU-hosted 3B model. A 5-epoch proxy is noisy, and the repository lists larger models, ablations and multiple seeds as future work. The AST guard rail is not a security boundary.</p></article>
+      </div>
+    </section>
+
+    <section class="section reproduce" id="reproduce"><div class="wrap">
+      <div class="section-title"><span class="num">04 / REPRODUCE</span><h2>Run it on your machine.</h2></div>
+      <p class="intro">This page is a static report, not a live NAS service. The repository has <strong>no web UI</strong>; run the Python CLI locally with Python dependencies from <code>requirements.txt</code>, Ollama for the LLM strategy, CIFAR-10 parquet files and a CUDA-capable GPU for training. After cloning and installing dependencies, the search and report commands are copied from the project's README.</p>
+      <div class="terminal"><div class="terminal-bar"><span>POWERSHELL / LOCAL REPRODUCTION</span><button type="button" id="copy-command" aria-label="Copy reproduction commands">Copy commands</button></div><pre><code id="commands">git clone https://github.com/Avinashistoocool/llm-nas.git
+cd llm-nas
+python -m pip install -r requirements.txt
+
+curl.exe -L -o data/train.parquet https://huggingface.co/datasets/uoft-cs/cifar10/resolve/main/plain_text/train-00000-of-00001.parquet
+curl.exe -L -o data/test.parquet  https://huggingface.co/datasets/uoft-cs/cifar10/resolve/main/plain_text/test-00000-of-00001.parquet
+
+ollama pull qwen2.5-coder:3b
+python -m nas.search --run llm_qwen3b --strategy llm   --set search.budget=40
+python -m nas.search --run random     --strategy random --set search.budget=40
+python -m nas.final  --runs llm_qwen3b random
+python -m analysis.report --runs llm_qwen3b random</code></pre></div>
+      <p class="fineprint">To display results, open <code>analysis/RESULTS.md</code> and <code>analysis/search_progress.png</code> after the report command; no server or dashboard is provided. The report reads local <code>runs/&lt;run&gt;/archive.jsonl</code> and optional <code>runs/final_results.json</code>. Do not publish run directories, model files, checkpoints or API keys. Rerunning the same run names resumes existing archives rather than starting fresh.</p>
+      <div class="end-links"><a class="button primary" href="https://github.com/Avinashistoocool/llm-nas">Browse repository ↗</a><a class="button outline" href="https://github.com/Avinashistoocool/llm-nas/blob/master/README.md">Setup &amp; limitations ↗</a></div>
+    </div></section>
+  </main>
+  <footer class="wrap"><span>LLM NAS / A REPORT, NOT A DEMO OF TRAINING</span><a href="https://avinashistoocool.github.io/">← Back to Avinash</a></footer>
+</body>
+</html>
