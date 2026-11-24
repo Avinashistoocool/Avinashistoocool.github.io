@@ -412,7 +412,7 @@
     .then(render)
     .catch((err) => console.error("data.json", err));
 
-  /* data.json is rebuilt hourly; patch in anything pushed since then straight from the GitHub API */
+  /* Patch repository activity newer than the checked-in snapshot from the GitHub API. */
   async function live(d) {
     const TTL = 5 * 60e3;
     const gh = async (path) => {
@@ -432,6 +432,7 @@
       const repos = (await gh(`users/${login}/repos?per_page=100&type=owner&sort=pushed`))
         .filter((r) => !r.fork && !r.archived && r.name.toLowerCase() !== login.toLowerCase() && r.size > 0);
       const known = new Map(d.projects.map((p) => [p.name, p]));
+      const currentNames = new Set(repos.map((r) => r.name));
       const changed = [];
       for (const r of repos) {
         let p = known.get(r.name);
@@ -443,6 +444,8 @@
         if (r.pushed_at > p.pushed_at) changed.push(p);
         Object.assign(p, { stars: r.stargazers_count, forks: r.forks_count, pushed_at: r.pushed_at, size_kb: r.size });
       }
+      d.projects = d.projects.filter((p) => currentNames.has(p.name));
+      d.commits = d.commits.filter((c) => currentNames.has(c.repo));
       const seen = new Set(d.commits.map((c) => c.sha));
       const since = new Date(d.generated_at).toISOString();
       await Promise.all(changed.slice(0, 5).map(async (p) => {
@@ -455,7 +458,7 @@
       d.commits.sort((a, b) => new Date(b.date) - new Date(a.date));
       d.commits = d.commits.slice(0, 60);
       d.projects.sort((a, b) => (b.stars - a.stars) || (a.pushed_at < b.pushed_at ? 1 : -1));
-      d.live = true;
+      d.reposLive = true;
     } catch (err) {
       console.warn("live GitHub refresh skipped:", err);
     }
@@ -466,7 +469,8 @@
     const { user, projects, commits, libraries, languages, diff, contributions } = d;
 
     $("#year").textContent = new Date().getFullYear();
-    $("#generated").textContent = `data from the GitHub API · ${d.live ? "live" : `updated ${ago(d.generated_at)}`}`;
+    const snapshotDate = d.generated_at.slice(0, 10);
+    $("#generated").textContent = `GitHub data · contributions captured ${snapshotDate} · ${d.reposLive ? "repos checked live" : "repos from snapshot"}`;
     if (commits.length) $("#hero-last").textContent = `last pushed code ${ago(commits[0].date)}`;
     for (const a of document.querySelectorAll('a[href*="buymeacoffee"]')) a.href = user.support_url;
 
@@ -482,7 +486,7 @@
     renderDiff(diff);
     renderProjects(projects).catch((err) => console.error("projects", err));
     renderLibTable(libraries, projects.length);
-    renderContrib(contributions);
+    renderContrib(contributions, snapshotDate);
     renderContact(user);
   }
 
@@ -643,10 +647,10 @@
     ).join("");
   }
 
-  function renderContrib(c) {
+  function renderContrib(c, snapshotDate) {
     const days = c.days.slice().sort((a, b) => (a.col - b.col) || (a.row - b.row));
     $("#contrib-grid").innerHTML = days.map((d) => `<i data-l="${d.level}" title="${esc(d.date)}" style="grid-row:${d.row + 1};grid-column:${d.col + 1}"></i>`).join("");
-    $("#contrib-chip").innerHTML = `<i class="dot pass"></i>${c.total} TOTAL`;
+    $("#contrib-chip").innerHTML = `<i class="dot pass"></i>${c.total} TOTAL · AS OF ${esc(snapshotDate)}`;
   }
 
   function renderContact(user) {
