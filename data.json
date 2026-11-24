@@ -1,16 +1,16 @@
 {
- "generated_at": "2026-10-21T13:04:31+00:00",
+ "generated_at": "2026-11-24T20:28:20+00:00",
  "user": {
   "login": "Avinashistoocool",
   "name": "Avinash Chandra Gupta",
-  "bio": "A cool dude starting out ;D",
+  "bio": "Avinash Chandra Gupta \u00b7 Physics @ IIT Delhi \u00b7 ML for particle physics, drones & lunar science \u00b7 Open-source tools",
   "avatar": "https://avatars.githubusercontent.com/u/230444961?v=4",
   "since": "2025",
-  "followers": 3,
-  "public_repos": 9,
+  "followers": 4,
+  "public_repos": 22,
   "location": null,
   "email": "ph1251520@iitd.ac.in",
-  "blog": null,
+  "blog": "avinashistoocool.github.io",
   "socials": [
    {
     "provider": "linkedin",
@@ -24,55 +24,155 @@
   {
    "name": "Agnostos-v2",
    "url": "https://github.com/Avinashistoocool/Agnostos-v2",
-   "text": "Agnostos: AI research internship outreach CLI. Finds professors matching your resume, drafts honest cold emails, sends them paced, tracks and drafts replies.",
-   "stars": 33,
-   "forks": 1,
+   "text": "Research internship cold-email CLI: finds professors matching your resume, drafts personalised emails, sends them paced from your inbox, tracks replies.",
+   "stars": 20,
+   "forks": 2,
    "language": "Python",
-   "pushed_at": "2026-10-16T18:50:10Z",
+   "pushed_at": "2026-11-21T21:11:36Z",
    "created_at": "2026-10-13T07:50:44Z",
    "topics": [
     "academic-outreach",
-    "agnostos",
+    "avinash-chandra-gupta",
     "cli",
     "cold-email",
     "email-automation",
     "groq",
-    "internship",
     "llm",
     "openai",
     "openalex",
-    "professors",
     "python",
-    "research-internship",
-    "students"
+    "research-internship"
    ],
-   "size_kb": 502,
-   "commits": 19,
+   "size_kb": 6088,
+   "commits": 30,
    "libs": [
     "openpyxl",
-    "pyyaml",
-    "dns",
-    "ddgs",
-    "openai",
-    "playwright"
+    "python-dotenv",
+    "PySide6",
+    "pdfplumber",
+    "playwright",
+    "ruamel"
+   ]
+  },
+  {
+   "name": "Agnostos-v3",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v3",
+   "text": "Self-hosted web app for research internship outreach: find professors, draft emails, send paced from your inbox, handle replies. FastAPI. No public instance.",
+   "stars": 1,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-11-19T18:59:39Z",
+   "created_at": "2026-10-15T22:20:39Z",
+   "topics": [
+    "academic-outreach",
+    "cold-email",
+    "email-automation",
+    "fastapi",
+    "groq",
+    "llm",
+    "openalex",
+    "python",
+    "research-internship",
+    "self-hosted"
+   ],
+   "size_kb": 573,
+   "commits": 8,
+   "libs": [
+    "openpyxl",
+    "sqlalchemy",
+    "cryptography",
+    "playwright",
+    "fastapi",
+    "alembic"
+   ]
+  },
+  {
+   "name": "GDS-ParT-L1T-FPGA",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-L1T-FPGA",
+   "text": "GDS-ParT distilled for the CMS Level-1 trigger: hls4ml FPGA firmware with microsecond latency",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-11-21T15:47:23Z",
+   "created_at": "2026-11-20T20:59:55Z",
+   "topics": [],
+   "size_kb": 231,
+   "commits": 9,
+   "libs": [
+    "torch",
+    "gdsl1",
+    "numpy",
+    "pytest",
+    "hls4ml",
+    "awkward"
+   ]
+  },
+  {
+   "name": "GDS-ParT-CMS-OpenData",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-CMS-OpenData",
+   "text": "Running GDS-ParT on real CMS Open Data: data vs simulation disagreement study",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-11-21T15:41:31Z",
+   "created_at": "2026-11-20T21:00:00Z",
+   "topics": [],
+   "size_kb": 28848,
+   "commits": 7,
+   "libs": [
+    "numpy",
+    "awkward",
+    "torch",
+    "cmsod",
+    "scikit-learn",
+    "matplotlib"
+   ]
+  },
+  {
+   "name": "ParT-Interpretability",
+   "url": "https://github.com/Avinashistoocool/ParT-Interpretability",
+   "text": "What does the Particle Transformer learn? Attention patterns behind b-tagging",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-11-21T15:28:39Z",
+   "created_at": "2026-11-20T20:59:49Z",
+   "topics": [],
+   "size_kb": 2238,
+   "commits": 5,
+   "libs": [
+    "torch",
+    "numpy",
+    "partinterp",
+    "awkward",
+    "uproot",
+    "scikit-learn"
    ]
   },
   {
    "name": "Gated-Dual-Stream-Particle-Transformer",
    "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer",
-   "text": "A custom PyTorch architecture for jet classification that rethinks how pairwise particle physics enters a transformer.",
+   "text": "Gated dual-stream particle transformer for jet tagging: pairwise physics gates attention queries/keys. 84.84% accuracy, AUC 0.9853 on JetClass. PyTorch.",
    "stars": 0,
    "forks": 0,
    "language": "Python",
-   "pushed_at": "2026-10-21T11:43:29Z",
+   "pushed_at": "2026-11-20T10:48:53Z",
    "created_at": "2026-07-02T07:36:49Z",
    "topics": [
+    "attention",
+    "avinash-chandra-gupta",
+    "deep-learning",
+    "high-energy-physics",
+    "jet-tagging",
     "jetclass",
+    "lhc",
     "particle-physics",
+    "particle-transformer",
+    "pytorch",
     "transformer"
    ],
-   "size_kb": 61059,
-   "commits": 15,
+   "size_kb": 93520,
+   "commits": 30,
    "libs": [
     "numpy",
     "torch",
@@ -83,58 +183,325 @@
    ]
   },
   {
-   "name": "asclepius",
-   "url": "https://github.com/Avinashistoocool/asclepius",
-   "text": "RescueSwarm - Phase 1 Simulation. Core logic for: 1. FleetManager - polygon -> parallel search lanes, balanced across N search drones 2. TargetManager - survivor detections -> delivery-drone dispatch (continuous / two-wave) Scope note (read before extending): This module is a GENERAL lane-generation planner driven by swathwidth. It is deliberately separate from the \"5 fixed parallel strips flown once as a single formation pass\" design used elsewhere in the RescueSwarm engineering docs - that design assumes the 5-drone combined swath already spans the polygon width in one pass. This planner instead computes however many lanes swathwidth actually requires and balances them across the fleet, which is the right tool if that single-pass assumption doesn't hold (narrower footprint, different polygon, different fleet size). Keep the two mental models separate.",
+   "name": "Avinashistoocool.github.io",
+   "url": "https://github.com/Avinashistoocool/Avinashistoocool.github.io",
+   "text": "Personal website and portfolio of Avinash Chandra Gupta: physics at IIT Delhi, machine learning for particle physics, drones and lunar science.",
    "stars": 0,
    "forks": 0,
-   "language": "Python",
-   "pushed_at": "2026-10-04T19:20:01Z",
-   "created_at": "2026-08-29T17:13:51Z",
-   "topics": [],
-   "size_kb": 22,
-   "commits": 2,
+   "language": "JavaScript",
+   "pushed_at": "2026-11-20T09:44:05Z",
+   "created_at": "2026-10-21T13:06:02Z",
+   "topics": [
+    "avinash-chandra-gupta",
+    "avinash-gupta",
+    "github-pages",
+    "html",
+    "iit-delhi",
+    "personal-website",
+    "portfolio"
+   ],
+   "size_kb": 3304,
+   "commits": 25,
+   "libs": []
+  },
+  {
+   "name": "Rotary-Detonation-Engine",
+   "url": "https://github.com/Avinashistoocool/Rotary-Detonation-Engine",
+   "text": "Conceptual planning and visualisation materials for a university rotating detonation engine demonstrator: project atlas, schedule, PlayCanvas 3D viewer.",
+   "stars": 0,
+   "forks": 0,
+   "language": "HTML",
+   "pushed_at": "2026-11-19T19:02:01Z",
+   "created_at": "2026-10-23T16:48:26Z",
+   "topics": [
+    "aerospace",
+    "html",
+    "playcanvas",
+    "project-planning",
+    "propulsion",
+    "rotating-detonation-engine",
+    "visualization",
+    "webgl"
+   ],
+   "size_kb": 74,
+   "commits": 6,
+   "libs": []
+  },
+  {
+   "name": "Sci-Synth",
+   "url": "https://github.com/Avinashistoocool/Sci-Synth",
+   "text": "Browser extension (MV3) that explains scientific PDFs: hold Alt over text, equations or figures and ask your own AI provider. Opt-in viewer, no analytics.",
+   "stars": 0,
+   "forks": 0,
+   "language": "TypeScript",
+   "pushed_at": "2026-11-19T18:59:33Z",
+   "created_at": "2026-10-05T16:18:00Z",
+   "topics": [
+    "ai",
+    "chrome-extension",
+    "llm",
+    "manifest-v3",
+    "ocr",
+    "pdf",
+    "pdfjs",
+    "physics-simulation",
+    "study-tool",
+    "tesseract"
+   ],
+   "size_kb": 373,
+   "commits": 8,
    "libs": [
-    "shapely",
+    "fastapi",
+    "pytest",
     "numpy",
-    "matplotlib",
-    "scipy",
-    "ultralytics",
-    "opencv"
+    "routes",
+    "pydantic",
+    "pypdf"
    ]
   },
   {
-   "name": "eraksha-hackathon",
-   "url": "https://github.com/Avinashistoocool/eraksha-hackathon",
-   "text": "IoT Flow Generator - IMPROVED VERSION. Simulates IoT device traffic with clear output",
+   "name": "ToggleCV",
+   "url": "https://github.com/Avinashistoocool/ToggleCV",
+   "text": "CLI that turns your GitHub repos into a YAML toggle file and writes the Projects section of your LaTeX CV, with reviewed Result/Action/Context bullets.",
    "stars": 0,
    "forks": 0,
    "language": "Python",
-   "pushed_at": "2026-07-06T12:12:53Z",
-   "created_at": "2026-07-06T12:10:19Z",
-   "topics": [],
-   "size_kb": 11079,
-   "commits": 1,
+   "pushed_at": "2026-11-19T18:59:28Z",
+   "created_at": "2026-10-31T17:39:11Z",
+   "topics": [
+    "cli",
+    "cv",
+    "github-api",
+    "jinja2",
+    "latex",
+    "python",
+    "resume",
+    "yaml"
+   ],
+   "size_kb": 282,
+   "commits": 5,
    "libs": [
-    "google-adk",
-    "scapy",
+    "pyyaml",
+    "jinja2"
+   ]
+  },
+  {
+   "name": "llm-nas",
+   "url": "https://github.com/Avinashistoocool/llm-nas",
+   "text": "Single-run comparison of LLM-guided (Ollama Qwen2.5-Coder 3B) and random neural architecture search on CIFAR-10 in PyTorch, with recorded results.",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-11-19T18:59:15Z",
+   "created_at": "2026-11-19T11:51:56Z",
+   "topics": [
+    "automl",
+    "cifar10",
+    "llm-guided-search",
+    "neural-architecture-search",
+    "ollama",
+    "pytorch",
+    "qwen2-5-coder",
+    "random-search",
+    "reproducible-research"
+   ],
+   "size_kb": 460,
+   "commits": 7,
+   "libs": [
+    "torch",
+    "matplotlib",
+    "pyarrow",
     "numpy",
+    "pillow",
+    "pytest"
+   ]
+  },
+  {
+   "name": "PLE-Lab",
+   "url": "https://github.com/Avinashistoocool/PLE-Lab",
+   "text": "Small-scale per-layer embeddings (PLE) experiment inspired by Gemma 3n: TinyStories GPT, PLE-table offload benchmarks (GPU/CPU/mmap) and a token explorer.",
+   "stars": 0,
+   "forks": 0,
+   "language": "JavaScript",
+   "pushed_at": "2026-11-19T18:59:10Z",
+   "created_at": "2026-11-19T11:51:51Z",
+   "topics": [
+    "gemma-3n",
+    "language-model",
+    "llm-interpretability",
+    "memory-mapping",
+    "model-offloading",
+    "per-layer-embeddings",
+    "pytorch",
+    "tinystories",
+    "token-embeddings",
+    "transformer"
+   ],
+   "size_kb": 27319,
+   "commits": 8,
+   "libs": [
+    "torch",
+    "numpy",
+    "tiktoken",
+    "playwright",
     "scikit-learn",
-    "flask"
+    "pytest"
+   ]
+  },
+  {
+   "name": "asclepius",
+   "url": "https://github.com/Avinashistoocool/asclepius",
+   "text": "Search-and-rescue drone swarm tooling for NIDAR RescueSwarm: nadir-camera coverage path planning, ArduPilot mission export, fleet tools, YOLO-World detection.",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-11-19T16:24:05Z",
+   "created_at": "2026-08-29T17:13:51Z",
+   "topics": [
+    "ardupilot",
+    "avinash-chandra-gupta",
+    "computational-geometry",
+    "coverage-path-planning",
+    "drone-swarm",
+    "mavlink",
+    "multi-robot",
+    "nidar",
+    "search-and-rescue",
+    "uav",
+    "yolo-world"
+   ],
+   "size_kb": 3002,
+   "commits": 30,
+   "libs": [
+    "numpy",
+    "scipy",
+    "shapely",
+    "skimage",
+    "pymavlink",
+    "matplotlib"
+   ]
+  },
+  {
+   "name": "ISRO-BAH-26",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26",
+   "text": "Lunar south pole subsurface ice mapping from Chandrayaan-2 DFSAR polarimetry: ice volume estimate, landing-site selection, A rover path. ISRO hackathon 2026.",
+   "stars": 0,
+   "forks": 2,
+   "language": "Python",
+   "pushed_at": "2026-11-19T16:20:34Z",
+   "created_at": "2026-06-26T07:23:22Z",
+   "topics": [
+    "chandrayaan-2",
+    "dfsar",
+    "hackathon",
+    "isro",
+    "lunar-ice",
+    "lunar-south-pole",
+    "path-planning",
+    "planetary-science",
+    "radar-polarimetry",
+    "remote-sensing",
+    "rover",
+    "sar"
+   ],
+   "size_kb": 10306,
+   "commits": 24,
+   "libs": [
+    "numpy",
+    "rasterio",
+    "matplotlib",
+    "scipy",
+    "pyproj",
+    "tqdm"
+   ]
+  },
+  {
+   "name": "AnaTele",
+   "url": "https://github.com/Avinashistoocool/AnaTele",
+   "text": "Drone crash investigation for ArduPilot flight logs (.tlog/.bin): 3D flight replay, compass/EKF, vibration and motor diagnostics, ranked crash hypotheses.",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-11-19T16:19:57Z",
+   "created_at": "2026-10-29T21:21:41Z",
+   "topics": [
+    "ardupilot",
+    "avinash-chandra-gupta",
+    "crash-investigation",
+    "drone",
+    "flight-log-analysis",
+    "mavlink",
+    "mission-planner",
+    "pyside6",
+    "python",
+    "telemetry",
+    "uav"
+   ],
+   "size_kb": 11131,
+   "commits": 15,
+   "libs": [
+    "pymavlink",
+    "matplotlib",
+    "duckdb",
+    "PySide6",
+    "fastapi",
+    "pyyaml"
+   ]
+  },
+  {
+   "name": "GDS-parT-MoE",
+   "url": "https://github.com/Avinashistoocool/GDS-parT-MoE",
+   "text": "Per-particle Mixture-of-Experts for GDS-ParT on JetClass: sparse upcycling and expert interpretability via mutual information and knockout. PyTorch.",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-11-19T16:19:22Z",
+   "created_at": "2026-10-23T03:02:31Z",
+   "topics": [
+    "avinash-chandra-gupta",
+    "high-energy-physics",
+    "interpretability",
+    "jet-tagging",
+    "jetclass",
+    "mixture-of-experts",
+    "particle-physics",
+    "pytorch",
+    "sparse-upcycling",
+    "transformer"
+   ],
+   "size_kb": 2652,
+   "commits": 7,
+   "libs": [
+    "torch",
+    "numpy",
+    "matplotlib",
+    "awkward",
+    "uproot",
+    "scikit-learn"
    ]
   },
   {
    "name": "Jet-Class-Particle-Visualizer",
    "url": "https://github.com/Avinashistoocool/Jet-Class-Particle-Visualizer",
-   "text": "Build a clean, modular, self-contained PyTorch implementation of a novel alternative to ParT that fuses single-particle and pairwise interaction information differently from the original additive attention-bias formulation.",
+   "text": "Plotting pipeline for JetClass jets: 2D/3D particle clouds, class-averaged heatmaps, energy spectra, radial profiles and event displays. uproot, plotly.",
    "stars": 0,
    "forks": 0,
    "language": "Python",
-   "pushed_at": "2026-07-02T07:06:20Z",
+   "pushed_at": "2026-11-19T14:17:54Z",
    "created_at": "2026-05-25T15:32:01Z",
-   "topics": [],
-   "size_kb": 33,
-   "commits": 1,
+   "topics": [
+    "data-visualization",
+    "high-energy-physics",
+    "jet-tagging",
+    "jetclass",
+    "matplotlib",
+    "particle-physics",
+    "plotly",
+    "python",
+    "uproot"
+   ],
+   "size_kb": 39,
+   "commits": 2,
    "libs": [
     "numpy",
     "matplotlib",
@@ -144,491 +511,674 @@
    ]
   },
   {
-   "name": "ISRO-BAH-26",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26",
-   "text": "This project maps subsurface lunar ice using Chandrayaan-2 DFSAR radar polarimetry. It identifies safe landing zones near doubly shadowed craters and computes an optimal, power-constrained rover traverse to access these ancient volatile deposits.",
-   "stars": 0,
-   "forks": 2,
-   "language": "Python",
-   "pushed_at": "2026-07-02T06:51:10Z",
-   "created_at": "2026-06-26T07:23:22Z",
-   "topics": [],
-   "size_kb": 58052,
-   "commits": 18,
-   "libs": [
-    "numpy",
-    "rasterio",
-    "matplotlib",
-    "pyproj",
-    "scipy",
-    "tqdm"
-   ]
-  },
-  {
    "name": "Object-tracking-with-color",
    "url": "https://github.com/Avinashistoocool/Object-tracking-with-color",
-   "text": "This project consists of two different approaches to computer vision- both using opencv-python.",
+   "text": "OpenCV object tracking by colour: HSV masking, contours and convex hull centroid to plot a trajectory and velocity from a video. Early learning project.",
    "stars": 0,
    "forks": 0,
    "language": "Python",
-   "pushed_at": "2026-02-04T16:56:42Z",
+   "pushed_at": "2026-11-19T14:17:48Z",
    "created_at": "2026-02-04T16:56:36Z",
-   "topics": [],
-   "size_kb": 17977,
-   "commits": 2,
-   "libs": [
-    "numpy",
+   "topics": [
+    "color-detection",
+    "computer-vision",
+    "contours",
+    "hsv",
     "matplotlib",
-    "opencv"
+    "object-tracking",
+    "opencv",
+    "python"
+   ],
+   "size_kb": 18464,
+   "commits": 3,
+   "libs": [
+    "matplotlib",
+    "opencv",
+    "numpy"
+   ]
+  },
+  {
+   "name": "eraksha-hackathon",
+   "url": "https://github.com/Avinashistoocool/eraksha-hackathon",
+   "text": "Hackathon prototype for network monitoring: Scapy flow capture, simulated IoT traffic, Isolation Forest anomaly detection, SQLite and a Flask dashboard.",
+   "stars": 0,
+   "forks": 0,
+   "language": "Python",
+   "pushed_at": "2026-11-19T14:17:41Z",
+   "created_at": "2026-07-06T12:10:19Z",
+   "topics": [
+    "anomaly-detection",
+    "flask",
+    "hackathon",
+    "iot",
+    "isolation-forest",
+    "network-security",
+    "packet-sniffer",
+    "python",
+    "scapy",
+    "scikit-learn"
+   ],
+   "size_kb": 25,
+   "commits": 4,
+   "libs": [
+    "google-adk",
+    "scapy",
+    "scikit-learn",
+    "numpy",
+    "flask"
    ]
   }
  ],
  "commits": [
   {
+   "repo": "Agnostos-v2",
+   "sha": "16de8eb",
+   "date": "2026-11-21T21:11:27Z",
+   "message": "Docs: explain local sending and public discovery Actor",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/16de8eb96e0da1f7a0a3b5b778034428211ae028"
+  },
+  {
+   "repo": "GDS-ParT-L1T-FPGA",
+   "sha": "a450ebb",
+   "date": "2026-11-21T15:47:18Z",
+   "message": "Track the small QAT-baked student checkpoints under results/",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-L1T-FPGA/commit/a450ebba7307a1dd9f93357ea892905076ff059d"
+  },
+  {
+   "repo": "GDS-ParT-L1T-FPGA",
+   "sha": "b30ebe4",
+   "date": "2026-11-21T15:47:05Z",
+   "message": "Trained-student results from Kaggle (T4, 3M jets): accuracy, hls4ml C-sim, latency/resource estimates",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-L1T-FPGA/commit/b30ebe42fd80e9090c908b471728e84478898fc3"
+  },
+  {
+   "repo": "GDS-ParT-CMS-OpenData",
+   "sha": "32892d2",
+   "date": "2026-11-21T15:41:14Z",
+   "message": "Kaggle v4 results: data vs CMS sim vs JetClass analysis, n_constituents diagnostics, docs/RESULTS.md",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-CMS-OpenData/commit/32892d2d5e9d7895c274b2efdf68e853db115818"
+  },
+  {
+   "repo": "GDS-ParT-CMS-OpenData",
+   "sha": "641680e",
+   "date": "2026-11-21T15:35:30Z",
+   "message": "Retry dropped HTTP reads per chunk (JetHT file lost in v4), larger Kaggle config",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-CMS-OpenData/commit/641680eb9ce4602bca6e6a5b5395d73949819ee6"
+  },
+  {
+   "repo": "ParT-Interpretability",
+   "sha": "8cb2e4f",
+   "date": "2026-11-21T15:28:31Z",
+   "message": "Kaggle GPU results (ParT_full + GDS-ParT, main + replica), FINDINGS.md, report, paper figures",
+   "url": "https://github.com/Avinashistoocool/ParT-Interpretability/commit/8cb2e4f09abe39fe538d7dc25e9df69ca3ab3b02"
+  },
+  {
+   "repo": "GDS-ParT-CMS-OpenData",
+   "sha": "9b88c5d",
+   "date": "2026-11-20T23:18:09Z",
+   "message": "PLAN: Kaggle full-size run in progress",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-CMS-OpenData/commit/9b88c5d92a5532689beb9766fa950ab0959a4823"
+  },
+  {
+   "repo": "GDS-ParT-L1T-FPGA",
+   "sha": "6402bf2",
+   "date": "2026-11-20T22:30:24Z",
+   "message": "LF endings for shell scripts",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-L1T-FPGA/commit/6402bf2ed7ceb1fb675e2a45336f2fc70019b04a"
+  },
+  {
+   "repo": "GDS-ParT-L1T-FPGA",
+   "sha": "28ebb92",
+   "date": "2026-11-20T22:30:10Z",
+   "message": "README, PLAN, estimate model doc, synth.sh, requirements",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-L1T-FPGA/commit/28ebb92cd306cdcb9d8ba9996817db7f3eaebfe6"
+  },
+  {
+   "repo": "GDS-ParT-L1T-FPGA",
+   "sha": "4418f67",
+   "date": "2026-11-20T22:28:04Z",
+   "message": "hls4ml report/sweep, tests, CPU Kaggle kernel; per-layer parallelization; DAG latency estimate",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-L1T-FPGA/commit/4418f67aa280300b6ffe4e927b8e41d69478d412"
+  },
+  {
+   "repo": "GDS-ParT-L1T-FPGA",
+   "sha": "d6c668c",
+   "date": "2026-11-20T22:16:09Z",
+   "message": "Fix multi-input tracing for linear-attention student; all students convert",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-L1T-FPGA/commit/d6c668ced801df2ce091b8f55a3abf1c258e0410"
+  },
+  {
+   "repo": "GDS-ParT-CMS-OpenData",
+   "sha": "d32b8dd",
+   "date": "2026-11-20T22:15:12Z",
+   "message": "Full-size Kaggle GPU config: parallel sources, deadline + per-file checkpoints, two-pass PFNano reading",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-CMS-OpenData/commit/d32b8ddbbe30cb4afa67bf64b110f3bc7f60c53d"
+  },
+  {
+   "repo": "ParT-Interpretability",
+   "sha": "d46bbba",
+   "date": "2026-11-20T22:10:03Z",
+   "message": "Remove stray local run logs",
+   "url": "https://github.com/Avinashistoocool/ParT-Interpretability/commit/d46bbba3fcef1d9bd7c5dcf350789e0b4dda4a0e"
+  },
+  {
+   "repo": "ParT-Interpretability",
+   "sha": "427659e",
+   "date": "2026-11-20T22:09:54Z",
+   "message": "Kaggle kernels: offline-capable bundle, GPU/CPU-adaptive config; push script can refresh bundle",
+   "url": "https://github.com/Avinashistoocool/ParT-Interpretability/commit/427659e955ba6c7465f447b947a5fd6dd22a6afe"
+  },
+  {
+   "repo": "GDS-ParT-L1T-FPGA",
+   "sha": "90fcea1",
+   "date": "2026-11-20T22:09:01Z",
+   "message": "hls4ml conversion module with frontend fixes; self-contained Kaggle kernel build + push script",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-L1T-FPGA/commit/90fcea1a4f9a61f2955c5836fabadab84cb6bd75"
+  },
+  {
+   "repo": "GDS-ParT-CMS-OpenData",
+   "sha": "b72937c",
+   "date": "2026-11-20T22:02:48Z",
+   "message": "Tests, docs (datasets, feature mapping, plan), local end-to-end results on real CMS Open Data, Kaggle internet check",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-CMS-OpenData/commit/b72937cfe0549ce1cfe863c47c97c2e902e3fec5"
+  },
+  {
+   "repo": "GDS-ParT-L1T-FPGA",
+   "sha": "99a8953",
+   "date": "2026-11-20T21:55:09Z",
+   "message": "Add L1 student models, KD+QAT training, Kaggle distill kernel",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-L1T-FPGA/commit/99a89534708609d02a53854ca6b3df107639d30b"
+  },
+  {
+   "repo": "GDS-ParT-CMS-OpenData",
+   "sha": "ba46574",
+   "date": "2026-11-20T21:54:37Z",
+   "message": "Fix score_jets signature, prefer fsspec HTTP, push script slug handling",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-CMS-OpenData/commit/ba46574758d0c625918aaf3ca41397154ae42da8"
+  },
+  {
+   "repo": "ParT-Interpretability",
+   "sha": "3c95927",
+   "date": "2026-11-20T21:54:21Z",
+   "message": "Kaggle: offline bundle dataset (code, wheels, checkpoints) since kernels lacked internet; R99 metric; report script",
+   "url": "https://github.com/Avinashistoocool/ParT-Interpretability/commit/3c959274237283aa0da43f5576b3782ef1f99972"
+  },
+  {
+   "repo": "GDS-ParT-CMS-OpenData",
+   "sha": "97ff9aa",
+   "date": "2026-11-20T21:47:11Z",
+   "message": "Initial pipeline: CMS Open Data records, PF->JetClass feature mapper, selections, inference, comparison, Kaggle kernel",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-CMS-OpenData/commit/97ff9aaaac845fc662d273431e9a0f8c883975bc"
+  },
+  {
+   "repo": "GDS-ParT-L1T-FPGA",
+   "sha": "ae4196f",
+   "date": "2026-11-20T21:46:32Z",
+   "message": "Scaffold: vendored GDS-ParT model/data code, fixed-point QAT module",
+   "url": "https://github.com/Avinashistoocool/GDS-ParT-L1T-FPGA/commit/ae4196fd48274ec8fd7ccefd9ed48d2be5f31091"
+  },
+  {
+   "repo": "ParT-Interpretability",
+   "sha": "7b9d294",
+   "date": "2026-11-20T21:45:29Z",
+   "message": "Initial ParT interpretability pipeline: instrumented ParT/GDS-ParT, analyses, Kaggle kernels, tests, paper skeleton",
+   "url": "https://github.com/Avinashistoocool/ParT-Interpretability/commit/7b9d294dcc73f4b48a57041b9b3d69723771b7a9"
+  },
+  {
    "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "a1f2d65",
-   "date": "2026-10-21T11:43:13Z",
-   "message": "Add 10M/10-epoch results (test acc 0.8484, AUC 0.9853) and resumable 20-epoch checkpoint (epoch 3)",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/a1f2d65124db7f476ed0d0eb1f2dfb2d179b9610"
+   "sha": "b38f1b7",
+   "date": "2026-11-20T10:47:46Z",
+   "message": "Cite published technical report DOI separately from software",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/b38f1b7d7ad5d67d4f4933b2a2fbe646fed26da7"
   },
   {
    "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "45947f0",
-   "date": "2026-10-19T08:49:55Z",
-   "message": "Add ablation results, official-ParT pipeline validation, accuracy-ceiling analysis",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/45947f051f0f63023c020d60535d22750e25eaa5"
+   "sha": "625fde6",
+   "date": "2026-11-20T10:46:52Z",
+   "message": "Link published GDS-ParT Zenodo report",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/625fde6f04921bd2d1d25625187ea97e5641267d"
   },
   {
    "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "1a43457",
-   "date": "2026-10-19T06:43:33Z",
-   "message": "Add GUIDE.md, SLURM script, requirements, ablation runner, gate_mode=none, --cache_only",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/1a434574addbf27a468058c55621d5dca4966052"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "e11a161",
-   "date": "2026-10-16T18:50:07Z",
-   "message": "SEO: brand-first README heading and intro",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/e11a161f073877a26ef3033578c002c50908bff2"
+   "sha": "3411ad4",
+   "date": "2026-11-20T10:39:21Z",
+   "message": "Repair technical report diagrams and remove build section",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/3411ad416db32828b5993888b1d450783d408005"
   },
   {
    "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "b01d04f",
-   "date": "2026-10-16T11:14:56Z",
-   "message": "Cap GPU memory fraction to avoid WDDM shared-memory spill (4x speedup on 6 GB GPU)",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/b01d04f32b629da51c26790be91480bd573077ee"
+   "sha": "e199d2d",
+   "date": "2026-11-20T10:33:01Z",
+   "message": "Revise GDS-ParT technical documentation",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/e199d2d59229ad1b480f34c573cf6343f5f072eb"
   },
   {
-   "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "c6f4ae5",
-   "date": "2026-10-16T10:55:58Z",
-   "message": "GDS-ParT v2: identity per-layer gates, hybrid pair bias, CLS pooling, EMA; PBS job scripts",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/c6f4ae5bee2e447e478ad0e63741cb6b852f47c7"
-  },
-  {
-   "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "d4bd26f",
-   "date": "2026-10-16T05:17:40Z",
-   "message": "Add 10M-jet GDS-ParT results: test acc 0.8272, AUC 0.9824 (1M test jets)",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/d4bd26fa04853e051818ac8a12d3e5cb205594c8"
-  },
-  {
-   "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "926ecab",
-   "date": "2026-10-15T23:25:20Z",
-   "message": "Add persistent run logging and official-ParT pipeline validation",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/926ecab2cadf1ec990f13709ea44f5c7d541d9f3"
-  },
-  {
-   "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "0fd4129",
-   "date": "2026-10-15T22:49:42Z",
-   "message": "Clean repo: fix corrupted README trailer, ignore checkpoints and logs",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/0fd4129ee0e6083c60d3594a8a24817d8af3ca71"
+   "repo": "Avinashistoocool.github.io",
+   "sha": "3236c8d",
+   "date": "2026-11-20T09:44:02Z",
+   "message": "Use avinash-chandra-gupta.jpg as the About portrait so one photo is indexed for name searches",
+   "url": "https://github.com/Avinashistoocool/Avinashistoocool.github.io/commit/3236c8d90344e01cd334daaaf17eb05cdd09a6e2"
   },
   {
    "repo": "Agnostos-v2",
-   "sha": "feb62de",
-   "date": "2026-10-15T22:41:04Z",
-   "message": "Fix CI: make httpx optional and declare it as a dependency",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/feb62deaa41b6d1b08220d76da365de83ce6da82"
+   "sha": "0e1ad31",
+   "date": "2026-11-19T22:19:02Z",
+   "message": "Save uncommitted changes",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/0e1ad3193f6d3eb7022b4f564600733d60f0c300"
+  },
+  {
+   "repo": "Avinashistoocool.github.io",
+   "sha": "6b330c3",
+   "date": "2026-11-19T20:34:15Z",
+   "message": "Add name-based portrait, ImageObject schema and image sitemap for profile photo search",
+   "url": "https://github.com/Avinashistoocool/Avinashistoocool.github.io/commit/6b330c374da2261da1254b6fb5a08d9605fdf2a4"
+  },
+  {
+   "repo": "Avinashistoocool.github.io",
+   "sha": "8e4f3d2",
+   "date": "2026-11-19T19:54:56Z",
+   "message": "Recentre social card and headshot on the face; drop letterbox bands",
+   "url": "https://github.com/Avinashistoocool/Avinashistoocool.github.io/commit/8e4f3d236a895c7f7f27164eaf7272c47bf8c4f7"
+  },
+  {
+   "repo": "Avinashistoocool.github.io",
+   "sha": "ac27e49",
+   "date": "2026-11-19T19:46:56Z",
+   "message": "Add square headshot and 1200x630 social card for search and link previews",
+   "url": "https://github.com/Avinashistoocool/Avinashistoocool.github.io/commit/ac27e49c8abe4b3ab508f4e11dd5d9b7c5f67fc7"
+  },
+  {
+   "repo": "Rotary-Detonation-Engine",
+   "sha": "415d935",
+   "date": "2026-11-19T19:01:57Z",
+   "message": "Add author attribution and structured data",
+   "url": "https://github.com/Avinashistoocool/Rotary-Detonation-Engine/commit/415d9353625365ceb76a629c4e61b5b39bbc0d13"
+  },
+  {
+   "repo": "Avinashistoocool.github.io",
+   "sha": "750b089",
+   "date": "2026-11-19T19:00:41Z",
+   "message": "Add author attribution and structured data",
+   "url": "https://github.com/Avinashistoocool/Avinashistoocool.github.io/commit/750b0895250fc45876bddccd335a599921442446"
+  },
+  {
+   "repo": "Agnostos-v3",
+   "sha": "54bd51b",
+   "date": "2026-11-19T18:59:34Z",
+   "message": "Add author attribution and structured data",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v3/commit/54bd51b651bb4995035a8f8fa3fb9aca7adf37d8"
+  },
+  {
+   "repo": "Sci-Synth",
+   "sha": "7e88084",
+   "date": "2026-11-19T18:59:28Z",
+   "message": "Add author attribution and structured data",
+   "url": "https://github.com/Avinashistoocool/Sci-Synth/commit/7e8808403db1cc117f9fd88b1030efa867ba4e58"
+  },
+  {
+   "repo": "ToggleCV",
+   "sha": "e1e6afc",
+   "date": "2026-11-19T18:59:21Z",
+   "message": "Add author attribution and structured data",
+   "url": "https://github.com/Avinashistoocool/ToggleCV/commit/e1e6afc10d8a897dc6c8d431ebc75071546fe327"
+  },
+  {
+   "repo": "Rotary-Detonation-Engine",
+   "sha": "fe48048",
+   "date": "2026-11-19T18:59:15Z",
+   "message": "Add author attribution and structured data",
+   "url": "https://github.com/Avinashistoocool/Rotary-Detonation-Engine/commit/fe480484c1e2bbe6e17ece0a6093721d19888306"
+  },
+  {
+   "repo": "llm-nas",
+   "sha": "ce76368",
+   "date": "2026-11-19T18:59:11Z",
+   "message": "Add author attribution and structured data",
+   "url": "https://github.com/Avinashistoocool/llm-nas/commit/ce763686562ca80e6109ae82ca355cc0d36693dd"
+  },
+  {
+   "repo": "PLE-Lab",
+   "sha": "a473f44",
+   "date": "2026-11-19T18:59:06Z",
+   "message": "Add author attribution and structured data",
+   "url": "https://github.com/Avinashistoocool/PLE-Lab/commit/a473f4405ce61589c7fde3f4c834cdbe5fdce843"
   },
   {
    "repo": "Agnostos-v2",
-   "sha": "882e837",
-   "date": "2026-10-15T22:19:36Z",
-   "message": "Add FAQ and diagnostics guides",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/882e8375d698eee85ac4795971b4d7957701597e"
+   "sha": "0451cf9",
+   "date": "2026-11-19T18:55:14Z",
+   "message": "Security fixes: block Unicode line-separator .env injection, keep Keychain secrets out of argv, release builds ignore en",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/0451cf9827d4a3ea2c785c9f7ac179e344e0b963"
   },
   {
    "repo": "Agnostos-v2",
-   "sha": "0141e1b",
-   "date": "2026-10-15T22:17:20Z",
-   "message": "Add Windows, macOS and Linux usage documentation",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/0141e1bbbfc1809133995ede5a3f988f62928e24"
+   "sha": "0838a09",
+   "date": "2026-11-19T16:54:18Z",
+   "message": "Pipeline: one-click quick start (find, draft, preview) and Settings-default choices",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/0838a09eb73640140b06d23722a0565b838cdcec"
   },
   {
-   "repo": "Agnostos-v2",
-   "sha": "71e74e3",
-   "date": "2026-10-15T20:09:32Z",
-   "message": "Fix macOS certificate errors with OS trust store; survive laptop sleep",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/71e74e3cd186b6332e2a9cad0d4b67f6c1bf3cc4"
+   "repo": "Sci-Synth",
+   "sha": "d4417b2",
+   "date": "2026-11-19T16:33:26Z",
+   "message": "Add Sci-Synth brand: integral-page mark, lockups, favicons and store tiles",
+   "url": "https://github.com/Avinashistoocool/Sci-Synth/commit/d4417b2b5c58ea9a58fed53dca063852db408568"
   },
   {
-   "repo": "Agnostos-v2",
-   "sha": "874e5b9",
-   "date": "2026-10-15T18:49:48Z",
-   "message": "adding replier",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/874e5b90487896700e37c9530441239f1c77dcd8"
+   "repo": "Avinashistoocool.github.io",
+   "sha": "0c372ec",
+   "date": "2026-11-19T16:26:22Z",
+   "message": "Sync Sci-Synth description with its GitHub description",
+   "url": "https://github.com/Avinashistoocool/Avinashistoocool.github.io/commit/0c372ecd2f5822b3ef914b50d5d550f05a5fa613"
   },
   {
-   "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "1b4ee9a",
-   "date": "2026-10-15T13:37:19Z",
-   "message": "Add live training monitor dashboard",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/1b4ee9a16ef39b19453adb2159c90cfad2d8de2a"
-  },
-  {
-   "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "5dc7908",
-   "date": "2026-10-15T13:35:54Z",
-   "message": "Scalable JetClass training pipeline, ParT-paper metrics, and report generator",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/5dc79081057cbb39955feec9334a00fb2f93b5ab"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "61a1b32",
-   "date": "2026-10-15T12:25:53Z",
-   "message": "Add stats command, send log, SMTP reconnect, reasoning-model token budget",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/61a1b32d885704158fa0ba86ecc83c83bc4b376d"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "3c979d8",
-   "date": "2026-10-15T00:36:11Z",
-   "message": "Add send scheduling (--at, recipient-local windows) and IMAP reply tracking",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/3c979d84e234d521f24d57d96032880b5142413d"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "6a1e994",
-   "date": "2026-10-14T20:48:32Z",
-   "message": "Decode obfuscated and TYPO3-encrypted email addresses in verify",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/6a1e994e828e8d3b0340674aacfa719cfe42b8a9"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "2fc0574",
-   "date": "2026-10-14T20:48:32Z",
-   "message": "Show live timer between emails while sending",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/2fc05742652046cb247e06a9c3ba9474abda0f18"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "99345ca",
-   "date": "2026-10-14T13:52:53Z",
-   "message": "Add run --skip option and clearer filter diagnostics",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/99345caccc1222040b673f87efc52bc126ba3851"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "f14e81a",
-   "date": "2026-10-14T13:03:36Z",
-   "message": "Update README: workflow diagram, scaling guide, sent-row safety, test coverage",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/f14e81a53e3116a38b457ee4869c75c10981a089"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "4f82c25",
-   "date": "2026-10-14T12:59:38Z",
-   "message": "Fix review_1 findings",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/4f82c25ddb625941e1cf41b9f466dc4e9e34bf6e"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "6588fc7",
-   "date": "2026-10-14T12:10:50Z",
-   "message": "Add batched N-professor discovery, email verification and recheck",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/6588fc7c4668b6375332f85b357a4650c8866bfb"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "d216b2a",
-   "date": "2026-10-13T12:05:36Z",
-   "message": "Revise README for improved project overview",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/d216b2a72389c26ce0885478dbb950f77c00ffba"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "ca149e2",
-   "date": "2026-10-13T12:04:34Z",
-   "message": "Never lose send statuses when the workbook is locked",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/ca149e2743881947c68f52c2ca6df8275ce6c578"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "4adcf11",
-   "date": "2026-10-13T08:15:00Z",
-   "message": "Make SMTP sending resilient to dropped connections",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/4adcf11af773f79a79228bb453cec37607e05bf4"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "8d3ad66",
-   "date": "2026-10-13T08:03:58Z",
-   "message": "Agnostos v2: production-ready release with free Groq support",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/8d3ad66ba27645e52aac25e939f336a869940f51"
-  },
-  {
-   "repo": "Agnostos-v2",
-   "sha": "2e0528e",
-   "date": "2026-10-13T07:50:45Z",
-   "message": "Initial commit",
-   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/2e0528e16553e9398a9fee3a4a7ac8f744b71be9"
+   "repo": "Rotary-Detonation-Engine",
+   "sha": "9051c55",
+   "date": "2026-11-19T16:24:40Z",
+   "message": "Pages: add avinash/All projects links and a root sitemap.xml",
+   "url": "https://github.com/Avinashistoocool/Rotary-Detonation-Engine/commit/9051c55ed4b8793e0ca7c586a63863c534102846"
   },
   {
    "repo": "asclepius",
-   "sha": "0e2e8f6",
-   "date": "2026-10-04T19:20:00Z",
-   "message": "Add update note to README",
-   "url": "https://github.com/Avinashistoocool/asclepius/commit/0e2e8f67138a16533f0f0d8da5502cb262edfa56"
+   "sha": "9c5926c",
+   "date": "2026-11-19T16:23:52Z",
+   "message": "Pages: add avinash and All projects links to nav and footer",
+   "url": "https://github.com/Avinashistoocool/asclepius/commit/9c5926c1b4b67f12c3159d13e2d9152c297c2b3a"
   },
   {
-   "repo": "asclepius",
-   "sha": "38aa16c",
-   "date": "2026-09-22T20:57:31Z",
-   "message": "Fresh initial commit with Git LFS",
-   "url": "https://github.com/Avinashistoocool/asclepius/commit/38aa16cd37840f9f4439874f115fa8f09c1bd598"
+   "repo": "Agnostos-v2",
+   "sha": "201e035",
+   "date": "2026-11-19T16:20:36Z",
+   "message": "Docs: add All projects link to site nav",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/201e0351bb1becd54817f9b435f1fcdc6a2d830e"
   },
   {
-   "repo": "eraksha-hackathon",
-   "sha": "eefffb4",
-   "date": "2026-07-06T12:11:15Z",
-   "message": "initial commit july 26",
-   "url": "https://github.com/Avinashistoocool/eraksha-hackathon/commit/eefffb4c30b7b875561f190d23b4c7ef05a205a2"
+   "repo": "ISRO-BAH-26",
+   "sha": "e53d8ba",
+   "date": "2026-11-19T16:20:01Z",
+   "message": "Docs: add All projects link to site nav",
+   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/e53d8bafa81931d73f696d6bb67e5b7f2425e368"
+  },
+  {
+   "repo": "AnaTele",
+   "sha": "b2601ef",
+   "date": "2026-11-19T16:19:24Z",
+   "message": "Docs: add All projects link to site nav",
+   "url": "https://github.com/Avinashistoocool/AnaTele/commit/b2601eff27da4d4bf92686449f224a03d7296bf7"
+  },
+  {
+   "repo": "GDS-parT-MoE",
+   "sha": "9fabcdf",
+   "date": "2026-11-19T16:19:10Z",
+   "message": "Docs: add All projects link to site nav",
+   "url": "https://github.com/Avinashistoocool/GDS-parT-MoE/commit/9fabcdfc2b2444da4e96d7b2647bd2449433a3de"
   },
   {
    "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "25952bf",
-   "date": "2026-07-05T11:34:29Z",
-   "message": "Update README with project details and structure",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/25952bfb509d82fa237909e16c96caed148a5091"
+   "sha": "b4379d1",
+   "date": "2026-11-19T16:18:58Z",
+   "message": "Docs: add All projects link to site nav",
+   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/b4379d138419d1a6fbffaf5535f378811afceb6c"
   },
   {
-   "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "5a36ca3",
-   "date": "2026-07-05T11:33:57Z",
-   "message": "Context_update",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/5a36ca36acab4ca9af0957b590552a62e3288952"
+   "repo": "Agnostos-v2",
+   "sha": "f6da8e3",
+   "date": "2026-11-19T16:12:38Z",
+   "message": "discover: retry OpenAlex 429/503 with Retry-After, explain missing API key, stop early instead of empty batches",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/f6da8e38aa2f5273750c8dc67a9b775dd204eacb"
   },
   {
-   "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "c7ca91a",
-   "date": "2026-07-02T07:41:27Z",
-   "message": "Update README",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/c7ca91acf14844e70f3ce3a56361a60c6c3101dc"
+   "repo": "Sci-Synth",
+   "sha": "dac1f6e",
+   "date": "2026-11-19T16:08:32Z",
+   "message": "Add safe declarative ODE solver; never execute model-written code",
+   "url": "https://github.com/Avinashistoocool/Sci-Synth/commit/dac1f6effba002e8b8ab11fd8c3faf889fa7bb5f"
   },
   {
-   "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "aec962b",
-   "date": "2026-07-02T07:40:47Z",
-   "message": "files edit",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/aec962b18c699e35ed11860c9e2b010aed6d5638"
+   "repo": "Agnostos-v2",
+   "sha": "c807644",
+   "date": "2026-11-19T15:51:52Z",
+   "message": "Docs for 2.3.0: download section, funding factor, company search, macOS build; skip facts tests when absent",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/c807644df2071a2c1e26621829b8980901476684"
   },
   {
-   "repo": "Gated-Dual-Stream-Particle-Transformer",
-   "sha": "34c945e",
-   "date": "2026-07-02T07:39:59Z",
-   "message": "first commit",
-   "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/34c945e3565373245876694e20a64eac381ddfa4"
+   "repo": "Avinashistoocool.github.io",
+   "sha": "2e7ec84",
+   "date": "2026-11-19T15:51:20Z",
+   "message": "Update Sci-Synth entry: merged browser extension, privacy link",
+   "url": "https://github.com/Avinashistoocool/Avinashistoocool.github.io/commit/2e7ec840dd77f8b1c93d013f4952c07168761141"
   },
   {
-   "repo": "Jet-Class-Particle-Visualizer",
-   "sha": "4337bc9",
-   "date": "2026-07-02T06:53:15Z",
-   "message": "First commit",
-   "url": "https://github.com/Avinashistoocool/Jet-Class-Particle-Visualizer/commit/4337bc9067473fce03c8d558242bb1b9b15e16df"
+   "repo": "Sci-Synth",
+   "sha": "cbb78bb",
+   "date": "2026-11-19T15:46:56Z",
+   "message": "Add Sci-Synth project page, privacy page, 404 and sitemap",
+   "url": "https://github.com/Avinashistoocool/Sci-Synth/commit/cbb78bbc60f588e48258345170db5279d1627391"
   },
   {
-   "repo": "ISRO-BAH-26",
-   "sha": "f42140c",
-   "date": "2026-07-02T06:51:09Z",
-   "message": "Spaces in latex dont work sweetheart",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/f42140c54b5308451ca44ddc61daf13eb57f0882"
+   "repo": "Sci-Synth",
+   "sha": "0153b18",
+   "date": "2026-11-19T15:43:36Z",
+   "message": "Make Sci-Synth an opt-in extension; add disabled local simulator",
+   "url": "https://github.com/Avinashistoocool/Sci-Synth/commit/0153b187f8f96afd8287185f5c1c47c04031896a"
   },
   {
-   "repo": "ISRO-BAH-26",
-   "sha": "904684a",
-   "date": "2026-07-02T06:50:06Z",
-   "message": "added arhcitecture diagram and process flow diagram in this",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/904684ad8cf42536fcaa64e944b920f38b1c382d"
+   "repo": "Agnostos-v2",
+   "sha": "2815774",
+   "date": "2026-11-19T15:31:40Z",
+   "message": "Add macOS build: Keychain token storage, Application Support data dir, .app/.dmg bundle",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/28157746258f69033695602a5542cd8919f6c7b7"
   },
   {
-   "repo": "ISRO-BAH-26",
-   "sha": "f004ec6",
-   "date": "2026-07-02T06:46:30Z",
-   "message": "Merge branch 'main' of https://github.com/Avinashistoocool/ISRO-BAH-26-",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/f004ec62f367083841a835c2ae68020534cfd678"
+   "repo": "Sci-Synth",
+   "sha": "ed8f830",
+   "date": "2026-11-19T15:22:00Z",
+   "message": "Merge pdf-ai-explorer main (940cd93) into Sci-Synth",
+   "url": "https://github.com/Avinashistoocool/Sci-Synth/commit/ed8f830d000262f99c83d8d686dd7c58998a0746"
   },
   {
-   "repo": "ISRO-BAH-26",
-   "sha": "bf0b83f",
-   "date": "2026-07-02T06:45:50Z",
-   "message": "added_presentation_slides",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/bf0b83f1dd93181defdac544dd8728af8c640d23"
+   "repo": "Agnostos-v2",
+   "sha": "cfe9530",
+   "date": "2026-11-19T14:20:14Z",
+   "message": "Release 2.3.0: expose funding factor, company search and legacy options in desktop app",
+   "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/cfe9530e303e889083d9a7952daf7c146b12ec2e"
   },
   {
-   "repo": "ISRO-BAH-26",
-   "sha": "fa4b525",
-   "date": "2026-07-02T06:26:01Z",
-   "message": "Updated_README_with_parameters_to_fill",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/fa4b525853e26b2791be4e7d89ecf59f096fef61"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "0cd490f",
-   "date": "2026-07-02T06:23:54Z",
-   "message": "Final_cost_estimation_with_A_star",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/0cd490fffa2565be5f558c3e5b0023dd61450bd0"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "a3c3157",
-   "date": "2026-06-30T21:56:27Z",
-   "message": "Revert \"Merge pull request #1 from eshajain-123/main\"",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/a3c3157626a57ab0ff012fc7a94f3468be2fff01"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "d0b79d0",
-   "date": "2026-06-30T21:48:13Z",
-   "message": "Merge branch 'main' of https://github.com/Avinashistoocool/ISRO-BAH-26-",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/d0b79d04b62e54ea45b62aa4874e0bbbc5552b3f"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "6c4d621",
-   "date": "2026-06-30T21:10:21Z",
-   "message": "cost",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/6c4d62181fc202098c91dc43c4a474f41802a064"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "243689f",
-   "date": "2026-06-30T18:49:11Z",
-   "message": "Merge pull request #1 from eshajain-123/main",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/243689f6c19f1f356bebb05b4d2f22a56e001f10"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "101aca1",
-   "date": "2026-06-28T07:40:02Z",
-   "message": "Update cost_map.py",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/101aca11e3ccd0e099601b908b9fb8dddcf04113"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "9c94f96",
-   "date": "2026-06-28T06:49:30Z",
-   "message": "Merge branch 'main' of https://github.com/Avinashistoocool/ISRO-BAH-26-",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/9c94f969e26289b5c6ed61251f9babd8ad68fd9c"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "07d62bf",
-   "date": "2026-06-28T06:48:40Z",
-   "message": "cost",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/07d62bfe5753c061862c6a42e038e349ab80e4d6"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "b2d6283",
-   "date": "2026-06-27T14:06:39Z",
-   "message": "Update README.md- How to use_v!",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/b2d6283a8bb76bd464373d14e7a4912fc758ad37"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "1aacac4",
-   "date": "2026-06-27T10:46:54Z",
-   "message": "elevation and slope maps for cost mapping",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/1aacac49409d485034eb7eb25d6c9ef1c5c8a8ae"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "a93bb81",
-   "date": "2026-06-26T07:26:07Z",
-   "message": "Update README.md again",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/a93bb81824c8a6359ceab34440f74b7ea1e2eb00"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "22e3cb7",
-   "date": "2026-06-26T07:25:21Z",
-   "message": "Update README.md",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/22e3cb7924b78ff37ca6b4cf8cb286b930e73570"
-  },
-  {
-   "repo": "ISRO-BAH-26",
-   "sha": "d868863",
-   "date": "2026-06-26T07:23:22Z",
-   "message": "Initial commit",
-   "url": "https://github.com/Avinashistoocool/ISRO-BAH-26/commit/d86886300f6f609ca5059c8a46f3b94ad18e86ea"
-  },
-  {
-   "repo": "Object-tracking-with-color",
-   "sha": "da1cfc9",
-   "date": "2026-02-04T16:56:27Z",
-   "message": "First draft",
-   "url": "https://github.com/Avinashistoocool/Object-tracking-with-color/commit/da1cfc9be2b356c766bdebbb9ffbdd133c4c1992"
-  },
-  {
-   "repo": "Object-tracking-with-color",
-   "sha": "c27677a",
-   "date": "2026-02-04T16:54:42Z",
-   "message": "Initial commit",
-   "url": "https://github.com/Avinashistoocool/Object-tracking-with-color/commit/c27677a60d15ea0feebd98c9910d67be8be72f92"
+   "repo": "Avinashistoocool.github.io",
+   "sha": "14c7b10",
+   "date": "2026-11-19T14:17:50Z",
+   "message": "Add project guide; link projects to their own /{Repo}/ pages",
+   "url": "https://github.com/Avinashistoocool/Avinashistoocool.github.io/commit/14c7b10d67fe797a81d2e526ddb21cc644a878f3"
   }
  ],
  "languages": [
   {
    "name": "Python",
-   "bytes": 630040
+   "bytes": 3185751
   },
   {
-   "name": "Shell",
-   "bytes": 3892
+   "name": "TypeScript",
+   "bytes": 418129
   },
   {
    "name": "HTML",
-   "bytes": 3734
+   "bytes": 386634
+  },
+  {
+   "name": "JavaScript",
+   "bytes": 358927
+  },
+  {
+   "name": "CSS",
+   "bytes": 114840
+  },
+  {
+   "name": "TeX",
+   "bytes": 97642
+  },
+  {
+   "name": "Rust",
+   "bytes": 29738
+  },
+  {
+   "name": "PowerShell",
+   "bytes": 20847
+  },
+  {
+   "name": "Jinja",
+   "bytes": 7324
+  },
+  {
+   "name": "Shell",
+   "bytes": 7159
+  },
+  {
+   "name": "Dockerfile",
+   "bytes": 2532
+  },
+  {
+   "name": "Batchfile",
+   "bytes": 215
   }
  ],
  "libraries": [
   {
    "name": "numpy",
-   "repos": 6,
-   "files": 28,
+   "repos": 13,
+   "files": 82,
    "group": "Science"
   },
   {
    "name": "matplotlib",
-   "repos": 5,
-   "files": 14,
+   "repos": 10,
+   "files": 27,
    "group": "Science"
   },
   {
+   "name": "torch",
+   "repos": 7,
+   "files": 53,
+   "group": "ML"
+  },
+  {
+   "name": "scipy",
+   "repos": 6,
+   "files": 13,
+   "group": "Science"
+  },
+  {
+   "name": "pytest",
+   "repos": 6,
+   "files": 11,
+   "group": "Tooling"
+  },
+  {
    "name": "scikit-learn",
-   "repos": 2,
-   "files": 3,
+   "repos": 6,
+   "files": 8,
    "group": "ML"
   },
   {
    "name": "uproot",
+   "repos": 6,
+   "files": 8,
+   "group": "Science"
+  },
+  {
+   "name": "awkward",
+   "repos": 5,
+   "files": 9,
+   "group": "Science"
+  },
+  {
+   "name": "fastapi",
+   "repos": 4,
+   "files": 14,
+   "group": "LLM / web"
+  },
+  {
+   "name": "pydantic",
+   "repos": 4,
+   "files": 7,
+   "group": "Tooling"
+  },
+  {
+   "name": "pyyaml",
+   "repos": 4,
+   "files": 7,
+   "group": "Tooling"
+  },
+  {
+   "name": "playwright",
+   "repos": 3,
+   "files": 8,
+   "group": "LLM / web"
+  },
+  {
+   "name": "python-dotenv",
+   "repos": 3,
+   "files": 6,
+   "group": "Tooling"
+  },
+  {
+   "name": "uvicorn",
+   "repos": 3,
+   "files": 3,
+   "group": "LLM / web"
+  },
+  {
+   "name": "openpyxl",
+   "repos": 2,
+   "files": 23,
+   "group": "Tooling"
+  },
+  {
+   "name": "pymavlink",
+   "repos": 2,
+   "files": 15,
+   "group": "Tooling"
+  },
+  {
+   "name": "PySide6",
+   "repos": 2,
+   "files": 7,
+   "group": "Tooling"
+  },
+  {
+   "name": "google-adk",
    "repos": 2,
    "files": 3,
-   "group": "Science"
+   "group": "LLM / web"
+  },
+  {
+   "name": "pdfplumber",
+   "repos": 2,
+   "files": 3,
+   "group": "Tooling"
+  },
+  {
+   "name": "ddgs",
+   "repos": 2,
+   "files": 2,
+   "group": "LLM / web"
+  },
+  {
+   "name": "dns",
+   "repos": 2,
+   "files": 2,
+   "group": "Tooling"
+  },
+  {
+   "name": "docx",
+   "repos": 2,
+   "files": 2,
+   "group": "Tooling"
+  },
+  {
+   "name": "openai",
+   "repos": 2,
+   "files": 2,
+   "group": "LLM / web"
   },
   {
    "name": "opencv",
@@ -637,10 +1187,34 @@
    "group": "Geo / CV"
   },
   {
-   "name": "scipy",
+   "name": "reportlab",
    "repos": 2,
    "files": 2,
-   "group": "Science"
+   "group": "Tooling"
+  },
+  {
+   "name": "starlette",
+   "repos": 2,
+   "files": 2,
+   "group": "Tooling"
+  },
+  {
+   "name": "the",
+   "repos": 2,
+   "files": 2,
+   "group": "Tooling"
+  },
+  {
+   "name": "tzdata",
+   "repos": 2,
+   "files": 2,
+   "group": "Tooling"
+  },
+  {
+   "name": "gdsl1",
+   "repos": 1,
+   "files": 7,
+   "group": "Tooling"
   },
   {
    "name": "rasterio",
@@ -649,28 +1223,64 @@
    "group": "Geo / CV"
   },
   {
-   "name": "torch",
+   "name": "sqlalchemy",
    "repos": 1,
    "files": 6,
-   "group": "ML"
+   "group": "Tooling"
   },
   {
-   "name": "openpyxl",
+   "name": "duckdb",
    "repos": 1,
    "files": 5,
    "group": "Tooling"
   },
   {
-   "name": "pyproj",
+   "name": "cmsod",
    "repos": 1,
    "files": 4,
+   "group": "Tooling"
+  },
+  {
+   "name": "cryptography",
+   "repos": 1,
+   "files": 4,
+   "group": "Tooling"
+  },
+  {
+   "name": "partinterp",
+   "repos": 1,
+   "files": 4,
+   "group": "Tooling"
+  },
+  {
+   "name": "alembic",
+   "repos": 1,
+   "files": 3,
+   "group": "Tooling"
+  },
+  {
+   "name": "routes",
+   "repos": 1,
+   "files": 3,
+   "group": "Tooling"
+  },
+  {
+   "name": "shapely",
+   "repos": 1,
+   "files": 3,
    "group": "Geo / CV"
   },
   {
-   "name": "google-adk",
+   "name": "skimage",
    "repos": 1,
-   "files": 2,
-   "group": "LLM / web"
+   "files": 3,
+   "group": "Geo / CV"
+  },
+  {
+   "name": "tiktoken",
+   "repos": 1,
+   "files": 3,
+   "group": "Tooling"
   },
   {
    "name": "plotly",
@@ -679,31 +1289,19 @@
    "group": "Science"
   },
   {
-   "name": "awkward",
+   "name": "pyproj",
+   "repos": 1,
+   "files": 2,
+   "group": "Geo / CV"
+  },
+  {
+   "name": "aiohttp",
    "repos": 1,
    "files": 1,
-   "group": "Science"
+   "group": "Tooling"
   },
   {
    "name": "certifi",
-   "repos": 1,
-   "files": 1,
-   "group": "Tooling"
-  },
-  {
-   "name": "ddgs",
-   "repos": 1,
-   "files": 1,
-   "group": "LLM / web"
-  },
-  {
-   "name": "dns",
-   "repos": 1,
-   "files": 1,
-   "group": "Tooling"
-  },
-  {
-   "name": "docx",
    "repos": 1,
    "files": 1,
    "group": "Tooling"
@@ -715,43 +1313,61 @@
    "group": "LLM / web"
   },
   {
+   "name": "google_auth_oauthlib",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "googleapiclient",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "groq",
+   "repos": 1,
+   "files": 1,
+   "group": "LLM / web"
+  },
+  {
+   "name": "hls4ml",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
    "name": "httpx",
    "repos": 1,
    "files": 1,
    "group": "LLM / web"
   },
   {
-   "name": "openai",
-   "repos": 1,
-   "files": 1,
-   "group": "LLM / web"
-  },
-  {
-   "name": "pdfplumber",
+   "name": "jinja2",
    "repos": 1,
    "files": 1,
    "group": "Tooling"
   },
   {
-   "name": "playwright",
+   "name": "pillow",
    "repos": 1,
    "files": 1,
-   "group": "LLM / web"
+   "group": "Geo / CV"
   },
   {
-   "name": "python-dotenv",
-   "repos": 1,
-   "files": 1,
-   "group": "Tooling"
-  },
-  {
-   "name": "pyyaml",
+   "name": "pyarrow",
    "repos": 1,
    "files": 1,
    "group": "Tooling"
   },
   {
-   "name": "reportlab",
+   "name": "pypdf",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "ruamel",
    "repos": 1,
    "files": 1,
    "group": "Tooling"
@@ -763,13 +1379,19 @@
    "group": "Tooling"
   },
   {
-   "name": "shapely",
+   "name": "serial",
    "repos": 1,
    "files": 1,
-   "group": "Geo / CV"
+   "group": "Tooling"
   },
   {
-   "name": "the",
+   "name": "that",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "those",
    "repos": 1,
    "files": 1,
    "group": "Tooling"
@@ -787,12 +1409,6 @@
    "group": "Tooling"
   },
   {
-   "name": "tzdata",
-   "repos": 1,
-   "files": 1,
-   "group": "Tooling"
-  },
-  {
    "name": "ultralytics",
    "repos": 1,
    "files": 1,
@@ -803,2243 +1419,2249 @@
    "repos": 1,
    "files": 1,
    "group": "ML"
+  },
+  {
+   "name": "webview",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
+  },
+  {
+   "name": "win32crypt",
+   "repos": 1,
+   "files": 1,
+   "group": "Tooling"
   }
  ],
  "diff": {
-  "repo": "Gated-Dual-Stream-Particle-Transformer",
-  "sha": "a1f2d65",
-  "message": "Add 10M/10-epoch results (test acc 0.8484, AUC 0.9853) and resumable 20-epoch checkpoint (epoch 3)",
-  "file": "results/v2_shared_10M_10ep/RESULTS.md",
-  "additions": 89,
+  "repo": "Agnostos-v2",
+  "sha": "16de8eb",
+  "message": "Docs: explain local sending and public discovery Actor",
+  "file": "docs/apify-actor.md",
+  "additions": 31,
   "deletions": 0,
   "lines": [
-   "+# GDS-ParT results \u2014 train_10M",
+   "+# Agnostos Research Discovery on Apify",
    "+",
-   "+## Setup",
+   "+The [public Agnostos Research Discovery Actor](https://apify.com/avinashistoocool/agnostos-research-discovery",
+   "+is a separate cloud-based discovery tool, not the local Agnostos sender. It searches",
+   "+OpenAlex for researchers by topic and country, with recent publications and seniority",
+   "+data. An optional public-page lookup returns **email suggestions**, not proof of",
+   "+ownership or deliverability. An optional Groq-powered step creates **unsent**",
+   "+subject/body drafts in the run dataset. The Actor never connects to SMTP or IMAP,",
+   "+uploads a CV, checks replies, or sends email. A researcher result is not proof",
+   "+that the person is a professor; verify identity and affiliation yourself.",
    "+",
-   "+- Training set: `D:\\JetClass\\train_10M` (train_10M)",
-   "+- Validation set: `D:\\JetClass\\val` \u2014 1,000,000 jets",
-   "+- Test set: `D:\\JetClass\\test` \u2014 **1,000,000 jets** (balanced, 10 classes)",
-   "+- Model: 2,074,420 parameters; embed_dim=128, layers=8, heads=8, pairwise_embed_dim=64, max_particles=128",
-   "+- Optimizer: AdamW lr=0.001, wd=0.01, batch=512, 10 epochs, warmup 5% + cosine, AMP",
-   "+- Checkpoint used for test: best validation accuracy (epoch 10)",
-   "+",
-   "+## Headline test metrics",
-   "+",
-   "+| Metric | Value |"
+   "+Provide `topics` (separated by semicolons or newlines) and optionally `countries`,",
+   "+`maxResults` (1-50), `maxPagesPerTopic` (1-10), `minHIndex`, and an",
+   "+`openalexApiKey`. `verifyEmails` is off by default. To opt in to drafts, set"
   ],
-  "url": "https://github.com/Avinashistoocool/Gated-Dual-Stream-Particle-Transformer/commit/a1f2d65124db7f476ed0d0eb1f2dfb2d179b9610"
+  "url": "https://github.com/Avinashistoocool/Agnostos-v2/commit/16de8eb96e0da1f7a0a3b5b778034428211ae028"
  },
  "contributions": {
-  "total": 86,
+  "total": 325,
   "days": [
-   {
-    "date": "2025-10-19",
-    "row": 0,
-    "col": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-26",
-    "row": 0,
-    "col": 1,
-    "level": 0
-   },
-   {
-    "date": "2025-11-02",
-    "row": 0,
-    "col": 2,
-    "level": 0
-   },
-   {
-    "date": "2025-11-09",
-    "row": 0,
-    "col": 3,
-    "level": 0
-   },
-   {
-    "date": "2025-11-16",
-    "row": 0,
-    "col": 4,
-    "level": 0
-   },
    {
     "date": "2025-11-23",
     "row": 0,
-    "col": 5,
+    "col": 0,
     "level": 0
    },
    {
     "date": "2025-11-30",
     "row": 0,
-    "col": 6,
+    "col": 1,
     "level": 0
    },
    {
     "date": "2025-12-07",
     "row": 0,
-    "col": 7,
+    "col": 2,
     "level": 0
    },
    {
     "date": "2025-12-14",
     "row": 0,
-    "col": 8,
+    "col": 3,
     "level": 0
    },
    {
     "date": "2025-12-21",
     "row": 0,
-    "col": 9,
+    "col": 4,
     "level": 0
    },
    {
     "date": "2025-12-28",
     "row": 0,
-    "col": 10,
+    "col": 5,
     "level": 0
    },
    {
     "date": "2026-01-04",
     "row": 0,
-    "col": 11,
+    "col": 6,
     "level": 0
    },
    {
     "date": "2026-01-11",
     "row": 0,
-    "col": 12,
+    "col": 7,
     "level": 0
    },
    {
     "date": "2026-01-18",
     "row": 0,
-    "col": 13,
+    "col": 8,
     "level": 0
    },
    {
     "date": "2026-01-25",
     "row": 0,
-    "col": 14,
+    "col": 9,
     "level": 0
    },
    {
     "date": "2026-02-01",
     "row": 0,
-    "col": 15,
+    "col": 10,
     "level": 0
    },
    {
     "date": "2026-02-08",
     "row": 0,
-    "col": 16,
+    "col": 11,
     "level": 0
    },
    {
     "date": "2026-02-15",
     "row": 0,
-    "col": 17,
+    "col": 12,
     "level": 0
    },
    {
     "date": "2026-02-22",
     "row": 0,
-    "col": 18,
+    "col": 13,
     "level": 0
    },
    {
     "date": "2026-03-01",
     "row": 0,
-    "col": 19,
+    "col": 14,
     "level": 0
    },
    {
     "date": "2026-03-08",
     "row": 0,
-    "col": 20,
+    "col": 15,
     "level": 0
    },
    {
     "date": "2026-03-15",
     "row": 0,
-    "col": 21,
+    "col": 16,
     "level": 0
    },
    {
     "date": "2026-03-22",
     "row": 0,
-    "col": 22,
+    "col": 17,
     "level": 0
    },
    {
     "date": "2026-03-29",
     "row": 0,
-    "col": 23,
+    "col": 18,
     "level": 0
    },
    {
     "date": "2026-04-05",
     "row": 0,
-    "col": 24,
+    "col": 19,
     "level": 0
    },
    {
     "date": "2026-04-12",
     "row": 0,
-    "col": 25,
+    "col": 20,
     "level": 0
    },
    {
     "date": "2026-04-19",
     "row": 0,
-    "col": 26,
+    "col": 21,
     "level": 0
    },
    {
     "date": "2026-04-26",
     "row": 0,
-    "col": 27,
+    "col": 22,
     "level": 0
    },
    {
     "date": "2026-05-03",
     "row": 0,
-    "col": 28,
+    "col": 23,
     "level": 0
    },
    {
     "date": "2026-05-10",
     "row": 0,
-    "col": 29,
+    "col": 24,
     "level": 0
    },
    {
     "date": "2026-05-17",
     "row": 0,
-    "col": 30,
+    "col": 25,
     "level": 0
    },
    {
     "date": "2026-05-24",
     "row": 0,
-    "col": 31,
+    "col": 26,
     "level": 0
    },
    {
     "date": "2026-05-31",
     "row": 0,
-    "col": 32,
+    "col": 27,
     "level": 0
    },
    {
     "date": "2026-06-07",
     "row": 0,
-    "col": 33,
+    "col": 28,
     "level": 0
    },
    {
     "date": "2026-06-14",
     "row": 0,
-    "col": 34,
+    "col": 29,
     "level": 0
    },
    {
     "date": "2026-06-21",
     "row": 0,
-    "col": 35,
+    "col": 30,
     "level": 0
    },
    {
     "date": "2026-06-28",
     "row": 0,
-    "col": 36,
+    "col": 31,
     "level": 1
    },
    {
     "date": "2026-07-05",
     "row": 0,
-    "col": 37,
+    "col": 32,
     "level": 1
    },
    {
     "date": "2026-07-12",
     "row": 0,
-    "col": 38,
+    "col": 33,
     "level": 0
    },
    {
     "date": "2026-07-19",
     "row": 0,
-    "col": 39,
+    "col": 34,
     "level": 0
    },
    {
     "date": "2026-07-26",
     "row": 0,
-    "col": 40,
+    "col": 35,
     "level": 0
    },
    {
     "date": "2026-08-02",
     "row": 0,
-    "col": 41,
+    "col": 36,
     "level": 0
    },
    {
     "date": "2026-08-09",
     "row": 0,
-    "col": 42,
+    "col": 37,
     "level": 0
    },
    {
     "date": "2026-08-16",
     "row": 0,
-    "col": 43,
+    "col": 38,
     "level": 0
    },
    {
     "date": "2026-08-23",
     "row": 0,
-    "col": 44,
+    "col": 39,
     "level": 0
    },
    {
     "date": "2026-08-30",
     "row": 0,
-    "col": 45,
+    "col": 40,
     "level": 0
    },
    {
     "date": "2026-09-06",
     "row": 0,
-    "col": 46,
+    "col": 41,
     "level": 0
    },
    {
     "date": "2026-09-13",
     "row": 0,
-    "col": 47,
+    "col": 42,
     "level": 0
    },
    {
     "date": "2026-09-20",
     "row": 0,
-    "col": 48,
+    "col": 43,
     "level": 0
    },
    {
     "date": "2026-09-27",
     "row": 0,
-    "col": 49,
+    "col": 44,
     "level": 0
    },
    {
     "date": "2026-10-04",
     "row": 0,
-    "col": 50,
+    "col": 45,
     "level": 0
    },
    {
     "date": "2026-10-11",
     "row": 0,
-    "col": 51,
+    "col": 46,
     "level": 0
    },
    {
     "date": "2026-10-18",
     "row": 0,
+    "col": 47,
+    "level": 0
+   },
+   {
+    "date": "2026-10-25",
+    "row": 0,
+    "col": 48,
+    "level": 1
+   },
+   {
+    "date": "2026-11-01",
+    "row": 0,
+    "col": 49,
+    "level": 1
+   },
+   {
+    "date": "2026-11-08",
+    "row": 0,
+    "col": 50,
+    "level": 1
+   },
+   {
+    "date": "2026-11-15",
+    "row": 0,
+    "col": 51,
+    "level": 0
+   },
+   {
+    "date": "2026-11-22",
+    "row": 0,
     "col": 52,
-    "level": 0
-   },
-   {
-    "date": "2025-10-20",
-    "row": 1,
-    "col": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-27",
-    "row": 1,
-    "col": 1,
-    "level": 0
-   },
-   {
-    "date": "2025-11-03",
-    "row": 1,
-    "col": 2,
-    "level": 0
-   },
-   {
-    "date": "2025-11-10",
-    "row": 1,
-    "col": 3,
-    "level": 0
-   },
-   {
-    "date": "2025-11-17",
-    "row": 1,
-    "col": 4,
-    "level": 0
+    "level": 1
    },
    {
     "date": "2025-11-24",
     "row": 1,
-    "col": 5,
+    "col": 0,
     "level": 0
    },
    {
     "date": "2025-12-01",
     "row": 1,
-    "col": 6,
+    "col": 1,
     "level": 0
    },
    {
     "date": "2025-12-08",
     "row": 1,
-    "col": 7,
+    "col": 2,
     "level": 0
    },
    {
     "date": "2025-12-15",
     "row": 1,
-    "col": 8,
+    "col": 3,
     "level": 0
    },
    {
     "date": "2025-12-22",
     "row": 1,
-    "col": 9,
+    "col": 4,
     "level": 0
    },
    {
     "date": "2025-12-29",
     "row": 1,
-    "col": 10,
+    "col": 5,
     "level": 0
    },
    {
     "date": "2026-01-05",
     "row": 1,
-    "col": 11,
+    "col": 6,
     "level": 0
    },
    {
     "date": "2026-01-12",
     "row": 1,
-    "col": 12,
+    "col": 7,
     "level": 0
    },
    {
     "date": "2026-01-19",
     "row": 1,
-    "col": 13,
+    "col": 8,
     "level": 0
    },
    {
     "date": "2026-01-26",
     "row": 1,
-    "col": 14,
+    "col": 9,
     "level": 0
    },
    {
     "date": "2026-02-02",
     "row": 1,
-    "col": 15,
+    "col": 10,
     "level": 0
    },
    {
     "date": "2026-02-09",
     "row": 1,
-    "col": 16,
+    "col": 11,
     "level": 0
    },
    {
     "date": "2026-02-16",
     "row": 1,
-    "col": 17,
+    "col": 12,
     "level": 0
    },
    {
     "date": "2026-02-23",
     "row": 1,
-    "col": 18,
+    "col": 13,
     "level": 0
    },
    {
     "date": "2026-03-02",
     "row": 1,
-    "col": 19,
+    "col": 14,
     "level": 0
    },
    {
     "date": "2026-03-09",
     "row": 1,
-    "col": 20,
+    "col": 15,
     "level": 0
    },
    {
     "date": "2026-03-16",
     "row": 1,
-    "col": 21,
+    "col": 16,
     "level": 0
    },
    {
     "date": "2026-03-23",
     "row": 1,
-    "col": 22,
+    "col": 17,
     "level": 0
    },
    {
     "date": "2026-03-30",
     "row": 1,
-    "col": 23,
+    "col": 18,
     "level": 0
    },
    {
     "date": "2026-04-06",
     "row": 1,
-    "col": 24,
+    "col": 19,
     "level": 0
    },
    {
     "date": "2026-04-13",
     "row": 1,
-    "col": 25,
+    "col": 20,
     "level": 0
    },
    {
     "date": "2026-04-20",
     "row": 1,
-    "col": 26,
+    "col": 21,
     "level": 0
    },
    {
     "date": "2026-04-27",
     "row": 1,
-    "col": 27,
+    "col": 22,
     "level": 0
    },
    {
     "date": "2026-05-04",
     "row": 1,
-    "col": 28,
+    "col": 23,
     "level": 0
    },
    {
     "date": "2026-05-11",
     "row": 1,
-    "col": 29,
+    "col": 24,
     "level": 0
    },
    {
     "date": "2026-05-18",
     "row": 1,
-    "col": 30,
+    "col": 25,
     "level": 0
    },
    {
     "date": "2026-05-25",
     "row": 1,
-    "col": 31,
+    "col": 26,
     "level": 1
    },
    {
     "date": "2026-06-01",
     "row": 1,
-    "col": 32,
+    "col": 27,
     "level": 0
    },
    {
     "date": "2026-06-08",
     "row": 1,
-    "col": 33,
+    "col": 28,
     "level": 0
    },
    {
     "date": "2026-06-15",
     "row": 1,
-    "col": 34,
+    "col": 29,
     "level": 0
    },
    {
     "date": "2026-06-22",
     "row": 1,
-    "col": 35,
+    "col": 30,
     "level": 0
    },
    {
     "date": "2026-06-29",
     "row": 1,
-    "col": 36,
+    "col": 31,
     "level": 0
    },
    {
     "date": "2026-07-06",
     "row": 1,
-    "col": 37,
-    "level": 2
+    "col": 32,
+    "level": 1
    },
    {
     "date": "2026-07-13",
     "row": 1,
-    "col": 38,
+    "col": 33,
     "level": 0
    },
    {
     "date": "2026-07-20",
     "row": 1,
-    "col": 39,
+    "col": 34,
     "level": 0
    },
    {
     "date": "2026-07-27",
     "row": 1,
-    "col": 40,
+    "col": 35,
     "level": 0
    },
    {
     "date": "2026-08-03",
     "row": 1,
-    "col": 41,
+    "col": 36,
     "level": 0
    },
    {
     "date": "2026-08-10",
     "row": 1,
-    "col": 42,
+    "col": 37,
     "level": 0
    },
    {
     "date": "2026-08-17",
     "row": 1,
-    "col": 43,
+    "col": 38,
     "level": 0
    },
    {
     "date": "2026-08-24",
     "row": 1,
-    "col": 44,
+    "col": 39,
     "level": 0
    },
    {
     "date": "2026-08-31",
     "row": 1,
-    "col": 45,
+    "col": 40,
     "level": 0
    },
    {
     "date": "2026-09-07",
     "row": 1,
-    "col": 46,
+    "col": 41,
     "level": 0
    },
    {
     "date": "2026-09-14",
     "row": 1,
-    "col": 47,
+    "col": 42,
     "level": 0
    },
    {
     "date": "2026-09-21",
     "row": 1,
-    "col": 48,
+    "col": 43,
     "level": 0
    },
    {
     "date": "2026-09-28",
     "row": 1,
-    "col": 49,
+    "col": 44,
     "level": 0
    },
    {
     "date": "2026-10-05",
     "row": 1,
-    "col": 50,
-    "level": 2
+    "col": 45,
+    "level": 1
    },
    {
     "date": "2026-10-12",
     "row": 1,
-    "col": 51,
+    "col": 46,
     "level": 0
    },
    {
     "date": "2026-10-19",
     "row": 1,
-    "col": 52,
+    "col": 47,
     "level": 1
    },
    {
-    "date": "2025-10-21",
-    "row": 2,
-    "col": 0,
+    "date": "2026-10-26",
+    "row": 1,
+    "col": 48,
+    "level": 2
+   },
+   {
+    "date": "2026-11-02",
+    "row": 1,
+    "col": 49,
+    "level": 1
+   },
+   {
+    "date": "2026-11-09",
+    "row": 1,
+    "col": 50,
+    "level": 1
+   },
+   {
+    "date": "2026-11-16",
+    "row": 1,
+    "col": 51,
     "level": 0
    },
    {
-    "date": "2025-10-28",
-    "row": 2,
-    "col": 1,
-    "level": 0
-   },
-   {
-    "date": "2025-11-04",
-    "row": 2,
-    "col": 2,
-    "level": 0
-   },
-   {
-    "date": "2025-11-11",
-    "row": 2,
-    "col": 3,
-    "level": 0
-   },
-   {
-    "date": "2025-11-18",
-    "row": 2,
-    "col": 4,
+    "date": "2026-11-23",
+    "row": 1,
+    "col": 52,
     "level": 0
    },
    {
     "date": "2025-11-25",
     "row": 2,
-    "col": 5,
+    "col": 0,
     "level": 0
    },
    {
     "date": "2025-12-02",
     "row": 2,
-    "col": 6,
+    "col": 1,
     "level": 0
    },
    {
     "date": "2025-12-09",
     "row": 2,
-    "col": 7,
+    "col": 2,
     "level": 0
    },
    {
     "date": "2025-12-16",
     "row": 2,
-    "col": 8,
+    "col": 3,
     "level": 0
    },
    {
     "date": "2025-12-23",
     "row": 2,
-    "col": 9,
+    "col": 4,
     "level": 0
    },
    {
     "date": "2025-12-30",
     "row": 2,
-    "col": 10,
+    "col": 5,
     "level": 0
    },
    {
     "date": "2026-01-06",
     "row": 2,
-    "col": 11,
+    "col": 6,
     "level": 0
    },
    {
     "date": "2026-01-13",
     "row": 2,
-    "col": 12,
+    "col": 7,
     "level": 0
    },
    {
     "date": "2026-01-20",
     "row": 2,
-    "col": 13,
+    "col": 8,
     "level": 0
    },
    {
     "date": "2026-01-27",
     "row": 2,
-    "col": 14,
+    "col": 9,
     "level": 0
    },
    {
     "date": "2026-02-03",
     "row": 2,
-    "col": 15,
+    "col": 10,
     "level": 0
    },
    {
     "date": "2026-02-10",
     "row": 2,
-    "col": 16,
+    "col": 11,
     "level": 0
    },
    {
     "date": "2026-02-17",
     "row": 2,
-    "col": 17,
+    "col": 12,
     "level": 0
    },
    {
     "date": "2026-02-24",
     "row": 2,
-    "col": 18,
+    "col": 13,
     "level": 0
    },
    {
     "date": "2026-03-03",
     "row": 2,
-    "col": 19,
+    "col": 14,
     "level": 0
    },
    {
     "date": "2026-03-10",
     "row": 2,
-    "col": 20,
+    "col": 15,
     "level": 0
    },
    {
     "date": "2026-03-17",
     "row": 2,
-    "col": 21,
+    "col": 16,
     "level": 0
    },
    {
     "date": "2026-03-24",
     "row": 2,
-    "col": 22,
+    "col": 17,
     "level": 0
    },
    {
     "date": "2026-03-31",
     "row": 2,
-    "col": 23,
+    "col": 18,
     "level": 0
    },
    {
     "date": "2026-04-07",
     "row": 2,
-    "col": 24,
+    "col": 19,
     "level": 0
    },
    {
     "date": "2026-04-14",
     "row": 2,
-    "col": 25,
+    "col": 20,
     "level": 0
    },
    {
     "date": "2026-04-21",
     "row": 2,
-    "col": 26,
+    "col": 21,
     "level": 0
    },
    {
     "date": "2026-04-28",
     "row": 2,
-    "col": 27,
+    "col": 22,
     "level": 0
    },
    {
     "date": "2026-05-05",
     "row": 2,
-    "col": 28,
+    "col": 23,
     "level": 0
    },
    {
     "date": "2026-05-12",
     "row": 2,
-    "col": 29,
+    "col": 24,
     "level": 0
    },
    {
     "date": "2026-05-19",
     "row": 2,
-    "col": 30,
+    "col": 25,
     "level": 0
    },
    {
     "date": "2026-05-26",
     "row": 2,
-    "col": 31,
+    "col": 26,
     "level": 0
    },
    {
     "date": "2026-06-02",
     "row": 2,
-    "col": 32,
+    "col": 27,
     "level": 0
    },
    {
     "date": "2026-06-09",
     "row": 2,
-    "col": 33,
+    "col": 28,
     "level": 0
    },
    {
     "date": "2026-06-16",
     "row": 2,
-    "col": 34,
+    "col": 29,
     "level": 0
    },
    {
     "date": "2026-06-23",
     "row": 2,
-    "col": 35,
+    "col": 30,
     "level": 0
    },
    {
     "date": "2026-06-30",
     "row": 2,
-    "col": 36,
+    "col": 31,
     "level": 0
    },
    {
     "date": "2026-07-07",
     "row": 2,
-    "col": 37,
+    "col": 32,
     "level": 0
    },
    {
     "date": "2026-07-14",
     "row": 2,
-    "col": 38,
+    "col": 33,
     "level": 0
    },
    {
     "date": "2026-07-21",
     "row": 2,
-    "col": 39,
+    "col": 34,
     "level": 0
    },
    {
     "date": "2026-07-28",
     "row": 2,
-    "col": 40,
+    "col": 35,
     "level": 0
    },
    {
     "date": "2026-08-04",
     "row": 2,
-    "col": 41,
+    "col": 36,
     "level": 0
    },
    {
     "date": "2026-08-11",
     "row": 2,
-    "col": 42,
+    "col": 37,
     "level": 0
    },
    {
     "date": "2026-08-18",
     "row": 2,
-    "col": 43,
+    "col": 38,
     "level": 0
    },
    {
     "date": "2026-08-25",
     "row": 2,
-    "col": 44,
+    "col": 39,
     "level": 0
    },
    {
     "date": "2026-09-01",
     "row": 2,
-    "col": 45,
+    "col": 40,
     "level": 0
    },
    {
     "date": "2026-09-08",
     "row": 2,
-    "col": 46,
+    "col": 41,
     "level": 0
    },
    {
     "date": "2026-09-15",
     "row": 2,
-    "col": 47,
+    "col": 42,
     "level": 0
    },
    {
     "date": "2026-09-22",
     "row": 2,
-    "col": 48,
+    "col": 43,
     "level": 0
    },
    {
     "date": "2026-09-29",
     "row": 2,
-    "col": 49,
+    "col": 44,
     "level": 0
    },
    {
     "date": "2026-10-06",
     "row": 2,
-    "col": 50,
+    "col": 45,
     "level": 0
    },
    {
     "date": "2026-10-13",
     "row": 2,
-    "col": 51,
-    "level": 3
+    "col": 46,
+    "level": 1
    },
    {
     "date": "2026-10-20",
+    "row": 2,
+    "col": 47,
+    "level": 0
+   },
+   {
+    "date": "2026-10-27",
+    "row": 2,
+    "col": 48,
+    "level": 3
+   },
+   {
+    "date": "2026-11-03",
+    "row": 2,
+    "col": 49,
+    "level": 2
+   },
+   {
+    "date": "2026-11-10",
+    "row": 2,
+    "col": 50,
+    "level": 0
+   },
+   {
+    "date": "2026-11-17",
+    "row": 2,
+    "col": 51,
+    "level": 1
+   },
+   {
+    "date": "2026-11-24",
     "row": 2,
     "col": 52,
     "level": 0
    },
    {
-    "date": "2025-10-22",
-    "row": 3,
-    "col": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-29",
-    "row": 3,
-    "col": 1,
-    "level": 0
-   },
-   {
-    "date": "2025-11-05",
-    "row": 3,
-    "col": 2,
-    "level": 0
-   },
-   {
-    "date": "2025-11-12",
-    "row": 3,
-    "col": 3,
-    "level": 0
-   },
-   {
-    "date": "2025-11-19",
-    "row": 3,
-    "col": 4,
-    "level": 0
-   },
-   {
     "date": "2025-11-26",
     "row": 3,
-    "col": 5,
+    "col": 0,
     "level": 0
    },
    {
     "date": "2025-12-03",
     "row": 3,
-    "col": 6,
+    "col": 1,
     "level": 0
    },
    {
     "date": "2025-12-10",
     "row": 3,
-    "col": 7,
+    "col": 2,
     "level": 0
    },
    {
     "date": "2025-12-17",
     "row": 3,
-    "col": 8,
+    "col": 3,
     "level": 0
    },
    {
     "date": "2025-12-24",
     "row": 3,
-    "col": 9,
+    "col": 4,
     "level": 0
    },
    {
     "date": "2025-12-31",
     "row": 3,
-    "col": 10,
+    "col": 5,
     "level": 0
    },
    {
     "date": "2026-01-07",
     "row": 3,
-    "col": 11,
+    "col": 6,
     "level": 0
    },
    {
     "date": "2026-01-14",
     "row": 3,
-    "col": 12,
+    "col": 7,
     "level": 0
    },
    {
     "date": "2026-01-21",
     "row": 3,
-    "col": 13,
+    "col": 8,
     "level": 0
    },
    {
     "date": "2026-01-28",
     "row": 3,
-    "col": 14,
+    "col": 9,
     "level": 0
    },
    {
     "date": "2026-02-04",
     "row": 3,
-    "col": 15,
-    "level": 2
+    "col": 10,
+    "level": 1
    },
    {
     "date": "2026-02-11",
     "row": 3,
-    "col": 16,
+    "col": 11,
     "level": 0
    },
    {
     "date": "2026-02-18",
     "row": 3,
-    "col": 17,
+    "col": 12,
     "level": 0
    },
    {
     "date": "2026-02-25",
     "row": 3,
-    "col": 18,
+    "col": 13,
     "level": 0
    },
    {
     "date": "2026-03-04",
     "row": 3,
-    "col": 19,
+    "col": 14,
     "level": 0
    },
    {
     "date": "2026-03-11",
     "row": 3,
-    "col": 20,
+    "col": 15,
     "level": 0
    },
    {
     "date": "2026-03-18",
     "row": 3,
-    "col": 21,
+    "col": 16,
     "level": 0
    },
    {
     "date": "2026-03-25",
     "row": 3,
-    "col": 22,
+    "col": 17,
     "level": 0
    },
    {
     "date": "2026-04-01",
     "row": 3,
-    "col": 23,
+    "col": 18,
     "level": 0
    },
    {
     "date": "2026-04-08",
     "row": 3,
-    "col": 24,
+    "col": 19,
     "level": 0
    },
    {
     "date": "2026-04-15",
     "row": 3,
-    "col": 25,
+    "col": 20,
     "level": 0
    },
    {
     "date": "2026-04-22",
     "row": 3,
-    "col": 26,
+    "col": 21,
     "level": 0
    },
    {
     "date": "2026-04-29",
     "row": 3,
-    "col": 27,
+    "col": 22,
     "level": 0
    },
    {
     "date": "2026-05-06",
     "row": 3,
-    "col": 28,
+    "col": 23,
     "level": 0
    },
    {
     "date": "2026-05-13",
     "row": 3,
-    "col": 29,
+    "col": 24,
     "level": 0
    },
    {
     "date": "2026-05-20",
     "row": 3,
-    "col": 30,
+    "col": 25,
     "level": 0
    },
    {
     "date": "2026-05-27",
     "row": 3,
-    "col": 31,
+    "col": 26,
     "level": 0
    },
    {
     "date": "2026-06-03",
     "row": 3,
-    "col": 32,
+    "col": 27,
     "level": 0
    },
    {
     "date": "2026-06-10",
     "row": 3,
-    "col": 33,
+    "col": 28,
     "level": 0
    },
    {
     "date": "2026-06-17",
     "row": 3,
-    "col": 34,
+    "col": 29,
     "level": 0
    },
    {
     "date": "2026-06-24",
     "row": 3,
-    "col": 35,
+    "col": 30,
     "level": 0
    },
    {
     "date": "2026-07-01",
     "row": 3,
-    "col": 36,
-    "level": 2
+    "col": 31,
+    "level": 1
    },
    {
     "date": "2026-07-08",
     "row": 3,
-    "col": 37,
+    "col": 32,
     "level": 0
    },
    {
     "date": "2026-07-15",
     "row": 3,
-    "col": 38,
+    "col": 33,
     "level": 0
    },
    {
     "date": "2026-07-22",
     "row": 3,
-    "col": 39,
+    "col": 34,
     "level": 0
    },
    {
     "date": "2026-07-29",
     "row": 3,
-    "col": 40,
+    "col": 35,
     "level": 0
    },
    {
     "date": "2026-08-05",
     "row": 3,
-    "col": 41,
+    "col": 36,
     "level": 0
    },
    {
     "date": "2026-08-12",
     "row": 3,
-    "col": 42,
+    "col": 37,
     "level": 0
    },
    {
     "date": "2026-08-19",
     "row": 3,
-    "col": 43,
+    "col": 38,
     "level": 0
    },
    {
     "date": "2026-08-26",
     "row": 3,
-    "col": 44,
+    "col": 39,
     "level": 0
    },
    {
     "date": "2026-09-02",
     "row": 3,
-    "col": 45,
+    "col": 40,
     "level": 0
    },
    {
     "date": "2026-09-09",
     "row": 3,
-    "col": 46,
+    "col": 41,
     "level": 0
    },
    {
     "date": "2026-09-16",
     "row": 3,
-    "col": 47,
+    "col": 42,
     "level": 0
    },
    {
     "date": "2026-09-23",
     "row": 3,
-    "col": 48,
+    "col": 43,
     "level": 1
    },
    {
     "date": "2026-09-30",
     "row": 3,
-    "col": 49,
+    "col": 44,
     "level": 0
    },
    {
     "date": "2026-10-07",
     "row": 3,
-    "col": 50,
+    "col": 45,
     "level": 0
    },
    {
     "date": "2026-10-14",
     "row": 3,
-    "col": 51,
-    "level": 2
+    "col": 46,
+    "level": 1
    },
    {
     "date": "2026-10-21",
     "row": 3,
-    "col": 52,
-    "level": 4
+    "col": 47,
+    "level": 2
    },
    {
-    "date": "2025-10-23",
-    "row": 4,
-    "col": 0,
+    "date": "2026-10-28",
+    "row": 3,
+    "col": 48,
     "level": 0
    },
    {
-    "date": "2025-10-30",
-    "row": 4,
-    "col": 1,
+    "date": "2026-11-04",
+    "row": 3,
+    "col": 49,
+    "level": 2
+   },
+   {
+    "date": "2026-11-11",
+    "row": 3,
+    "col": 50,
     "level": 0
    },
    {
-    "date": "2025-11-06",
-    "row": 4,
-    "col": 2,
-    "level": 0
-   },
-   {
-    "date": "2025-11-13",
-    "row": 4,
-    "col": 3,
-    "level": 0
-   },
-   {
-    "date": "2025-11-20",
-    "row": 4,
-    "col": 4,
+    "date": "2026-11-18",
+    "row": 3,
+    "col": 51,
     "level": 0
    },
    {
     "date": "2025-11-27",
     "row": 4,
-    "col": 5,
+    "col": 0,
     "level": 0
    },
    {
     "date": "2025-12-04",
     "row": 4,
-    "col": 6,
+    "col": 1,
     "level": 0
    },
    {
     "date": "2025-12-11",
     "row": 4,
-    "col": 7,
+    "col": 2,
     "level": 0
    },
    {
     "date": "2025-12-18",
     "row": 4,
-    "col": 8,
+    "col": 3,
     "level": 0
    },
    {
     "date": "2025-12-25",
     "row": 4,
-    "col": 9,
+    "col": 4,
     "level": 0
    },
    {
     "date": "2026-01-01",
     "row": 4,
-    "col": 10,
+    "col": 5,
     "level": 0
    },
    {
     "date": "2026-01-08",
     "row": 4,
-    "col": 11,
+    "col": 6,
     "level": 0
    },
    {
     "date": "2026-01-15",
     "row": 4,
-    "col": 12,
+    "col": 7,
     "level": 0
    },
    {
     "date": "2026-01-22",
     "row": 4,
-    "col": 13,
+    "col": 8,
     "level": 0
    },
    {
     "date": "2026-01-29",
     "row": 4,
-    "col": 14,
+    "col": 9,
     "level": 0
    },
    {
     "date": "2026-02-05",
     "row": 4,
-    "col": 15,
+    "col": 10,
     "level": 0
    },
    {
     "date": "2026-02-12",
     "row": 4,
-    "col": 16,
+    "col": 11,
     "level": 0
    },
    {
     "date": "2026-02-19",
     "row": 4,
-    "col": 17,
+    "col": 12,
     "level": 0
    },
    {
     "date": "2026-02-26",
     "row": 4,
-    "col": 18,
+    "col": 13,
     "level": 0
    },
    {
     "date": "2026-03-05",
     "row": 4,
-    "col": 19,
+    "col": 14,
     "level": 0
    },
    {
     "date": "2026-03-12",
     "row": 4,
-    "col": 20,
+    "col": 15,
     "level": 0
    },
    {
     "date": "2026-03-19",
     "row": 4,
-    "col": 21,
+    "col": 16,
     "level": 0
    },
    {
     "date": "2026-03-26",
     "row": 4,
-    "col": 22,
+    "col": 17,
     "level": 0
    },
    {
     "date": "2026-04-02",
     "row": 4,
-    "col": 23,
+    "col": 18,
     "level": 0
    },
    {
     "date": "2026-04-09",
     "row": 4,
-    "col": 24,
+    "col": 19,
     "level": 0
    },
    {
     "date": "2026-04-16",
     "row": 4,
-    "col": 25,
+    "col": 20,
     "level": 0
    },
    {
     "date": "2026-04-23",
     "row": 4,
-    "col": 26,
+    "col": 21,
     "level": 0
    },
    {
     "date": "2026-04-30",
     "row": 4,
-    "col": 27,
+    "col": 22,
     "level": 0
    },
    {
     "date": "2026-05-07",
     "row": 4,
-    "col": 28,
+    "col": 23,
     "level": 0
    },
    {
     "date": "2026-05-14",
     "row": 4,
-    "col": 29,
+    "col": 24,
     "level": 0
    },
    {
     "date": "2026-05-21",
     "row": 4,
-    "col": 30,
+    "col": 25,
     "level": 0
    },
    {
     "date": "2026-05-28",
     "row": 4,
-    "col": 31,
+    "col": 26,
     "level": 0
    },
    {
     "date": "2026-06-04",
     "row": 4,
-    "col": 32,
+    "col": 27,
     "level": 0
    },
    {
     "date": "2026-06-11",
     "row": 4,
-    "col": 33,
+    "col": 28,
     "level": 0
    },
    {
     "date": "2026-06-18",
     "row": 4,
-    "col": 34,
+    "col": 29,
     "level": 0
    },
    {
     "date": "2026-06-25",
     "row": 4,
-    "col": 35,
+    "col": 30,
     "level": 0
    },
    {
     "date": "2026-07-02",
     "row": 4,
-    "col": 36,
-    "level": 4
+    "col": 31,
+    "level": 2
    },
    {
     "date": "2026-07-09",
     "row": 4,
-    "col": 37,
+    "col": 32,
     "level": 0
    },
    {
     "date": "2026-07-16",
     "row": 4,
-    "col": 38,
+    "col": 33,
     "level": 0
    },
    {
     "date": "2026-07-23",
     "row": 4,
-    "col": 39,
+    "col": 34,
     "level": 0
    },
    {
     "date": "2026-07-30",
     "row": 4,
-    "col": 40,
+    "col": 35,
     "level": 0
    },
    {
     "date": "2026-08-06",
     "row": 4,
-    "col": 41,
+    "col": 36,
     "level": 0
    },
    {
     "date": "2026-08-13",
     "row": 4,
-    "col": 42,
+    "col": 37,
     "level": 0
    },
    {
     "date": "2026-08-20",
     "row": 4,
-    "col": 43,
+    "col": 38,
     "level": 0
    },
    {
     "date": "2026-08-27",
     "row": 4,
-    "col": 44,
+    "col": 39,
     "level": 0
    },
    {
     "date": "2026-09-03",
     "row": 4,
-    "col": 45,
+    "col": 40,
     "level": 0
    },
    {
     "date": "2026-09-10",
     "row": 4,
-    "col": 46,
+    "col": 41,
     "level": 0
    },
    {
     "date": "2026-09-17",
     "row": 4,
-    "col": 47,
+    "col": 42,
     "level": 0
    },
    {
     "date": "2026-09-24",
     "row": 4,
-    "col": 48,
+    "col": 43,
     "level": 0
    },
    {
     "date": "2026-10-01",
     "row": 4,
-    "col": 49,
+    "col": 44,
     "level": 0
    },
    {
     "date": "2026-10-08",
     "row": 4,
-    "col": 50,
+    "col": 45,
     "level": 0
    },
    {
     "date": "2026-10-15",
     "row": 4,
+    "col": 46,
+    "level": 1
+   },
+   {
+    "date": "2026-10-22",
+    "row": 4,
+    "col": 47,
+    "level": 0
+   },
+   {
+    "date": "2026-10-29",
+    "row": 4,
+    "col": 48,
+    "level": 1
+   },
+   {
+    "date": "2026-11-05",
+    "row": 4,
+    "col": 49,
+    "level": 0
+   },
+   {
+    "date": "2026-11-12",
+    "row": 4,
+    "col": 50,
+    "level": 1
+   },
+   {
+    "date": "2026-11-19",
+    "row": 4,
     "col": 51,
-    "level": 3
-   },
-   {
-    "date": "2025-10-24",
-    "row": 5,
-    "col": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-31",
-    "row": 5,
-    "col": 1,
-    "level": 0
-   },
-   {
-    "date": "2025-11-07",
-    "row": 5,
-    "col": 2,
-    "level": 0
-   },
-   {
-    "date": "2025-11-14",
-    "row": 5,
-    "col": 3,
-    "level": 0
-   },
-   {
-    "date": "2025-11-21",
-    "row": 5,
-    "col": 4,
-    "level": 0
+    "level": 2
    },
    {
     "date": "2025-11-28",
     "row": 5,
-    "col": 5,
+    "col": 0,
     "level": 0
    },
    {
     "date": "2025-12-05",
     "row": 5,
-    "col": 6,
+    "col": 1,
     "level": 0
    },
    {
     "date": "2025-12-12",
     "row": 5,
-    "col": 7,
+    "col": 2,
     "level": 0
    },
    {
     "date": "2025-12-19",
     "row": 5,
-    "col": 8,
+    "col": 3,
     "level": 0
    },
    {
     "date": "2025-12-26",
     "row": 5,
-    "col": 9,
+    "col": 4,
     "level": 0
    },
    {
     "date": "2026-01-02",
     "row": 5,
-    "col": 10,
+    "col": 5,
     "level": 0
    },
    {
     "date": "2026-01-09",
     "row": 5,
-    "col": 11,
+    "col": 6,
     "level": 0
    },
    {
     "date": "2026-01-16",
     "row": 5,
-    "col": 12,
+    "col": 7,
     "level": 0
    },
    {
     "date": "2026-01-23",
     "row": 5,
-    "col": 13,
+    "col": 8,
     "level": 0
    },
    {
     "date": "2026-01-30",
     "row": 5,
-    "col": 14,
+    "col": 9,
     "level": 0
    },
    {
     "date": "2026-02-06",
     "row": 5,
-    "col": 15,
+    "col": 10,
     "level": 0
    },
    {
     "date": "2026-02-13",
     "row": 5,
-    "col": 16,
+    "col": 11,
     "level": 0
    },
    {
     "date": "2026-02-20",
     "row": 5,
-    "col": 17,
+    "col": 12,
     "level": 0
    },
    {
     "date": "2026-02-27",
     "row": 5,
-    "col": 18,
+    "col": 13,
     "level": 0
    },
    {
     "date": "2026-03-06",
     "row": 5,
-    "col": 19,
+    "col": 14,
     "level": 0
    },
    {
     "date": "2026-03-13",
     "row": 5,
-    "col": 20,
+    "col": 15,
     "level": 0
    },
    {
     "date": "2026-03-20",
     "row": 5,
-    "col": 21,
+    "col": 16,
     "level": 0
    },
    {
     "date": "2026-03-27",
     "row": 5,
-    "col": 22,
+    "col": 17,
     "level": 0
    },
    {
     "date": "2026-04-03",
     "row": 5,
-    "col": 23,
+    "col": 18,
     "level": 0
    },
    {
     "date": "2026-04-10",
     "row": 5,
-    "col": 24,
+    "col": 19,
     "level": 0
    },
    {
     "date": "2026-04-17",
     "row": 5,
-    "col": 25,
+    "col": 20,
     "level": 0
    },
    {
     "date": "2026-04-24",
     "row": 5,
-    "col": 26,
+    "col": 21,
     "level": 0
    },
    {
     "date": "2026-05-01",
     "row": 5,
-    "col": 27,
+    "col": 22,
     "level": 0
    },
    {
     "date": "2026-05-08",
     "row": 5,
-    "col": 28,
+    "col": 23,
     "level": 0
    },
    {
     "date": "2026-05-15",
     "row": 5,
-    "col": 29,
+    "col": 24,
     "level": 0
    },
    {
     "date": "2026-05-22",
     "row": 5,
-    "col": 30,
+    "col": 25,
     "level": 0
    },
    {
     "date": "2026-05-29",
     "row": 5,
-    "col": 31,
+    "col": 26,
     "level": 0
    },
    {
     "date": "2026-06-05",
     "row": 5,
-    "col": 32,
+    "col": 27,
     "level": 0
    },
    {
     "date": "2026-06-12",
     "row": 5,
-    "col": 33,
+    "col": 28,
     "level": 0
    },
    {
     "date": "2026-06-19",
     "row": 5,
-    "col": 34,
+    "col": 29,
     "level": 0
    },
    {
     "date": "2026-06-26",
     "row": 5,
-    "col": 35,
-    "level": 2
+    "col": 30,
+    "level": 1
    },
    {
     "date": "2026-07-03",
     "row": 5,
-    "col": 36,
+    "col": 31,
     "level": 0
    },
    {
     "date": "2026-07-10",
     "row": 5,
-    "col": 37,
+    "col": 32,
     "level": 0
    },
    {
     "date": "2026-07-17",
     "row": 5,
-    "col": 38,
+    "col": 33,
     "level": 0
    },
    {
     "date": "2026-07-24",
     "row": 5,
-    "col": 39,
+    "col": 34,
     "level": 0
    },
    {
     "date": "2026-07-31",
     "row": 5,
-    "col": 40,
+    "col": 35,
     "level": 0
    },
    {
     "date": "2026-08-07",
     "row": 5,
-    "col": 41,
+    "col": 36,
     "level": 0
    },
    {
     "date": "2026-08-14",
     "row": 5,
-    "col": 42,
+    "col": 37,
     "level": 0
    },
    {
     "date": "2026-08-21",
     "row": 5,
-    "col": 43,
+    "col": 38,
     "level": 0
    },
    {
     "date": "2026-08-28",
     "row": 5,
-    "col": 44,
+    "col": 39,
     "level": 0
    },
    {
     "date": "2026-09-04",
     "row": 5,
-    "col": 45,
+    "col": 40,
     "level": 0
    },
    {
     "date": "2026-09-11",
     "row": 5,
-    "col": 46,
+    "col": 41,
     "level": 0
    },
    {
     "date": "2026-09-18",
     "row": 5,
-    "col": 47,
+    "col": 42,
     "level": 0
    },
    {
     "date": "2026-09-25",
     "row": 5,
-    "col": 48,
+    "col": 43,
     "level": 0
    },
    {
     "date": "2026-10-02",
     "row": 5,
-    "col": 49,
+    "col": 44,
     "level": 0
    },
    {
     "date": "2026-10-09",
     "row": 5,
-    "col": 50,
+    "col": 45,
     "level": 0
    },
    {
     "date": "2026-10-16",
     "row": 5,
-    "col": 51,
+    "col": 46,
+    "level": 2
+   },
+   {
+    "date": "2026-10-23",
+    "row": 5,
+    "col": 47,
     "level": 4
    },
    {
-    "date": "2025-10-25",
+    "date": "2026-10-30",
+    "row": 5,
+    "col": 48,
+    "level": 4
+   },
+   {
+    "date": "2026-11-06",
+    "row": 5,
+    "col": 49,
+    "level": 0
+   },
+   {
+    "date": "2026-11-13",
+    "row": 5,
+    "col": 50,
+    "level": 1
+   },
+   {
+    "date": "2026-11-20",
+    "row": 5,
+    "col": 51,
+    "level": 2
+   },
+   {
+    "date": "2025-11-29",
     "row": 6,
     "col": 0,
     "level": 0
    },
    {
-    "date": "2025-11-01",
+    "date": "2025-12-06",
     "row": 6,
     "col": 1,
     "level": 0
    },
    {
-    "date": "2025-11-08",
+    "date": "2025-12-13",
     "row": 6,
     "col": 2,
     "level": 0
    },
    {
-    "date": "2025-11-15",
+    "date": "2025-12-20",
     "row": 6,
     "col": 3,
     "level": 0
    },
    {
-    "date": "2025-11-22",
+    "date": "2025-12-27",
     "row": 6,
     "col": 4,
     "level": 0
    },
    {
-    "date": "2025-11-29",
+    "date": "2026-01-03",
     "row": 6,
     "col": 5,
     "level": 0
    },
    {
-    "date": "2025-12-06",
+    "date": "2026-01-10",
     "row": 6,
     "col": 6,
     "level": 0
    },
    {
-    "date": "2025-12-13",
+    "date": "2026-01-17",
     "row": 6,
     "col": 7,
     "level": 0
    },
    {
-    "date": "2025-12-20",
+    "date": "2026-01-24",
     "row": 6,
     "col": 8,
     "level": 0
    },
    {
-    "date": "2025-12-27",
+    "date": "2026-01-31",
     "row": 6,
     "col": 9,
     "level": 0
    },
    {
-    "date": "2026-01-03",
+    "date": "2026-02-07",
     "row": 6,
     "col": 10,
     "level": 0
    },
    {
-    "date": "2026-01-10",
+    "date": "2026-02-14",
     "row": 6,
     "col": 11,
     "level": 0
    },
    {
-    "date": "2026-01-17",
+    "date": "2026-02-21",
     "row": 6,
     "col": 12,
     "level": 0
    },
    {
-    "date": "2026-01-24",
+    "date": "2026-02-28",
     "row": 6,
     "col": 13,
     "level": 0
    },
    {
-    "date": "2026-01-31",
+    "date": "2026-03-07",
     "row": 6,
     "col": 14,
     "level": 0
    },
    {
-    "date": "2026-02-07",
+    "date": "2026-03-14",
     "row": 6,
     "col": 15,
     "level": 0
    },
    {
-    "date": "2026-02-14",
+    "date": "2026-03-21",
     "row": 6,
     "col": 16,
     "level": 0
    },
    {
-    "date": "2026-02-21",
+    "date": "2026-03-28",
     "row": 6,
     "col": 17,
     "level": 0
    },
    {
-    "date": "2026-02-28",
+    "date": "2026-04-04",
     "row": 6,
     "col": 18,
     "level": 0
    },
    {
-    "date": "2026-03-07",
+    "date": "2026-04-11",
     "row": 6,
     "col": 19,
     "level": 0
    },
    {
-    "date": "2026-03-14",
+    "date": "2026-04-18",
     "row": 6,
     "col": 20,
     "level": 0
    },
    {
-    "date": "2026-03-21",
+    "date": "2026-04-25",
     "row": 6,
     "col": 21,
     "level": 0
    },
    {
-    "date": "2026-03-28",
+    "date": "2026-05-02",
     "row": 6,
     "col": 22,
     "level": 0
    },
    {
-    "date": "2026-04-04",
+    "date": "2026-05-09",
     "row": 6,
     "col": 23,
     "level": 0
    },
    {
-    "date": "2026-04-11",
+    "date": "2026-05-16",
     "row": 6,
     "col": 24,
     "level": 0
    },
    {
-    "date": "2026-04-18",
+    "date": "2026-05-23",
     "row": 6,
     "col": 25,
     "level": 0
    },
    {
-    "date": "2026-04-25",
+    "date": "2026-05-30",
     "row": 6,
     "col": 26,
     "level": 0
    },
    {
-    "date": "2026-05-02",
+    "date": "2026-06-06",
     "row": 6,
     "col": 27,
     "level": 0
    },
    {
-    "date": "2026-05-09",
+    "date": "2026-06-13",
     "row": 6,
     "col": 28,
     "level": 0
    },
    {
-    "date": "2026-05-16",
+    "date": "2026-06-20",
     "row": 6,
     "col": 29,
     "level": 0
    },
    {
-    "date": "2026-05-23",
-    "row": 6,
-    "col": 30,
-    "level": 0
-   },
-   {
-    "date": "2026-05-30",
-    "row": 6,
-    "col": 31,
-    "level": 0
-   },
-   {
-    "date": "2026-06-06",
-    "row": 6,
-    "col": 32,
-    "level": 0
-   },
-   {
-    "date": "2026-06-13",
-    "row": 6,
-    "col": 33,
-    "level": 0
-   },
-   {
-    "date": "2026-06-20",
-    "row": 6,
-    "col": 34,
-    "level": 0
-   },
-   {
     "date": "2026-06-27",
     "row": 6,
-    "col": 35,
+    "col": 30,
     "level": 1
    },
    {
     "date": "2026-07-04",
     "row": 6,
-    "col": 36,
+    "col": 31,
     "level": 0
    },
    {
     "date": "2026-07-11",
     "row": 6,
-    "col": 37,
+    "col": 32,
     "level": 0
    },
    {
     "date": "2026-07-18",
     "row": 6,
-    "col": 38,
+    "col": 33,
     "level": 0
    },
    {
     "date": "2026-07-25",
     "row": 6,
-    "col": 39,
+    "col": 34,
     "level": 0
    },
    {
     "date": "2026-08-01",
     "row": 6,
-    "col": 40,
+    "col": 35,
     "level": 0
    },
    {
     "date": "2026-08-08",
     "row": 6,
-    "col": 41,
-    "level": 3
+    "col": 36,
+    "level": 1
    },
    {
     "date": "2026-08-15",
     "row": 6,
-    "col": 42,
+    "col": 37,
     "level": 0
    },
    {
     "date": "2026-08-22",
     "row": 6,
-    "col": 43,
+    "col": 38,
     "level": 0
    },
    {
     "date": "2026-08-29",
     "row": 6,
-    "col": 44,
+    "col": 39,
     "level": 1
    },
    {
     "date": "2026-09-05",
     "row": 6,
-    "col": 45,
+    "col": 40,
     "level": 0
    },
    {
     "date": "2026-09-12",
     "row": 6,
-    "col": 46,
+    "col": 41,
     "level": 0
    },
    {
     "date": "2026-09-19",
     "row": 6,
-    "col": 47,
+    "col": 42,
     "level": 0
    },
    {
     "date": "2026-09-26",
     "row": 6,
-    "col": 48,
+    "col": 43,
     "level": 0
    },
    {
     "date": "2026-10-03",
     "row": 6,
-    "col": 49,
+    "col": 44,
     "level": 0
    },
    {
     "date": "2026-10-10",
     "row": 6,
-    "col": 50,
+    "col": 45,
     "level": 0
    },
    {
     "date": "2026-10-17",
     "row": 6,
-    "col": 51,
+    "col": 46,
     "level": 1
+   },
+   {
+    "date": "2026-10-24",
+    "row": 6,
+    "col": 47,
+    "level": 1
+   },
+   {
+    "date": "2026-10-31",
+    "row": 6,
+    "col": 48,
+    "level": 1
+   },
+   {
+    "date": "2026-11-07",
+    "row": 6,
+    "col": 49,
+    "level": 0
+   },
+   {
+    "date": "2026-11-14",
+    "row": 6,
+    "col": 50,
+    "level": 0
+   },
+   {
+    "date": "2026-11-21",
+    "row": 6,
+    "col": 51,
+    "level": 3
    }
   ]
  }

@@ -123,15 +123,21 @@ def scan_code(repo, branch):
     return found, doc, sum(1 for t in code if t["path"].endswith(".py"))
 
 
+def parse_contributions(page):
+    days = [{"date": d, "row": int(r), "col": int(c), "level": int(l)} for d, r, c, l in re.findall(
+        r'data-date="(\d{4}-\d\d-\d\d)"[^>]*?id="contribution-day-component-(\d+)-(\d+)"[^>]*?data-level="(\d)"', page)]
+    tooltips = re.findall(r'for="contribution-day-component-\d+-\d+"[^>]*>(No contributions?|\d+ contributions?)\b', page)
+    if not days or len(tooltips) != len(days):
+        raise ValueError("GitHub contribution calendar is missing days or contribution counts")
+    total = sum(int(n.group()) for tooltip in tooltips if (n := re.match(r"\d+", tooltip)))
+    return {"total": total, "days": days}
+
+
 def contributions():
     page = fetch(f"https://github.com/users/{USER}/contributions", raw=True)
     if not page:
-        return {"total": 0, "days": []}
-    page = page.decode("utf-8", "replace")
-    days = [{"date": d, "row": int(r), "col": int(c), "level": int(l)} for d, r, c, l in re.findall(
-        r'data-date="(\d{4}-\d\d-\d\d)"[^>]*?id="contribution-day-component-(\d+)-(\d+)"[^>]*?data-level="(\d)"', page)]
-    total = sum(int(n) for n in re.findall(r'for="contribution-day-component-\d+-\d+"[^>]*>(\d+) contributions?', page))
-    return {"total": total, "days": days}
+        raise ValueError("GitHub contribution calendar is unavailable")
+    return parse_contributions(page.decode("utf-8", "replace"))
 
 
 def latest_diff(repo, sha):
