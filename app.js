@@ -24,7 +24,7 @@
   menuBtn.addEventListener("click", () => setMenu(menu.hidden));
   menu.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
   addEventListener("keydown", (e) => { if (e.key === "Escape" && !menu.hidden) setMenu(false); });
-  addEventListener("resize", () => { if (innerWidth > 820 && !menu.hidden) setMenu(false); });
+  addEventListener("resize", () => { if (innerWidth > 1024 && !menu.hidden) setMenu(false); });
 
   /* ---------------- radial glow follows the pointer ---------------- */
   document.addEventListener("pointermove", (e) => {

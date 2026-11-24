@@ -2,6 +2,8 @@
 
 Personal site of Avinash Chandra Gupta. Static HTML/CSS/JS, no build step.
 
+The homepage links directly to the [CV](assets/CV_msr-india-research.pdf), which is served with the site from `assets/`.
+
 The homepage activity comes from GitHub: `scripts/build_data.py` reads public repos (description or README or docstrings, languages, imports, commits, latest diff) plus the contribution calendar, and writes `data.json`.
 
 The site publishes from the `main` branch because this account's Actions jobs fail before a runner starts. The old `build and deploy` workflow is manual-only while branch deployment is active. To refresh the checked-in `data.json`, run `python scripts/build_data.py` and commit the result. In the browser, `app.js` checks the GitHub API (cached for 5 minutes) and patches in newer pushes and commits.
